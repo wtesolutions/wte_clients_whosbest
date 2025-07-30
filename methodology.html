@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover WhosBest.org's comprehensive methodology for creating trustworthy rankings across all categories. Learn how we collect data, evaluate businesses, weight factors, and validate results to identify true excellence.">
+  <meta name="keywords" content="ranking methodology, data collection methods, evaluation criteria, business rankings, hospital rankings, quality metrics, transparency in rankings, WhosBest methodology">
+  <meta name="author" content="WhosBest.org">
+  <meta property="og:title" content="Our Methodology | How We Rank Excellence | WhosBest.org">
+  <meta property="og:description" content="Learn about WhosBest.org's comprehensive, data-driven methodology for identifying and ranking excellence across multiple categories and industries.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whosbest.org/methodology.html">
+  <meta property="og:image" content="assets/methodology-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <title>Our Methodology | How We Rank Excellence | WhosBest.org</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  
+  <style>
+    /* Additional styles specific to the methodology page */
+    .methodology-section {
+      margin-bottom: var(--spacing-16);
+    }
+    
+    .methodology-card {
+      background-color: var(--bg-card);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow);
+      padding: var(--spacing-6);
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .methodology-step {
+      display: flex;
+      margin-bottom: var(--spacing-8);
+      position: relative;
+    }
+    
+    .methodology-step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 60px;
+      height: 60px;
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      font-size: var(--font-size-2xl);
+      font-weight: var(--font-weight-bold);
+      border-radius: var(--border-radius-full);
+      margin-right: var(--spacing-6);
+    }
+    
+    .methodology-step-content {
+      flex-grow: 1;
+    }
+    
+    .methodology-step-title {
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-2);
+      color: var(--color-gray-900);
+    }
+    
+    .methodology-step-description {
+      color: var(--color-gray-700);
+    }
+    
+    .methodology-step::after {
+      content: '';
+      position: absolute;
+      top: 70px;
+      left: 30px;
+      height: calc(100% - 50px);
+      width: 2px;
+      background-color: var(--color-gray-200);
+    }
+    
+    .methodology-step:last-child::after {
+      display: none;
+    }
+    
+    .criteria-card {
+      background-color: var(--bg-card);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow);
+      padding: var(--spacing-6);
+      margin-bottom: var(--spacing-6);
+      border-left: 4px solid var(--color-primary);
+    }
+    
+    .criteria-title {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-2);
+      color: var(--color-gray-900);
+      display: flex;
+      align-items: center;
+    }
+    
+    .criteria-title i {
+      color: var(--color-primary);
+      margin-right: var(--spacing-2);
+    }
+    
+    .criteria-weight {
+      display: inline-block;
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      padding: 2px 8px;
+      border-radius: var(--border-radius-full);
+      font-size: var(--font-size-sm);
+      margin-left: var(--spacing-2);
+    }
+    
+    .faq-item {
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .faq-question {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--spacing-2);
+      color: var(--color-gray-900);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-question i {
+      color: var(--color-primary);
+      transition: transform var(--transition-normal) var(--transition-timing);
+    }
+    
+    .faq-question.active i {
+      transform: rotate(180deg);
+    }
+    
+    .faq-answer {
+      padding-top: var(--spacing-2);
+      color: var(--color-gray-700);
+      display: none;
+    }
+    
+    .faq-answer.active {
+      display: block;
+    }
+    
+    .data-source-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: var(--spacing-4);
+    }
+    
+    .data-source-icon {
+      min-width: 40px;
+      height: 40px;
+      background-color: var(--color-primary-light);
+      color: var(--color-primary-dark);
+      border-radius: var(--border-radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: var(--spacing-4);
+    }
+    
+    .process-timeline {
+      position: relative;
+      padding-left: 60px;
+    }
+    
+    .process-timeline-item {
+      position: relative;
+      padding-bottom: var(--spacing-8);
+    }
+    
+    .process-timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -30px;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: var(--color-primary);
+    }
+    
+    .process-timeline-item::after {
+      content: '';
+      position: absolute;
+      left: -23px;
+      top: 24px;
+      width: 2px;
+      height: calc(100% - 16px);
+      background-color: var(--color-gray-300);
+    }
+    
+    .process-timeline-item:last-child::after {
+      display: none;
+    }
+    
+    .process-timeline-title {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--spacing-2);
+      color: var(--color-gray-900);
+    }
+    
+    .table-of-contents {
+      background-color: var(--bg-card);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow);
+      padding: var(--spacing-6);
+      margin-bottom: var(--spacing-8);
+    }
+    
+    .table-of-contents-title {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--spacing-4);
+      color: var(--color-gray-900);
+    }
+    
+    .table-of-contents-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .table-of-contents-list li {
+      margin-bottom: var(--spacing-2);
+    }
+    
+    .table-of-contents-list a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color var(--transition-fast) var(--transition-timing);
+    }
+    
+    .table-of-contents-list a:hover {
+      color: var(--color-primary-dark);
+      text-decoration: underline;
+    }
+    
+    .table-of-contents-list .sub-item {
+      padding-left: var(--spacing-4);
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="220">
+          <!-- Star/Excellence Icon -->
+          <g fill="#2563eb">
+            <!-- Star shape representing "best" -->
+            <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+            
+            <!-- Optional subtle accent -->
+            <circle cx="50" cy="50" r="25" fill="#2563eb" opacity="0.1" />
+          </g>
+          
+          <!-- WHOSBEST.ORG Text -->
+          <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#2563eb">
+            WHOSBEST<tspan fill="#2563eb" font-weight="600">.ORG</tspan>
+          </text>
+          
+          <!-- Tagline (Optional) -->
+          <text x="92" y="75" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" letter-spacing="0.5" fill="#64748b">
+            The Directory of Excellence
+          </text>
+          
+          <!-- Abstract Line Element -->
+          <path d="M85 65 L85 45" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+          
+          <!-- Abstract Dots (Excellence Indicators) -->
+          <circle cx="350" cy="40" r="3" fill="#2563eb" />
+          <circle cx="360" cy="50" r="3" fill="#2563eb" />
+          <circle cx="350" cy="60" r="3" fill="#2563eb" />
+        </svg>
+      </a>
+      
+      <div class="navbar-menu" id="navbar-menu">
+        <a href="index.html" class="navbar-link">Home</a>
+        <a href="about.html" class="navbar-link">About</a>
+        <a href="categories.html" class="navbar-link">Categories</a>
+        <a href="rankings.html" class="navbar-link">Rankings</a>
+        <a href="methodology.html" class="navbar-link active">Methodology</a>
+        <a href="contact.html" class="navbar-link">Contact</a>
+      </div>
+      
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-image" style="background-image: url('assets/methodology-hero-bg.jpg');"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">Our Comprehensive Methodology</h1>
+      <p class="hero-subtitle">Discover how WhosBest.org creates trustworthy, data-driven rankings that identify true excellence across all categories. Our rigorous approach combines quantitative metrics, expert analysis, and consumer feedback to deliver rankings you can trust.</p>
+    </div>
+    <div class="hero-shape"></div>
+  </section>
+  
+  <!-- Main Content -->
+  <section class="py-16">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Sidebar with Table of Contents -->
+        <div class="lg:col-span-1">
+          <div class="table-of-contents sticky" style="top: 100px;">
+            <h3 class="table-of-contents-title">On This Page</h3>
+            <ul class="table-of-contents-list">
+              <li><a href="#general-methodology">General Methodology</a></li>
+              <li><a href="#data-collection">Data Collection & Sources</a></li>
+              <li><a href="#evaluation-criteria">Evaluation Criteria</a></li>
+              <li><a href="#scoring-system">Scoring & Weighting System</a></li>
+              <li><a href="#quality-control">Quality Control & Validation</a></li>
+              <li><a href="#hospital-rankings" class="font-semibold">Hospital Rankings Methodology</a>
+                <ul>
+                  <li class="sub-item"><a href="#hospital-criteria">Hospital-Specific Criteria</a></li>
+                  <li class="sub-item"><a href="#hospital-data">Hospital Data Sources</a></li>
+                </ul>
+              </li>
+              <li><a href="#transparency-ethics">Transparency & Ethics</a></li>
+              <li><a href="#methodology-faq">Frequently Asked Questions</a></li>
+            </ul>
+            
+            <div class="mt-8">
+              <h4 class="font-semibold mb-2">Category-Specific Methodologies</h4>
+              <ul class="table-of-contents-list">
+                <li><a href="methodology-healthcare.html">Healthcare Rankings</a></li>
+                <li><a href="methodology-business.html">Business Services Rankings</a></li>
+                <li><a href="methodology-technology.html">Technology Rankings</a></li>
+                <li><a href="methodology-education.html">Education Rankings</a></li>
+                <li><a href="methodology-local.html">Local Business Rankings</a></li>
+              </ul>
+            </div>
+            
+            <div class="mt-8 p-4 bg-gray-50 rounded-lg">
+              <p class="text-sm text-gray-600">Our methodology is continuously refined to ensure the most accurate and useful rankings. Last updated: July 2025.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <!-- General Methodology Section -->
+          <section id="general-methodology" class="methodology-section">
+            <h2 class="text-3xl font-bold mb-6">General Methodology Overview</h2>
+            <p class="mb-6">At WhosBest.org, we've developed a comprehensive, multi-faceted approach to identifying excellence across diverse categories. Our methodology combines rigorous data collection, expert analysis, and consumer feedback to create rankings that are objective, transparent, and genuinely useful to our users.</p>
+            
+            <div class="methodology-steps">
+              <div class="methodology-step">
+                <div class="methodology-step-number">1</div>
+                <div class="methodology-step-content">
+                  <h3 class="methodology-step-title">Research & Scope Definition</h3>
+                  <p class="methodology-step-description">We begin by defining the scope of each ranking, identifying the specific industry or category to be evaluated, and determining the key factors that constitute excellence in that field. This process involves consultation with industry experts and analysis of consumer priorities.</p>
+                </div>
+              </div>
+              
+              <div class="methodology-step">
+                <div class="methodology-step-number">2</div>
+                <div class="methodology-step-content">
+                  <h3 class="methodology-step-title">Data Collection & Verification</h3>
+                  <p class="methodology-step-description">Our research team gathers extensive data from multiple sources, including public databases, industry reports, consumer reviews, and direct outreach to businesses. All data undergoes rigorous verification to ensure accuracy and currency.</p>
+                </div>
+              </div>
+              
+              <div class="methodology-step">
+                <div class="methodology-step-number">3</div>
+                <div class="methodology-step-content">
+                  <h3 class="methodology-step-title">Criteria Development & Weighting</h3>
+                  <p class="methodology-step-description">We establish clear, category-specific evaluation criteria and assign appropriate weightings to each factor based on its importance to consumers and industry standards. These criteria are regularly reviewed and updated to reflect changing market conditions and consumer preferences.</p>
+                </div>
+              </div>
+              
+              <div class="methodology-step">
+                <div class="methodology-step-number">4</div>
+                <div class="methodology-step-content">
+                  <h3 class="methodology-step-title">Analysis & Scoring</h3>
+                  <p class="methodology-step-description">Our data scientists apply sophisticated analytical models to evaluate each business or service against our established criteria. This process yields quantitative scores that form the foundation of our rankings.</p>
+                </div>
+              </div>
+              
+              <div class="methodology-step">
+                <div class="methodology-step-number">5</div>
+                <div class="methodology-step-content">
+                  <h3 class="methodology-step-title">Expert Review & Validation</h3>
+                  <p class="methodology-step-description">A panel of category specialists reviews the preliminary rankings to provide qualitative insights and identify any anomalies that may require further investigation. This human oversight ensures that our data-driven approach captures nuances that numbers alone might miss.</p>
+                </div>
+              </div>
+              
+              <div class="methodology-step">
+                <div class="methodology-step-number">6</div>
+                <div class="methodology-step-content">
+                  <h3 class="methodology-step-title">Final Ranking & Publication</h3>
+                  <p class="methodology-step-description">After thorough validation, we finalize and publish our rankings, accompanied by detailed explanations of our methodology and key findings. Rankings are updated regularly to reflect changes in performance and market conditions.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Data Collection Section -->
+          <section id="data-collection" class="methodology-section">
+            <h2 class="text-3xl font-bold mb-6">Data Collection & Sources</h2>
+            <p class="mb-6">The foundation of our rankings is comprehensive, accurate data. We employ a multi-source approach to data collection, ensuring that our evaluations are based on the most complete and current information available.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div class="data-source-item">
+                <div class="data-source-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-1">Public Databases</h3>
+                  <p class="text-sm text-gray-700">We leverage authoritative public databases from government agencies, regulatory bodies, and industry organizations to establish baseline performance metrics.</p>
+                </div>
+              </div>
+              
+              <div class="data-source-item">
+                <div class="data-source-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-1">Industry Reports</h3>
+                  <p class="text-sm text-gray-700">We analyze reports from respected industry analysts, research firms, and academic institutions to identify trends, benchmarks, and emerging excellence indicators.</p>
+                </div>
+              </div>
+              
+              <div class="data-source-item">
+                <div class="data-source-icon">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-1">Consumer Reviews & Feedback</h3>
+                  <p class="text-sm text-gray-700">We aggregate and analyze consumer reviews from multiple platforms, applying sentiment analysis and other advanced techniques to extract meaningful insights.</p>
+                </div>
+              </div>
+              
+              <div class="data-source-item">
+                <div class="data-source-icon">
+                  <i class="fas fa-clipboard-check"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-1">Direct Business Submissions</h3>
+                  <p class="text-sm text-gray-700">We collect information directly from businesses through our submission process, which is then independently verified by our research team.</p>
+                </div>
+              </div>
+              
+              <div class="data-source-item">
+                <div class="data-source-icon">
+                  <i class="fas fa-user-tie"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-1">Expert Interviews</h3>
+                  <p class="text-sm text-gray-700">We conduct interviews with industry experts and practitioners to gain insights into quality indicators that may not be captured in quantitative data.</p>
+                </div>
+              </div>
+              
+              <div class="data-source-item">
+                <div class="data-source-icon">
+                  <i class="fas fa-search"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold mb-1">Mystery Shopping</h3>
+                  <p class="text-sm text-gray-700">For certain categories, we employ mystery shopping techniques to assess customer experience and service quality firsthand.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="methodology-card">
+              <h3 class="text-xl font-semibold mb-4">Data Verification Process</h3>
+              <p class="mb-4">All collected data undergoes a rigorous verification process to ensure accuracy and reliability:</p>
+              
+              <div class="process-timeline">
+                <div class="process-timeline-item">
+                  <h4 class="process-timeline-title">Initial Data Screening</h4>
+                  <p>All incoming data is screened for completeness, consistency, and plausibility, with automated systems flagging potential anomalies for human review.</p>
+                </div>
+                
+                <div class="process-timeline-item">
+                  <h4 class="process-timeline-title">Cross-Source Verification</h4>
+                  <p>Data points are cross-checked against multiple sources to identify and resolve discrepancies.</p>
+                </div>
+                
+                <div class="process-timeline-item">
+                  <h4 class="process-timeline-title">Expert Review</h4>
+                  <p>Category specialists review the data to identify potential inaccuracies based on their domain expertise.</p>
+                </div>
+                
+                <div class="process-timeline-item">
+                  <h4 class="process-timeline-title">Business Confirmation</h4>
+                  <p>When appropriate, we contact businesses directly to verify key information and provide an opportunity for them to correct factual errors.</p>
+                </div>
+                
+                <div class="process-timeline-item">
+                  <h4 class="process-timeline-title">Final Validation</h4>
+                  <p>After all verification steps are complete, the data is given a final review before being incorporated into our ranking algorithms.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Evaluation Criteria Section -->
+          <section id="evaluation-criteria" class="methodology-section">
+            <h2 class="text-3xl font-bold mb-6">Evaluation Criteria</h2>
+            <p class="mb-6">While specific criteria vary by category, our evaluation framework consistently focuses on factors that genuinely matter to consumers and reflect true excellence in each field. Below are the core dimensions we assess across most categories:</p>
+            
+            <div class="criteria-card">
+              <h3 class="criteria-title">
+                <i class="fas fa-star"></i>
+                Quality & Performance <span class="criteria-weight">30-40%</span>
+              </h3>
+              <p>We evaluate the fundamental quality of products or services, including reliability, effectiveness, and consistency. This dimension focuses on how well the core offering meets or exceeds industry standards and customer expectations.</p>
+            </div>
+            
+            <div class="criteria-card">
+              <h3 class="criteria-title">
+                <i class="fas fa-users"></i>
+                Customer Experience <span class="criteria-weight">20-30%</span>
+              </h3>
+              <p>We assess the overall customer journey, including service quality, accessibility, responsiveness, and problem resolution. This dimension recognizes that excellence extends beyond the core product to encompass the entire customer relationship.</p>
+            </div>
+            
+            <div class="criteria-card">
+              <h3 class="criteria-title">
+                <i class="fas fa-dollar-sign"></i>
+                Value <span class="criteria-weight">10-20%</span>
+              </h3>
+              <p>We evaluate the relationship between price and quality, focusing not simply on cost but on the overall value proposition. This dimension acknowledges that excellence isn't always about being the cheapest, but about delivering appropriate value at a given price point.</p>
+            </div>
+            
+            <div class="criteria-card">
+              <h3 class="criteria-title">
+                <i class="fas fa-lightbulb"></i>
+                Innovation & Adaptation <span class="criteria-weight">10-15%</span>
+              </h3>
+              <p>We consider how businesses innovate and adapt to changing market conditions, customer needs, and technological advancements. This dimension recognizes that sustained excellence requires continuous improvement and evolution.</p>
+            </div>
+            
+            <div class="criteria-card">
+              <h3 class="criteria-title">
+                <i class="fas fa-handshake"></i>
+                Ethics & Responsibility <span class="criteria-weight">5-15%</span>
+              </h3>
+              <p>We evaluate business practices related to sustainability, social responsibility, ethical conduct, and community engagement. This dimension acknowledges that true excellence includes how a business impacts society and the environment.</p>
+            </div>
+            
+            <p class="mt-6">Each category has additional specific criteria tailored to its unique characteristics and consumer priorities. These specialized criteria are detailed in our category-specific methodology pages.</p>
+          </section>
+          
+          <!-- Scoring System Section -->
+          <section id="scoring-system" class="methodology-section">
+            <h2 class="text-3xl font-bold mb-6">Scoring & Weighting System</h2>
+            <p class="mb-6">Our scoring system is designed to be objective, consistent, and transparent while allowing for category-specific nuances. Here's how we transform raw data into meaningful rankings:</p>
+            
+            <div class="methodology-card">
+              <h3 class="text-xl font-semibold mb-4">Standardization</h3>
+              <p>We standardize diverse data points to enable fair comparisons across different businesses and services. This process involves:</p>
+              <ul class="list-disc pl-6 mt-3 space-y-2">
+                <li>Converting all metrics to a consistent scale (typically 0-10 or 0-100)</li>
+                <li>Normalizing distributions to account for outliers</li>
+                <li>Applying appropriate transformations to ensure comparability across different types of data</li>
+              </ul>
+            </div>
+            
+            <div class="methodology-card">
+              <h3 class="text-xl font-semibold mb-4">Weighting Methodology</h3>
+              <p>Not all criteria are equally important in determining excellence. Our weighting system:</p>
+              <ul class="list-disc pl-6 mt-3 space-y-2">
+                <li>Assigns different weights to criteria based on their importance to consumers and industry standards</li>
+                <li>Adjusts weights to reflect category-specific priorities</li>
+                <li>Incorporates consumer survey data to ensure weights align with what users actually value</li>
+                <li>Undergoes regular review to ensure continued relevance as markets and preferences evolve</li>
+              </ul>
+            </div>
+            
+            <div class="methodology-card">
+              <h3 class="text-xl font-semibold mb-4">Composite Score Calculation</h3>
+              <p>Final scores are calculated using a weighted average of all criteria scores. The general formula is:</p>
+              <div class="bg-gray-100 p-4 rounded-lg mt-3 text-center">
+                <p class="font-mono">Final Score = Σ (Criterion Score × Criterion Weight)</p>
+              </div>
+              <p class="mt-3">This approach ensures that each aspect of excellence contributes appropriately to the overall assessment.</p>
+            </div>
+            
+            <div class="methodology-card">
+              <h3 class="text-xl font-semibold mb-4">Tiered Ranking Approach</h3>
+              <p>In addition to numerical rankings, we often employ a tiered approach that groups businesses or services into meaningful categories:</p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
+                <div class="bg-gray-50 p-3 rounded-lg text-center">
+                  <div class="text-primary text-xl mb-1"><i class="fas fa-award"></i></div>
+                  <h4 class="font-semibold mb-1">Exceptional</h4>
+                  <p class="text-sm text-gray-600">Top 10% of scores</p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-lg text-center">
+                  <div class="text-primary text-xl mb-1"><i class="fas fa-star"></i></div>
+                  <h4 class="font-semibold mb-1">Excellent</h4>
+                  <p class="text-sm text-gray-600">Top 11-25% of scores</p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-lg text-center">
+                  <div class="text-primary text-xl mb-1"><i class="fas fa-thumbs-up"></i></div>
+                  <h4 class="font-semibold mb-1">Very Good</h4>
+                  <p class="text-sm text-gray-600">Top 26-50% of scores</p>
+                </div>
+              </div>
+              <p class="mt-3">This approach helps users understand meaningful differences in quality beyond simple numerical rankings.</p>
+            </div>
+          </section>
+          
+          <!-- Quality Control Section -->
+          <section id="quality-control" class="methodology-section">
+            <h2 class="text-3xl font-bold mb-6">Quality Control & Validation</h2>
+            <p class="mb-6">We implement rigorous quality control measures throughout our ranking process to ensure accuracy, fairness, and reliability:</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div class="methodology-card">
+                <h3 class="text-xl font-semibold mb-3">Statistical Validation</h3>
+                <p>Our data science team employs advanced statistical techniques to validate results, including:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                  <li>Sensitivity analysis to test the robustness of rankings</li>
+                  <li>Outlier detection and verification</li>
+                  <li>Correlation analysis to identify potential data issues</li>
+                  <li>Confidence interval calculations to assess ranking stability</li>
+                </ul>
+              </div>
+              
+              <div class="methodology-card">
+                <h3 class="text-xl font-semibold mb-3">Expert Panel Review</h3>
+                <p>A panel of category specialists reviews preliminary rankings to:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                  <li>Identify counterintuitive results that warrant further investigation</li>
+                  <li>Provide qualitative context for quantitative findings</li>
+                  <li>Ensure rankings align with industry knowledge and standards</li>
+                  <li>Flag potential methodological improvements</li>
+                </ul>
+              </div>
+              
+              <div class="methodology-card">
+                <h3 class="text-xl font-semibold mb-3">Peer Review Process</h3>
+                <p>Our methodology and results undergo internal peer review to:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                  <li>Challenge assumptions and identify potential biases</li>
+                  <li>Ensure methodological consistency across categories</li>
+                  <li>Verify that rankings reflect genuine excellence</li>
+                  <li>Identify opportunities for methodological refinement</li>
+                </ul>
+              </div>
+              
+              <div class="methodology-card">
+                <h3 class="text-xl font-semibold mb-3">Feedback Mechanisms</h3>
+                <p>We incorporate feedback from multiple stakeholders:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                  <li>User feedback on ranking utility and accuracy</li>
+                  <li>Business feedback on data accuracy and completeness</li>
+                  <li>Expert community input on methodology improvements</li>
+                  <li>Continuous monitoring of ranking performance and relevance</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="methodology-card">
+              <h3 class="text-xl font-semibold mb-4">Continuous Improvement Process</h3>
+              <p class="mb-4">Our methodology is not static; it evolves through a structured improvement process:</p>
+              
+              <div class="process-timeline">
+                <div class="process-timeline-item">
+                  <h4 class="process-timeline-title">Post-Publication Analysis</h4>
+                  <p>After each ranking is published, we conduct a thorough analysis to identify strengths and weaknesses in our approach.</p>
+                </div>
+                
+                <div class="process-timeline-item">
+                  <h4 class="process-timeline-title">Stakeholder Feedback Collection</h4>
+                  <p>We actively solicit feedback from users, businesses, and industry experts on our methodology and results.</p>
+                </div>
+                
+                <div class="process-timeline-item">
+                  <h4 class="process-timeline-title">Methodology Review</h4>
+                  <p>Our methodology committee regularly reviews our approach, incorporating new research, feedback, and industry developments.</p>
+                </div>
+                
+                <div class="process-timeline-item">
+                  <h4 class="process-timeline-title">Pilot Testing</h4>
+                  <p>Significant methodological changes are pilot tested before full implementation to ensure they enhance ranking quality.</p>
+                </div>
+                
+                <div class="process-timeline-item">
+                  <h4 class="process-timeline-title">Implementation & Documentation</h4>
+                  <p>Approved improvements are implemented, documented, and communicated transparently to our users.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Hospital Rankings Methodology Section -->
+          <section id="hospital-rankings" class="methodology-section">
+            <h2 class="text-3xl font-bold mb-6">Hospital Rankings Methodology</h2>
+            <p class="mb-6">Our hospital rankings employ a specialized methodology designed to evaluate the complex, multifaceted nature of healthcare excellence. This approach combines clinical outcomes data, patient experience metrics, and assessments of innovation and research contributions.</p>
+            
+            <div id="hospital-criteria" class="mb-8">
+              <h3 class="text-2xl font-semibold mb-4">Hospital-Specific Evaluation Criteria</h3>
+              
+              <div class="criteria-card">
+                <h3 class="criteria-title">
+                  <i class="fas fa-heartbeat"></i>
+                  Patient Outcomes <span class="criteria-weight">35%</span>
+                </h3>
+                <p class="mb-3">We evaluate hospitals based on their success in treating patients across multiple conditions and procedures. Key metrics include:</p>
+                <ul class="list-disc pl-6 space-y-1">
+                  <li>Risk-adjusted mortality rates for common conditions and procedures</li>
+                  <li>Complication rates and hospital-acquired infection rates</li>
+                  <li>Readmission rates within 30 days of discharge</li>
+                  <li>Length of stay relative to condition severity</li>
+                  <li>Patient functional improvement measures</li>
+                </ul>
+              </div>
+              
+              <div class="criteria-card">
+                <h3 class="criteria-title">
+                  <i class="fas fa-clipboard-check"></i>
+                  Quality of Care <span class="criteria-weight">25%</span>
+                </h3>
+                <p class="mb-3">We assess the overall quality of care delivery and patient safety measures, including:</p>
+                <ul class="list-disc pl-6 space-y-1">
+                  <li>Adherence to clinical guidelines and best practices</li>
+                  <li>Nurse staffing levels and qualification ratios</li>
+                  <li>Implementation of patient safety protocols</li>
+                  <li>Medication error rates and prevention systems</li>
+                  <li>Availability of specialized care units and services</li>
+                </ul>
+              </div>
+              
+              <div class="criteria-card">
+                <h3 class="criteria-title">
+                  <i class="fas fa-user-md"></i>
+                  Patient Experience <span class="criteria-weight">15%</span>
+                </h3>
+                <p class="mb-3">We evaluate the hospital experience from the patient's perspective, including:</p>
+                <ul class="list-disc pl-6 space-y-1">
+                  <li>Communication effectiveness with doctors and nurses</li>
+                  <li>Pain management and medication explanation</li>
+                  <li>Discharge information and care transition quality</li>
+                  <li>Hospital environment (cleanliness, quietness)</li>
+                  <li>Overall patient satisfaction and recommendation rates</li>
+                </ul>
+              </div>
+              
+              <div class="criteria-card">
+                <h3 class="criteria-title">
+                  <i class="fas fa-microscope"></i>
+                  Innovation & Research <span class="criteria-weight">15%</span>
+                </h3>
+                <p class="mb-3">We assess contributions to advancing medical knowledge and practice, including:</p>
+                <ul class="list-disc pl-6 space-y-1">
+                  <li>Research output and publication impact</li>
+                  <li>Clinical trial participation and leadership</li>
+                  <li>Adoption of advanced technologies and treatments</li>
+                  <li>Teaching status and medical education programs</li>
+                  <li>Grants and research funding</li>
+                </ul>
+              </div>
+              
+              <div class="criteria-card">
+                <h3 class="criteria-title">
+                  <i class="fas fa-stethoscope"></i>
+                  Specialty Excellence <span class="criteria-weight">10%</span>
+                </h3>
+                <p class="mb-3">We evaluate performance in specialized areas of medicine, including:</p>
+                <ul class="list-disc pl-6 space-y-1">
+                  <li>Outcomes for complex procedures and rare conditions</li>
+                  <li>Availability of specialized equipment and expertise</li>
+                  <li>Recognition as referral centers for complex cases</li>
+                  <li>Specialized certification and center of excellence designations</li>
+                  <li>Volume of complex procedures (as a proxy for expertise)</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div id="hospital-data" class="mb-8">
+              <h3 class="text-2xl font-semibold mb-4">Hospital Data Sources</h3>
+              <p class="mb-4">Our hospital rankings incorporate data from multiple authoritative sources to ensure comprehensive evaluation:</p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="methodology-card">
+                  <h4 class="font-semibold mb-2">Government & Regulatory Data</h4>
+                  <ul class="list-disc pl-6 space-y-1 text-sm">
+                    <li>Centers for Medicare & Medicaid Services (CMS) quality measures</li>
+                    <li>Hospital Compare database</li>
+                    <li>Agency for Healthcare Research and Quality (AHRQ) metrics</li>
+                    <li>State health department reports and databases</li>
+                    <li>Joint Commission accreditation data</li>
+                  </ul>
+                </div>
+                
+                <div class="methodology-card">
+                  <h4 class="font-semibold mb-2">Patient Experience Data</h4>
+                  <ul class="list-disc pl-6 space-y-1 text-sm">
+                    <li>Hospital Consumer Assessment of Healthcare Providers and Systems (HCAHPS) survey results</li>
+                    <li>Patient satisfaction surveys and ratings</li>
+                    <li>Patient-reported outcome measures (PROMs)</li>
+                    <li>Online review analysis (with appropriate statistical controls)</li>
+                    <li>Focus group and interview insights</li>
+                  </ul>
+                </div>
+                
+                <div class="methodology-card">
+                  <h4 class="font-semibold mb-2">Clinical & Research Data</h4>
+                  <ul class="list-disc pl-6 space-y-1 text-sm">
+                    <li>Medical journal publication analysis</li>
+                    <li>Clinical trial participation data</li>
+                    <li>Research grant funding information</li>
+                    <li>Patent and innovation metrics</li>
+                    <li>Academic affiliation information</li>
+                  </ul>
+                </div>
+                
+                <div class="methodology-card">
+                  <h4 class="font-semibold mb-2">Professional Recognition</h4>
+                  <ul class="list-disc pl-6 space-y-1 text-sm">
+                    <li>Physician survey data on hospital reputation</li>
+                    <li>Specialty society recognition and awards</li>
+                    <li>Center of excellence designations</li>
+                    <li>Teaching status and residency program quality</li>
+                    <li>Leadership roles in medical advancement</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="methodology-card">
+              <h3 class="text-xl font-semibold mb-4">Hospital Ranking Process</h3>
+              <p class="mb-4">Our hospital ranking process follows these specialized steps:</p>
+              
+              <ol class="list-decimal pl-6 space-y-3">
+                <li>
+                  <strong>Initial Eligibility Screening:</strong> Hospitals must meet minimum requirements for data availability, service volume, and accreditation to be included in our rankings.
+                </li>
+                <li>
+                  <strong>Risk Adjustment:</strong> We apply sophisticated risk adjustment models to account for differences in patient populations and case complexity, ensuring fair comparisons across hospitals.
+                </li>
+                <li>
+                  <strong>Specialty-Specific Evaluation:</strong> For hospitals with notable specialty departments, we conduct detailed assessments of those specialties using additional metrics relevant to each field.
+                </li>
+                <li>
+                  <strong>Comprehensive Scoring:</strong> We calculate scores across all dimensions, applying appropriate weightings to reflect their relative importance in determining overall hospital quality.
+                </li>
+                <li>
+                  <strong>Expert Panel Review:</strong> A panel of healthcare professionals, including physicians, nurses, and hospital administrators, reviews the preliminary rankings to provide clinical context and identify any anomalies.
+                </li>
+                <li>
+                  <strong>Final Ranking Compilation:</strong> After thorough validation, we finalize the rankings and prepare detailed profiles of each ranked hospital, highlighting their particular strengths and areas of excellence.
+                </li>
+              </ol>
+            </div>
+            
+            <div class="mt-8 text-center">
+              <a href="methodology-healthcare.html" class="btn btn-primary">View Detailed Healthcare Methodology</a>
+            </div>
+          </section>
+          
+          <!-- Transparency & Ethics Section -->
+          <section id="transparency-ethics" class="methodology-section">
+            <h2 class="text-3xl font-bold mb-6">Transparency & Ethics</h2>
+            <p class="mb-6">WhosBest.org is committed to maintaining the highest standards of transparency and ethical conduct in our ranking process. Our users' trust is our most valuable asset, and we safeguard it through the following practices:</p>
+            
+            <div class="methodology-card">
+              <h3 class="text-xl font-semibold mb-4">Independence & Objectivity</h3>
+              <p class="mb-3">We maintain strict independence from the businesses and services we rank:</p>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Rankings cannot be purchased or influenced through financial relationships</li>
+                <li>Advertising relationships are kept strictly separate from our research and ranking operations</li>
+                <li>Staff involved in rankings are prohibited from accepting gifts, payments, or special considerations from ranked entities</li>
+                <li>All potential conflicts of interest are disclosed transparently</li>
+              </ul>
+            </div>
+            
+            <div class="methodology-card">
+              <h3 class="text-xl font-semibold mb-4">Methodology Transparency</h3>
+              <p class="mb-3">We provide clear, detailed information about how our rankings are created:</p>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Comprehensive documentation of data sources, criteria, and weightings</li>
+                <li>Explanation of significant methodological changes and their rationale</li>
+                <li>Regular publication of methodology updates and improvements</li>
+                <li>Clear distinction between factual data and expert opinion components</li>
+              </ul>
+            </div>
+            
+            <div class="methodology-card">
+              <h3 class="text-xl font-semibold mb-4">Data Privacy & Security</h3>
+              <p class="mb-3">We handle all data with the utmost care and respect for privacy:</p>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Strict adherence to data protection regulations and best practices</li>
+                <li>Anonymization of individual-level data used in rankings</li>
+                <li>Secure storage and processing of all ranking-related information</li>
+                <li>Responsible use of data in accordance with its original collection purpose</li>
+              </ul>
+            </div>
+            
+            <div class="methodology-card">
+              <h3 class="text-xl font-semibold mb-4">Correction & Appeal Process</h3>
+              <p class="mb-3">We maintain a formal process for addressing potential errors or concerns:</p>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Clear procedure for businesses to report factual errors in our data</li>
+                <li>Timely investigation of all correction requests</li>
+                <li>Transparent documentation of any post-publication corrections</li>
+                <li>Formal appeal process for businesses that believe they have been unfairly evaluated</li>
+              </ul>
+            </div>
+            
+            <div class="mt-6">
+              <p>For more information about our ethical standards and practices, please see our <a href="ethics-policy.html" class="text-primary hover:underline">Ethics Policy</a>.</p>
+            </div>
+          </section>
+          
+          <!-- FAQ Section -->
+          <section id="methodology-faq" class="methodology-section">
+            <h2 class="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How often are your rankings updated?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>Most of our rankings are updated annually to incorporate the latest data and reflect changes in performance and market conditions. However, some rapidly evolving categories may be updated more frequently. Each ranking page clearly displays the last update date and the scheduled next update.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can businesses pay to be included or ranked higher?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>Absolutely not. Our rankings cannot be purchased or influenced through financial relationships. We maintain strict separation between our ranking operations and any business relationships. Our reputation depends on providing objective, trustworthy rankings, and we never compromise on this principle.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do you prevent bias in your rankings?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>We employ multiple safeguards against bias, including:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                  <li>Using diverse data sources to prevent over-reliance on any single perspective</li>
+                  <li>Implementing standardized evaluation criteria applied consistently across all entities</li>
+                  <li>Employing statistical techniques to identify and address potential biases</li>
+                  <li>Utilizing diverse expert panels to provide balanced perspectives</li>
+                  <li>Maintaining transparent methodology that invites external scrutiny</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>What if a business disagrees with their ranking?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>We maintain a formal appeal process for businesses that believe they have been unfairly evaluated. This process includes:</p>
+                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                  <li>Submission of a formal appeal with supporting documentation</li>
+                  <li>Review by our methodology team independent from the original ranking team</li>
+                  <li>Consideration of any new or corrected information provided</li>
+                  <li>A formal response explaining our decision</li>
+                </ol>
+                <p class="mt-2">While we take all appeals seriously, our final decisions are based on our established methodology and commitment to providing accurate, helpful information to our users.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do you handle businesses that don't want to be ranked?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>As a consumer information service, we believe in providing comprehensive coverage of each category we rank. Therefore, we generally include all eligible businesses that meet our inclusion criteria, regardless of their preference. However, we only use publicly available information or data provided voluntarily, and we always strive to ensure our rankings are fair and accurate.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Do you consider size differences between businesses?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, we design our methodology to enable fair comparisons regardless of business size. This includes:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                  <li>Using relative metrics rather than absolute numbers where appropriate</li>
+                  <li>Implementing size-appropriate benchmarks and expectations</li>
+                  <li>In some categories, creating separate rankings for different size tiers</li>
+                  <li>Focusing on quality factors that aren't inherently size-dependent</li>
+                </ul>
+                <p class="mt-2">Our goal is to identify excellence wherever it exists, whether in large enterprises or smaller specialized providers.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How do you validate self-reported data from businesses?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>While we do collect information directly from businesses, we never rely solely on self-reported data. Our validation process includes:</p>
+                <ul class="list-disc pl-6 mt-2 space-y-1">
+                  <li>Cross-checking against independent third-party sources</li>
+                  <li>Requesting documentation to support key claims</li>
+                  <li>Conducting spot audits of submitted information</li>
+                  <li>Applying statistical analysis to identify implausible data points</li>
+                  <li>Giving greater weight to independently verified information</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Do you have specific methodologies for different industries?</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, while we maintain consistent core principles across all rankings, we develop specialized methodologies for each category we cover. These tailored approaches reflect the unique factors that constitute excellence in each field and the specific metrics that matter most to consumers in those categories. You can find detailed information about each specialized methodology on our category-specific methodology pages.</p>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Contact Section -->
+          <section class="methodology-section">
+            <h2 class="text-3xl font-bold mb-6">Questions About Our Methodology?</h2>
+            <p class="mb-6">We welcome inquiries and feedback about our ranking methodology. If you have questions, suggestions, or concerns, please don't hesitate to contact our methodology team.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="card p-6">
+                <h3 class="text-xl font-semibold mb-3">Contact Our Methodology Team</h3>
+                <p class="mb-4">For detailed questions about our approach or to provide feedback on our methodology:</p>
+                <div class="flex items-center mb-3">
+                  <i class="fas fa-envelope text-primary mr-3"></i>
+                  <a href="mailto:methodology@whosbest.org" class="text-primary hover:underline">methodology@whosbest.org</a>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-phone text-primary mr-3"></i>
+                  <a href="tel:+18005551234" class="text-primary hover:underline">(800) 555-1234 ext. 2</a>
+                </div>
+              </div>
+              
+              <div class="card p-6">
+                <h3 class="text-xl font-semibold mb-3">For Businesses</h3>
+                <p class="mb-4">If you represent a business that has been ranked or is eligible for ranking:</p>
+                <div class="flex items-center mb-3">
+                  <i class="fas fa-building text-primary mr-3"></i>
+                  <a href="business-resources.html" class="text-primary hover:underline">Business Resources Center</a>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-file-alt text-primary mr-3"></i>
+                  <a href="correction-request.html" class="text-primary hover:underline">Submit a Correction Request</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <div class="footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="150">
+            <!-- Star/Excellence Icon -->
+            <g fill="#ffffff">
+              <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+              <circle cx="50" cy="50" r="25" fill="#ffffff" opacity="0.1" />
+            </g>
+            
+            <!-- WHOSBEST.ORG Text -->
+            <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#ffffff">
+              WHOSBEST<tspan fill="#ffffff" font-weight="600">.ORG</tspan>
+            </text>
+          </svg>
+        </div>
+        <p class="footer-description">WhosBest.org is the definitive directory of excellence, providing comprehensive rankings across multiple categories to help you make informed decisions.</p>
+        
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Categories</h4>
+        <div class="footer-links">
+          <a href="categories/healthcare.html" class="footer-link">Healthcare</a>
+          <a href="categories/professional-services.html" class="footer-link">Professional Services</a>
+          <a href="categories/technology.html" class="footer-link">Technology</a>
+          <a href="categories/education.html" class="footer-link">Education</a>
+          <a href="categories/local-business.html" class="footer-link">Local Business</a>
+          <a href="categories.html" class="footer-link">View All Categories</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <div class="footer-links">
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="methodology.html" class="footer-link">Our Methodology</a>
+          <a href="rankings.html" class="footer-link">Latest Rankings</a>
+          <a href="submit.html" class="footer-link">Submit a Business</a>
+          <a href="contact.html" class="footer-link">Contact Us</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Legal</h4>
+        <div class="footer-links">
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-link">Terms of Service</a>
+          <a href="disclaimer.html" class="footer-link">Disclaimer</a>
+          <a href="accessibility.html" class="footer-link">Accessibility</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2025 WhosBest.org. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script>
+    $(document).ready(function() {
+      // Navbar scroll effect
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 50) {
+          $('#navbar').addClass('navbar-scrolled');
+        } else {
+          $('#navbar').removeClass('navbar-scrolled');
+        }
+      });
+      
+      // Mobile menu toggle
+      $('#navbar-toggle').click(function() {
+        $('#navbar-menu').toggleClass('open');
+      });
+      
+      // FAQ toggle
+      $('.faq-question').click(function() {
+        $(this).toggleClass('active');
+        $(this).next('.faq-answer').toggleClass('active');
+      });
+      
+      // Smooth scroll for anchor links
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top - 100
+          }, 800);
+        }
+      });
+      
+      // Check if URL has hash and scroll to it after page load
+      if (window.location.hash) {
+        var hash = window.location.hash;
+        if ($(hash).length) {
+          setTimeout(function() {
+            $('html, body').scrollTop(0).animate({
+              scrollTop: $(hash).offset().top - 100
+            }, 800);
+          }, 200);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

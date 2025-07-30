@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WhosBest.org Sitemap - A complete directory of all pages on WhosBest.org, the definitive directory of excellence.">
+  <meta name="keywords" content="sitemap, WhosBest.org, directory, navigation, website map">
+  <meta name="author" content="WhosBest.org">
+  <meta property="og:title" content="Sitemap | WhosBest.org | The Directory of Excellence">
+  <meta property="og:description" content="A complete directory of all pages on WhosBest.org, helping you navigate our comprehensive rankings and resources.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whosbest.org/sitemap.html">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <title>Sitemap | WhosBest.org | The Directory of Excellence</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  
+  <style>
+    .sitemap-section {
+      margin-bottom: 2rem;
+    }
+    
+    .sitemap-section h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--color-primary);
+      border-bottom: 2px solid var(--color-primary-light);
+      padding-bottom: 0.5rem;
+    }
+    
+    .sitemap-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .sitemap-list li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .sitemap-list a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--color-gray-800);
+      padding: 0.5rem;
+      border-radius: var(--border-radius);
+      transition: all 0.2s ease;
+    }
+    
+    .sitemap-list a:hover {
+      background-color: var(--color-gray-100);
+      color: var(--color-primary);
+      transform: translateX(5px);
+    }
+    
+    .sitemap-list a i {
+      margin-right: 0.75rem;
+      color: var(--color-primary);
+      width: 20px;
+      text-align: center;
+    }
+    
+    .sitemap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    @media (max-width: 768px) {
+      .sitemap-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="220">
+          <!-- Star/Excellence Icon -->
+          <g fill="#2563eb">
+            <!-- Star shape representing "best" -->
+            <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+            
+            <!-- Optional subtle accent -->
+            <circle cx="50" cy="50" r="25" fill="#2563eb" opacity="0.1" />
+          </g>
+          
+          <!-- WHOSBEST.ORG Text -->
+          <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#2563eb">
+            WHOSBEST<tspan fill="#2563eb" font-weight="600">.ORG</tspan>
+          </text>
+          
+          <!-- Tagline (Optional) -->
+          <text x="92" y="75" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" letter-spacing="0.5" fill="#64748b">
+            The Directory of Excellence
+          </text>
+          
+          <!-- Abstract Line Element -->
+          <path d="M85 65 L85 45" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+          
+          <!-- Abstract Dots (Excellence Indicators) -->
+          <circle cx="350" cy="40" r="3" fill="#2563eb" />
+          <circle cx="360" cy="50" r="3" fill="#2563eb" />
+          <circle cx="350" cy="60" r="3" fill="#2563eb" />
+        </svg>
+      </a>
+      
+      <div class="navbar-menu" id="navbar-menu">
+        <a href="index.html" class="navbar-link">Home</a>
+        <a href="about.html" class="navbar-link">About</a>
+        <a href="categories.html" class="navbar-link">Categories</a>
+        <a href="rankings.html" class="navbar-link">Rankings</a>
+        <a href="methodology.html" class="navbar-link">Methodology</a>
+        <a href="contact.html" class="navbar-link">Contact</a>
+      </div>
+      
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-image" style="background-image: url('assets/sitemap-hero.jpg');"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">Sitemap</h1>
+      <p class="hero-subtitle">A complete directory of all pages on WhosBest.org to help you navigate our comprehensive rankings and resources.</p>
+    </div>
+    <div class="hero-shape"></div>
+  </section>
+  
+  <!-- Breadcrumb -->
+  <div class="bg-gray-50 py-3">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Sitemap</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <section class="py-16">
+    <div class="container">
+      <div class="card p-8">
+        <h2 class="text-3xl font-bold mb-8">Complete Site Directory</h2>
+        
+        <!-- Main Pages Section -->
+        <div class="sitemap-section">
+          <h3>Main Pages</h3>
+          <ul class="sitemap-list">
+            <li>
+              <a href="index.html">
+                <i class="fas fa-home"></i>
+                <span>Home - The Directory of Excellence</span>
+              </a>
+            </li>
+            <li>
+              <a href="about.html">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us - Our Mission and Team</span>
+              </a>
+            </li>
+            <li>
+              <a href="methodology.html">
+                <i class="fas fa-chart-line"></i>
+                <span>Our Methodology - How We Rank Excellence</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Category Pages Section -->
+        <div class="sitemap-section">
+          <h3>Category Pages</h3>
+          <div class="sitemap-grid">
+            <div>
+              <ul class="sitemap-list">
+                <li>
+                  <a href="categories/healthcare.html">
+                    <i class="fas fa-hospital"></i>
+                    <span>Healthcare</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="categories/professional-services.html">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Professional Services</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="categories/technology.html">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Technology</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="sitemap-list">
+                <li>
+                  <a href="categories/education.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Education</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="categories/local-business.html">
+                    <i class="fas fa-store"></i>
+                    <span>Local Business</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- List Pages Section -->
+        <div class="sitemap-section">
+          <h3>Ranking Lists</h3>
+          <div class="sitemap-grid">
+            <div>
+              <ul class="sitemap-list">
+                <li>
+                  <a href="lists/top-hospitals.html">
+                    <i class="fas fa-hospital-alt"></i>
+                    <span>Top 10 Hospitals in the United States</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="lists/top-universities.html">
+                    <i class="fas fa-university"></i>
+                    <span>Top Universities</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="sitemap-list">
+                <li>
+                  <a href="lists/top-legal-firms.html">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Top Legal Firms</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="lists/top-software-companies.html">
+                    <i class="fas fa-code"></i>
+                    <span>Top Software Companies</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <div class="footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="150">
+            <!-- Star/Excellence Icon -->
+            <g fill="#ffffff">
+              <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+              <circle cx="50" cy="50" r="25" fill="#ffffff" opacity="0.1" />
+            </g>
+            
+            <!-- WHOSBEST.ORG Text -->
+            <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#ffffff">
+              WHOSBEST<tspan fill="#ffffff" font-weight="600">.ORG</tspan>
+            </text>
+          </svg>
+        </div>
+        <p class="footer-description">WhosBest.org is the definitive directory of excellence, providing comprehensive rankings across multiple categories to help you make informed decisions.</p>
+        
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Categories</h4>
+        <div class="footer-links">
+          <a href="categories/healthcare.html" class="footer-link">Healthcare</a>
+          <a href="categories/professional-services.html" class="footer-link">Professional Services</a>
+          <a href="categories/technology.html" class="footer-link">Technology</a>
+          <a href="categories/education.html" class="footer-link">Education</a>
+          <a href="categories/local-business.html" class="footer-link">Local Business</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <div class="footer-links">
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="methodology.html" class="footer-link">Our Methodology</a>
+          <a href="sitemap.html" class="footer-link">Sitemap</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Legal</h4>
+        <div class="footer-links">
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="terms.html" class="footer-link">Terms of Service</a>
+          <a href="disclaimer.html" class="footer-link">Disclaimer</a>
+          <a href="accessibility.html" class="footer-link">Accessibility</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2025 WhosBest.org. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script>
+    $(document).ready(function() {
+      // Navbar scroll effect
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 50) {
+          $('#navbar').addClass('navbar-scrolled');
+        } else {
+          $('#navbar').removeClass('navbar-scrolled');
+        }
+      });
+      
+      // Mobile menu toggle
+      $('#navbar-toggle').click(function() {
+        $('#navbar-menu').toggleClass('open');
+      });
+      
+      // Smooth scroll for anchor links
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top - 100
+          }, 800);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

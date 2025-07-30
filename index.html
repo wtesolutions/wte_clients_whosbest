@@ -1,736 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Elevating Healthcare Brands Through Cohesive Identity – Premium USA-made print and brand consulting for the healthcare industry. BCEX is part of America's WhosBest.org network.">
-  <meta name="keywords" content="healthcare branding, brand strategy, premium printing, USA-made, BCEX, WhosBest.org, Mark Esposito">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BCEX Healthcare Brand Consulting - WhosBest.org Network</title>
-  <!-- Example SEO-friendly Title: “Healthcare Brand Consulting | USA Printing & Cohesive Brand Identity | BCEX” -->
-
-  <style>
-	/* Global Resets & Typography */
-	* {
-	  margin: 0; 
-	  padding: 0; 
-	  box-sizing: border-box;
-	}
-	body {
-	  font-family: 'Helvetica Neue', Arial, sans-serif;
-	  color: #333;
-	  background-color: #fff;
-	  scroll-behavior: smooth;
-	  line-height: 1.5;
-	}
-	a {
-	  text-decoration: none;
-	  color: inherit;
-	}
-	img {
-	  max-width: 100%;
-	  display: block;
-	}
-
-	/* Color Variables */
-	:root {
-	  --primary-blue: #005f9e;
-	  --accent-color: #f09e00; /* Bold accent color (orange/gold) */
-	  --gray-light: #f7f7f7;
-	  --gray-dark: #444;
-	  --white: #ffffff;
-	}
-
-	/* Main Container */
-	.container {
-	  width: 90%;
-	  max-width: 1200px;
-	  margin: 0 auto;
-	}
-
-	/* Navigation */
-	header {
-	  position: fixed;
-	  top: 0;
-	  width: 100%;
-	  background-color: var(--white);
-	  z-index: 999;
-	  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-	}
-	.nav-container {
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-around;
-	  padding: 0.75rem 0;
-	}
-	.nav-logo {
-	  font-weight: bold;
-	  font-size: 1.2rem;
-	  text-transform: uppercase;
-	  color: var(--primary-blue);
-	  text-align: center;
-	}
-	.nav-links {
-	  display: flex;
-	  gap: 1.5rem;
-	  font-size: 0.95rem;
-	}
-	.nav-links a:hover {
-	  color: var(--accent-color);
-	}
-
-	/* Hero Section */
-	.hero {
-	  margin-top: 4.5rem; /* Account for fixed nav */
-	  background: linear-gradient(
-		rgba(255,255,255,0.8),
-		rgba(255,255,255,0.8)
-	  ), url('https://via.placeholder.com/1600x900?text=Healthcare+Brand+Imagery') center/cover no-repeat;
-	  text-align: center;
-	  padding: 6rem 1rem;
-	  color: var(--primary-blue);
-	  position: relative;
-	}
-	.hero h1 {
-	  font-size: 2.5rem;
-	  margin-bottom: 0.5rem;
-	  font-weight: 700;
-	}
-	.hero h2 {
-	  font-size: 1.2rem;
-	  font-weight: 400;
-	  margin-bottom: 2rem;
-	  color: var(--gray-dark);
-	}
-	.cta-button {
-	  background: var(--accent-color);
-	  color: var(--white);
-	  padding: 0.75rem 1.5rem;
-	  border: none;
-	  cursor: pointer;
-	  font-size: 1rem;
-	  font-weight: 600;
-	  border-radius: 4px;
-	  transition: background 0.3s ease;
-	}
-	.cta-button:hover {
-	  background: #d98900;
-	}
-
-	/* Services Section */
-	#services {
-	  background-color: var(--gray-light);
-	  padding: 4rem 1rem;
-	}
-	#services h2.section-title {
-	  text-align: center;
-	  font-size: 2rem;
-	  margin-bottom: 2rem;
-	  color: var(--primary-blue);
-	}
-	.services-grid {
-	  display: grid;
-	  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	  gap: 2rem;
-	}
-	.service-card {
-	  background: #fff;
-	  padding: 2rem;
-	  border-radius: 8px;
-	  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-	  text-align: center;
-	  transition: transform 0.3s ease;
-	}
-	.service-card:hover {
-	  transform: translateY(-4px);
-	}
-	.service-card img {
-	  width: 60px;
-	  margin-bottom: 1rem;
-	}
-	.service-card h3 {
-	  font-size: 1.1rem;
-	  margin-bottom: 1rem;
-	  color: var(--primary-blue);
-	}
-	.service-card p {
-	  font-size: 0.95rem;
-	  color: #555;
-	}
-
-	/* Unique Value Proposition */
-	#uvp {
-	  padding: 4rem 1rem;
-	}
-	#uvp h2.section-title {
-	  text-align: center;
-	  color: var(--primary-blue);
-	  margin-bottom: 2rem;
-	  font-size: 2rem;
-	}
-	.uvp-content {
-	  text-align: center;
-	  max-width: 800px;
-	  margin: 0 auto;
-	  margin-bottom: 2rem;
-	}
-	.uvp-metrics {
-	  display: flex;
-	  flex-wrap: wrap;
-	  justify-content: center;
-	  gap: 2rem;
-	}
-	.uvp-metrics .metric {
-	  background: var(--gray-light);
-	  padding: 1rem 2rem;
-	  border-radius: 4px;
-	  min-width: 200px;
-	}
-	.uvp-metrics .metric h3 {
-	  color: var(--primary-blue);
-	  margin-bottom: 0.5rem;
-	  font-size: 1.5rem;
-	}
-	.uvp-metrics .metric p {
-	  font-size: 0.95rem;
-	}
-
-	/* Process Section */
-	#process {
-	  padding: 4rem 1rem;
-	  background-color: #fff;
-	}
-	#process h2.section-title {
-	  text-align: center;
-	  color: var(--primary-blue);
-	  margin-bottom: 2rem;
-	  font-size: 2rem;
-	}
-	.process-steps {
-	  display: grid;
-	  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	  gap: 2rem;
-	  max-width: 1000px;
-	  margin: 0 auto;
-	}
-	.process-step {
-	  text-align: center;
-	  padding: 2rem;
-	  border-radius: 8px;
-	  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-	  background: var(--gray-light);
-	}
-	.process-step img {
-	  width: 50px;
-	  margin-bottom: 1rem;
-	}
-	.process-step h3 {
-	  font-size: 1rem;
-	  color: var(--primary-blue);
-	  margin-bottom: 0.5rem;
-	}
-	.process-step p {
-	  font-size: 0.9rem;
-	}
-
-	/* Portfolio/Case Studies Section */
-	#portfolio {
-	  padding: 4rem 1rem;
-	}
-	#portfolio h2.section-title {
-	  text-align: center;
-	  color: var(--primary-blue);
-	  margin-bottom: 2rem;
-	  font-size: 2rem;
-	}
-	.portfolio-grid {
-	  display: grid;
-	  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	  gap: 2rem;
-	}
-	.portfolio-item {
-	  background: #fff;
-	  border-radius: 8px;
-	  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-	  overflow: hidden;
-	  position: relative;
-	}
-	.portfolio-item img {
-	  height: 200px;
-	  object-fit: cover;
-	  display: block;
-	  width: 100%;
-	}
-	.portfolio-content {
-	  padding: 1.5rem;
-	}
-	.portfolio-content h3 {
-	  color: var(--primary-blue);
-	  margin-bottom: 1rem;
-	  font-size: 1.2rem;
-	}
-	.portfolio-content p {
-	  font-size: 0.95rem;
-	  margin-bottom: 1rem;
-	}
-	.testimonial {
-	  font-style: italic;
-	  border-left: 4px solid var(--accent-color);
-	  padding-left: 1rem;
-	  margin-top: 1rem;
-	}
-
-	/* Quality Assurance Section */
-	#quality {
-	  background: var(--gray-light);
-	  padding: 4rem 1rem;
-	}
-	#quality h2.section-title {
-	  text-align: center;
-	  color: var(--primary-blue);
-	  margin-bottom: 2rem;
-	  font-size: 2rem;
-	}
-	.quality-content {
-	  max-width: 800px;
-	  margin: 0 auto;
-	  text-align: center;
-	}
-	.quality-points {
-	  display: flex;
-	  flex-direction: column;
-	  gap: 1rem;
-	  margin-top: 2rem;
-	}
-	.quality-points div {
-	  display: flex;
-	  align-items: center;
-	  gap: 0.5rem;
-	}
-	.quality-points div img {
-	  width: 30px;
-	  height: 30px;
-	}
-
-	/* Contact Section */
-	#contact {
-	  padding: 4rem 1rem;
-	}
-	#contact h2.section-title {
-	  text-align: center;
-	  color: var(--primary-blue);
-	  margin-bottom: 2rem;
-	  font-size: 2rem;
-	}
-	.contact-container {
-	  display: grid;
-	  grid-template-columns: 1fr 1fr;
-	  gap: 2rem;
-	  max-width: 1000px;
-	  margin: 0 auto;
-	}
-	.contact-details {
-	  background: var(--gray-light);
-	  padding: 2rem;
-	  border-radius: 8px;
-	}
-	.contact-details p {
-	  margin-bottom: 1rem;
-	  font-size: 0.95rem;
-	}
-	.contact-form {
-	  background: #fff;
-	  padding: 2rem;
-	  border-radius: 8px;
-	  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-	}
-	.contact-form form {
-	  display: flex;
-	  flex-direction: column;
-	  gap: 1rem;
-	}
-	.contact-form label {
-	  font-weight: 600;
-	  font-size: 0.9rem;
-	}
-	.contact-form input, .contact-form textarea {
-	  padding: 0.75rem;
-	  border: 1px solid #ccc;
-	  border-radius: 4px;
-	  font-size: 0.95rem;
-	  resize: none;
-	}
-	.contact-form button {
-	  background: var(--primary-blue);
-	  color: var(--white);
-	  padding: 0.75rem 1.5rem;
-	  border: none;
-	  cursor: pointer;
-	  font-size: 1rem;
-	  font-weight: 600;
-	  border-radius: 4px;
-	  transition: background 0.3s ease;
-	}
-	.contact-form button:hover {
-	  background: #00497a;
-	}
-
-	/* Footer */
-	footer {
-	  background: #222;
-	  color: #ccc;
-	  padding: 2rem 1rem;
-	  margin-top: 2rem;
-	}
-	.footer-content {
-	  display: flex;
-	  flex-wrap: wrap;
-	  align-items: center;
-	  justify-content: space-between;
-	  max-width: 1200px;
-	  margin: 0 auto;
-	}
-	.footer-content .quick-links {
-	  display: flex;
-	  gap: 1.5rem;
-	}
-	.footer-content .quick-links a {
-	  font-size: 0.9rem;
-	  color: #ccc;
-	  transition: color 0.3s ease;
-	}
-	.footer-content .quick-links a:hover {
-	  color: var(--accent-color);
-	}
-	.footer-content p {
-	  font-size: 0.8rem;
-	}
-
-	/* Extra Features (placeholders) */
-	/* Scrolling testimonial ticker, loading animation, scroll-triggered animations, live chat widget, progress indicator, etc. 
-	   would typically be implemented via JS. Below are simple placeholders. */
-
-	.ticker {
-	  background: var(--accent-color);
-	  color: var(--white);
-	  padding: 0.5rem 1rem;
-	  text-align: center;
-	  font-size: 0.9rem;
-	  overflow: hidden;
-	  position: relative;
-	}
-	.ticker p {
-	  animation: scroll-text 10s linear infinite;
-	  white-space: nowrap;
-	}
-	@keyframes scroll-text {
-	  0% { transform: translateX(100%); }
-	  100% { transform: translateX(-100%); }
-	}
-
-	.newsletter-popup {
-	  display: none; /* or toggle via JS */
-	  position: fixed;
-	  top: 50%;
-	  left: 50%;
-	  transform: translate(-50%, -50%);
-	  background: var(--white);
-	  padding: 2rem;
-	  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-	  z-index: 1000;
-	  border-radius: 6px;
-	}
-
-	.live-chat-widget {
-	  position: fixed;
-	  bottom: 2rem;
-	  right: 2rem;
-	  background: var(--accent-color);
-	  color: var(--white);
-	  padding: 1rem;
-	  border-radius: 50%;
-	  cursor: pointer;
-	  text-align: center;
-	  /* Icon or text for Chat */
-	}
-
-	/* Responsive Tweaks */
-	@media (max-width: 768px) {
-	  .contact-container {
-		grid-template-columns: 1fr;
-	  }
-	  .nav-links {
-		display: none; /* For demonstration, could replace with hamburger menu */
-	  }
-	  .nav-container {
-		justify-content: center;
-	  }
-	}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WhosBest.org - The definitive directory of excellence. Find the best services, businesses, professionals, and resources across multiple categories, all thoroughly vetted and ranked.">
+  <meta name="keywords" content="best services, top businesses, rankings, directory, best professionals, WhosBest, excellence directory">
+  <meta name="author" content="WhosBest.org">
+  <meta property="og:title" content="WhosBest.org | The Directory of Excellence">
+  <meta property="og:description" content="Find the best services, businesses, professionals, and resources across multiple categories, all thoroughly vetted and ranked.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whosbest.org">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <title>WhosBest.org | The Directory of Excellence</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 </head>
 <body>
-
-<!-- Sticky Header / Navigation -->
-<header>
-  <div class="nav-container">
-	<div class="nav-logo">BCEX</div>
-	<nav class="nav-links">
-	  <a href="#services">Services</a>
-	  <a href="#process">Process</a>
-	  <a href="#portfolio">Portfolio</a>
-	  <a href="#contact">Contact</a>
-	</nav>
-  </div>
-</header>
-
-<!-- Scrolling Testimonial Ticker (Optional) -->
-<div class="ticker">
-  <p>“BCEX helped us achieve a 30% increase in brand recognition across our healthcare networks!” – Satisfied Healthcare Client</p>
-</div>
-
-<!-- Hero Section -->
-<section class="hero" id="hero">
-  <h1>Elevating Healthcare Brands Through Cohesive Identity</h1>
-  <h2>Unifying your brand message across all touchpoints with premium USA-made materials</h2>
-  <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView()">Schedule a Brand Assessment</button>
-</section>
-
-<!-- Services Section -->
-<section id="services" class="container">
-  <h2 class="section-title">Services</h2>
-  <div class="services-grid">
-	<div class="service-card">
-	  <img src="https://via.placeholder.com/60?text=Icon" alt="Brand Strategy Icon">
-	  <h3>Brand Strategy Development</h3>
-	  <p>In-depth market research and positioning to align your healthcare organization’s vision with your audience’s needs.</p>
-	</div>
-	<div class="service-card">
-	  <img src="https://via.placeholder.com/60?text=Icon" alt="Visual Identity Icon">
-	  <h3>Visual Identity Systems</h3>
-	  <p>Comprehensive logo, color, and typography systems optimized for healthcare’s unique demands.</p>
-	</div>
-	<div class="service-card">
-	  <img src="https://via.placeholder.com/60?text=Icon" alt="Brand Guidelines Icon">
-	  <h3>Brand Guidelines Creation</h3>
-	  <p>Formalized documentation ensuring consistent use of brand elements throughout all healthcare touchpoints.</p>
-	</div>
-	<div class="service-card">
-	  <img src="https://via.placeholder.com/60?text=Icon" alt="Print Production Icon">
-	  <h3>Premium Print Production</h3>
-	  <p>USA-based printing services with cutting-edge technology for unmatched quality and reliability.</p>
-	</div>
-	<div class="service-card">
-	  <img src="https://via.placeholder.com/60?text=Icon" alt="Marketing Collateral Icon">
-	  <h3>Marketing Collateral Design</h3>
-	  <p>Patient brochures, signage, and promotional materials designed to reinforce trust and professionalism.</p>
-	</div>
-	<div class="service-card">
-	  <img src="https://via.placeholder.com/60?text=Icon" alt="Implementation Icon">
-	  <h3>Brand Implementation Training</h3>
-	  <p>Team workshops to ensure brand compliance and cohesive message delivery across all healthcare channels.</p>
-	</div>
-  </div>
-</section>
-
-<!-- Unique Value Proposition Section -->
-<section id="uvp" class="container">
-  <h2 class="section-title">Why Choose BCEX?</h2>
-  <div class="uvp-content">
-	<p>BCEX (Business Card Express), part of America’s WhosBest.org network, is a dedicated healthcare brand consultancy. 
-	We understand the nuances of medical regulations, HIPAA compliance, and industry best practices. Our end-to-end approach 
-	ensures your brand is consistently represented in all patient, provider, and stakeholder interactions.</p>
-  </div>
-  <div class="uvp-metrics">
-	<div class="metric">
-	  <h3>30%</h3>
-	  <p>Increase in brand recognition among major healthcare institutions.</p>
-	</div>
-	<div class="metric">
-	  <h3>100%</h3>
-	  <p>USA-based premium printing for ultimate quality and compliance.</p>
-	</div>
-	<div class="metric">
-	  <h3>25+</h3>
-	  <p>Years of combined healthcare branding experience on our core team.</p>
-	</div>
-  </div>
-</section>
-
-<!-- Process Section -->
-<section id="process">
-  <div class="container">
-	<h2 class="section-title">Our Process</h2>
-	<div class="process-steps">
-	  <div class="process-step">
-		<img src="https://via.placeholder.com/50?text=1" alt="Discovery Icon">
-		<h3>Discovery & Analysis</h3>
-		<p>We evaluate your current brand and perform market research to clarify objectives.</p>
-	  </div>
-	  <div class="process-step">
-		<img src="https://via.placeholder.com/50?text=2" alt="Strategy Icon">
-		<h3>Strategy Development</h3>
-		<p>We craft a tailored brand strategy that aligns with healthcare industry standards.</p>
-	  </div>
-	  <div class="process-step">
-		<img src="https://via.placeholder.com/50?text=3" alt="Design Icon">
-		<h3>Visual System Design</h3>
-		<p>Our creative team develops logos, color palettes, and typefaces to shape your brand identity.</p>
-	  </div>
-	  <div class="process-step">
-		<img src="https://via.placeholder.com/50?text=4" alt="Guidelines Icon">
-		<h3>Guidelines Creation</h3>
-		<p>We formalize brand usage rules for consistent messaging across all channels.</p>
-	  </div>
-	  <div class="process-step">
-		<img src="https://via.placeholder.com/50?text=5" alt="Production Icon">
-		<h3>Print Production</h3>
-		<p>Our USA-based facilities produce top-quality, HIPAA-compliant marketing materials.</p>
-	  </div>
-	  <div class="process-step">
-		<img src="https://via.placeholder.com/50?text=6" alt="Support Icon">
-		<h3>Implementation Support</h3>
-		<p>Training and ongoing assistance to keep your healthcare brand unified and effective.</p>
-	  </div>
-	</div>
-  </div>
-</section>
-
-<!-- Portfolio/Case Studies Section -->
-<section id="portfolio">
-  <div class="container">
-	<h2 class="section-title">Portfolio & Case Studies</h2>
-	<div class="portfolio-grid">
-	  <div class="portfolio-item">
-		<img src="https://via.placeholder.com/400x200?text=Hospital+Brand+Transformation" alt="Hospital Brand Transformation">
-		<div class="portfolio-content">
-		  <h3>Citywide Hospital Rebrand</h3>
-		  <p>Complete overhaul of visual identity and printed materials, boosting patient trust scores.</p>
-		  <p class="testimonial">"BCEX delivered beyond our expectations, ensuring brand consistency across 5 branches."</p>
-		</div>
-	  </div>
-	  <div class="portfolio-item">
-		<img src="https://via.placeholder.com/400x200?text=Healthcare+Clinic" alt="Healthcare Clinic Marketing">
-		<div class="portfolio-content">
-		  <h3>Neighborhood Clinic Marketing</h3>
-		  <p>Developed marketing collateral for community outreach, increasing patient enrollment by 20%.</p>
-		  <p class="testimonial">"Their USA-based print quality is outstanding and met our tight deadlines."</p>
-		</div>
-	  </div>
-	  <div class="portfolio-item">
-		<img src="https://via.placeholder.com/400x200?text=Healthcare+Network" alt="Healthcare Network Identity">
-		<div class="portfolio-content">
-		  <h3>Regional Healthcare Network Identity</h3>
-		  <p>Unified brand visuals and guidelines across multiple facilities and satellite offices.</p>
-		  <p class="testimonial">"We finally have a cohesive look that patients recognize everywhere they go."</p>
-		</div>
-	  </div>
-	  <div class="portfolio-item">
-		<img src="https://via.placeholder.com/400x200?text=Pharma+Brand" alt="Pharma Brand Collateral">
-		<div class="portfolio-content">
-		  <h3>Pharmaceutical Brand Collateral</h3>
-		  <p>Managed design and printing for product launches, ensuring regulatory compliance.</p>
-		  <p class="testimonial">"BCEX’s expertise in healthcare branding made our launch seamless."</p>
-		</div>
-	  </div>
-	</div>
-  </div>
-</section>
-
-<!-- Quality Assurance Section -->
-<section id="quality">
-  <div class="container">
-	<h2 class="section-title">Quality Assurance</h2>
-	<div class="quality-content">
-	  <p>Our commitment to premium print standards and regulatory compliance means you get peace of mind alongside a polished brand presence. We follow stringent healthcare industry requirements to ensure every piece of collateral meets or exceeds expectations.</p>
-	  <div class="quality-points">
-		<div>
-		  <img src="https://via.placeholder.com/30?text=Icon" alt="USA Facility Icon">
-		  <p>All printing in USA-based facilities</p>
-		</div>
-		<div>
-		  <img src="https://via.placeholder.com/30?text=Icon" alt="Quality Control Icon">
-		  <p>Strict quality control processes</p>
-		</div>
-		<div>
-		  <img src="https://via.placeholder.com/30?text=Icon" alt="Premium Materials Icon">
-		  <p>Use of premium, durable materials</p>
-		</div>
-		<div>
-		  <img src="https://via.placeholder.com/30?text=Icon" alt="Industry Certification Icon">
-		  <p>Certified to industry standards</p>
-		</div>
-		<div>
-		  <img src="https://via.placeholder.com/30?text=Icon" alt="Compliance Icon">
-		  <p>Full HIPAA compliance and privacy adherence</p>
-		</div>
-	  </div>
-	</div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-  <div class="container">
-	<h2 class="section-title">Contact Us</h2>
-	<div class="contact-container">
-	  <div class="contact-details">
-		<p><strong>BCEX Business Card Express</strong></p>
-		<p>1602 Hylton Road<br>Pennsauken, NJ 08110</p>
-		<p>Email: <a href="mailto:mark@bcex.com">mark@bcex.com</a> (Mark Esposito)</p>
-		<p>Phone: <a href="tel:856-555-1234">(856) 555-1234</a></p>
-		<p><strong>BCEX.com is part of America's WhosBest.org network.</strong></p>
-		<p>We are dedicated to delivering cohesive healthcare branding, from strategy to premium print production.</p>
-		<p>Follow us on social media:</p>
-		<p>
-		  <a href="#" target="_blank">LinkedIn</a> | 
-		  <a href="#" target="_blank">Twitter</a> | 
-		  <a href="#" target="_blank">Facebook</a>
-		</p>
-	  </div>
-	  <div class="contact-form">
-		<form action="#" method="POST">
-		  <label for="name">Name</label>
-		  <input type="text" id="name" name="name" required />
-
-		  <label for="email">Email</label>
-		  <input type="email" id="email" name="email" required />
-
-		  <label for="message">Message</label>
-		  <textarea id="message" name="message" rows="5" required></textarea>
-
-		  <button type="submit">Send Message</button>
-		</form>
-	  </div>
-	</div>
-  </div>
-</section>
-
-<!-- Live Chat Widget Placeholder -->
-<div class="live-chat-widget" title="Chat with us!">
-  Chat
-</div>
-
-<!-- Footer -->
-<footer>
-  <div class="footer-content">
-	<div class="quick-links">
-	  <a href="#services">Services</a>
-	  <a href="#process">Process</a>
-	  <a href="#portfolio">Portfolio</a>
-	  <a href="#contact">Contact</a>
-	</div>
-	<p>&copy; <span id="year"></span> BCEX - WhosBest.org Network. All rights reserved.</p>
-	<p>
-	  <a href="#" style="color:#ccc;">Privacy Policy</a> | 
-	  <a href="#" style="color:#ccc;">Terms of Service</a>
-	</p>
-  </div>
-</footer>
-
-<script>
-  // Dynamic copyright
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // Additional JS (e.g., cookie consent, progress bar, loading animation) can be implemented here.
-</script>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="220">
+          <!-- Star/Excellence Icon -->
+          <g fill="#2563eb">
+            <!-- Star shape representing "best" -->
+            <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+            
+            <!-- Optional subtle accent -->
+            <circle cx="50" cy="50" r="25" fill="#2563eb" opacity="0.1" />
+          </g>
+          
+          <!-- WHOSBEST.ORG Text -->
+          <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#2563eb">
+            WHOSBEST<tspan fill="#2563eb" font-weight="600">.ORG</tspan>
+          </text>
+          
+          <!-- Tagline (Optional) -->
+          <text x="92" y="75" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" letter-spacing="0.5" fill="#64748b">
+            The Directory of Excellence
+          </text>
+          
+          <!-- Abstract Line Element -->
+          <path d="M85 65 L85 45" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+          
+          <!-- Abstract Dots (Excellence Indicators) -->
+          <circle cx="350" cy="40" r="3" fill="#2563eb" />
+          <circle cx="360" cy="50" r="3" fill="#2563eb" />
+          <circle cx="350" cy="60" r="3" fill="#2563eb" />
+        </svg>
+      </a>
+      
+      <div class="navbar-menu" id="navbar-menu">
+        <a href="index.html" class="navbar-link active">Home</a>
+        <a href="about.html" class="navbar-link">About</a>
+        <a href="methodology.html" class="navbar-link">Methodology</a>
+      </div>
+      
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-image" style="background-image: url('assets/hero-bg.jpg');"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">Discover Excellence in Every Category</h1>
+      <p class="hero-subtitle">WhosBest.org is your definitive resource for finding the best services, businesses, professionals, and resources across multiple categories, all thoroughly vetted and ranked.</p>
+      <div class="hero-cta">
+        <a href="#categories" class="btn btn-lg btn-accent btn-icon">
+          <span>Explore Categories</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-shape"></div>
+  </section>
+  
+  <!-- Featured Categories Section -->
+  <section class="py-16" id="categories">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold mb-4">Browse Categories</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Explore our comprehensive directory of excellence across various industries and sectors. Each category features meticulously researched and ranked lists of the best options available.</p>
+      </div>
+      
+      <div class="directory-grid">
+        <!-- Healthcare Category -->
+        <div class="category-card stagger-item">
+          <div class="category-card-image">
+            <img src="assets/categories/healthcare.jpg" alt="Healthcare Excellence">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Healthcare</h3>
+            <p class="category-card-description">Discover top-rated hospitals, medical specialists, clinics, and healthcare services that provide exceptional care and outcomes.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-list-ol"></i> 12 Lists</span>
+              <a href="categories/healthcare.html" class="btn btn-sm btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Professional Services Category -->
+        <div class="category-card stagger-item">
+          <div class="category-card-image">
+            <img src="assets/categories/professional.jpg" alt="Professional Services Excellence">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Professional Services</h3>
+            <p class="category-card-description">Find the best lawyers, accountants, consultants, and other professional service providers ranked by expertise and client satisfaction.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-list-ol"></i> 15 Lists</span>
+              <a href="categories/professional-services.html" class="btn btn-sm btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Technology Category -->
+        <div class="category-card stagger-item">
+          <div class="category-card-image">
+            <img src="assets/categories/technology.jpg" alt="Technology Excellence">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Technology</h3>
+            <p class="category-card-description">Explore top-rated tech companies, software solutions, IT services, and digital products that lead their respective niches.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-list-ol"></i> 18 Lists</span>
+              <a href="categories/technology.html" class="btn btn-sm btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Education Category -->
+        <div class="category-card stagger-item">
+          <div class="category-card-image">
+            <img src="assets/categories/education.jpg" alt="Education Excellence">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Education</h3>
+            <p class="category-card-description">Discover top-ranked schools, universities, online courses, and educational resources for learners of all ages and backgrounds.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-list-ol"></i> 10 Lists</span>
+              <a href="categories/education.html" class="btn btn-sm btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Local Business Category -->
+        <div class="category-card stagger-item">
+          <div class="category-card-image">
+            <img src="assets/categories/local-business.jpg" alt="Local Business Excellence">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Local Business</h3>
+            <p class="category-card-description">Find the best local businesses in your area, from restaurants and retail to service providers and entertainment venues.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-list-ol"></i> 20 Lists</span>
+              <a href="categories/local-business.html" class="btn btn-sm btn-primary">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- How It Works Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold mb-4">How WhosBest.org Works</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Our comprehensive methodology ensures that only the best make it to our lists. Here's how we identify and rank excellence in every category.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="card p-6 text-center">
+          <div class="flex justify-center mb-4">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+              <i class="fas fa-search text-white text-2xl"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Research & Data Collection</h3>
+          <p class="text-gray-600">We gather extensive data from multiple sources, including consumer reviews, industry reports, expert opinions, and performance metrics.</p>
+        </div>
+        
+        <div class="card p-6 text-center">
+          <div class="flex justify-center mb-4">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+              <i class="fas fa-chart-bar text-white text-2xl"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Analysis & Evaluation</h3>
+          <p class="text-gray-600">Our team analyzes the data using proprietary algorithms and evaluation criteria specific to each category and industry.</p>
+        </div>
+        
+        <div class="card p-6 text-center">
+          <div class="flex justify-center mb-4">
+            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+              <i class="fas fa-trophy text-white text-2xl"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Ranking & Publication</h3>
+          <p class="text-gray-600">We compile and publish comprehensive rankings that are regularly updated to reflect changes in performance and market conditions.</p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="methodology.html" class="btn btn-ghost">Learn More About Our Methodology</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Featured Lists Section -->
+  <section class="py-16">
+    <div class="container">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold mb-4">Featured Rankings</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Explore some of our most popular and recently updated lists across various categories.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="list-card">
+          <div class="list-card-image">
+            <img src="assets/lists/hospitals.jpg" alt="Top Hospitals">
+          </div>
+          <div class="list-card-content">
+            <h3 class="list-card-title">Top 10 Hospitals in the United States</h3>
+            <p class="list-card-description">Comprehensive rankings of the best hospitals based on patient outcomes, innovation, research, and specialized care.</p>
+            <div class="list-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated July 2025</span>
+              <a href="lists/top-hospitals.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="list-card">
+          <div class="list-card-image">
+            <img src="assets/lists/law-firms.jpg" alt="Top Law Firms">
+          </div>
+          <div class="list-card-content">
+            <h3 class="list-card-title">Top Legal Firms</h3>
+            <p class="list-card-description">Rankings of the top law firms based on client satisfaction, case outcomes, and industry reputation.</p>
+            <div class="list-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated June 2025</span>
+              <a href="lists/top-legal-firms.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="list-card">
+          <div class="list-card-image">
+            <img src="assets/lists/universities.jpg" alt="Top Universities">
+          </div>
+          <div class="list-card-content">
+            <h3 class="list-card-title">Top Universities</h3>
+            <p class="list-card-description">Comprehensive rankings of universities based on academic excellence, research output, and career outcomes.</p>
+            <div class="list-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated May 2025</span>
+              <a href="lists/top-universities.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="list-card">
+          <div class="list-card-image">
+            <img src="assets/lists/software.jpg" alt="Top Software Companies">
+          </div>
+          <div class="list-card-content">
+            <h3 class="list-card-title">Top Software Companies</h3>
+            <p class="list-card-description">Discover the leading software companies worldwide, ranked by innovation, product quality, and market impact.</p>
+            <div class="list-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated July 2025</span>
+              <a href="lists/top-software-companies.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Newsletter Section -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">Stay Updated with the Latest Rankings</h2>
+        <p class="mb-6">Subscribe to our newsletter to receive updates when new rankings are published and get exclusive insights from our research team.</p>
+        
+        <form class="flex flex-col md:flex-row gap-4 justify-center">
+          <input type="email" placeholder="Your email address" class="form-control" required>
+          <button type="submit" class="btn btn-accent">Subscribe</button>
+        </form>
+        
+        <p class="text-sm mt-4 opacity-80">We respect your privacy. Unsubscribe at any time.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <div class="footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="150">
+            <!-- Star/Excellence Icon -->
+            <g fill="#ffffff">
+              <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+              <circle cx="50" cy="50" r="25" fill="#ffffff" opacity="0.1" />
+            </g>
+            
+            <!-- WHOSBEST.ORG Text -->
+            <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#ffffff">
+              WHOSBEST<tspan fill="#ffffff" font-weight="600">.ORG</tspan>
+            </text>
+          </svg>
+        </div>
+        <p class="footer-description">WhosBest.org is the definitive directory of excellence, providing comprehensive rankings across multiple categories to help you make informed decisions.</p>
+        
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Categories</h4>
+        <div class="footer-links">
+          <a href="categories/healthcare.html" class="footer-link">Healthcare</a>
+          <a href="categories/professional-services.html" class="footer-link">Professional Services</a>
+          <a href="categories/technology.html" class="footer-link">Technology</a>
+          <a href="categories/education.html" class="footer-link">Education</a>
+          <a href="categories/local-business.html" class="footer-link">Local Business</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <div class="footer-links">
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="methodology.html" class="footer-link">Our Methodology</a>
+          <a href="sitemap.html" class="footer-link">Sitemap</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2025 WhosBest.org. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script>
+    $(document).ready(function() {
+      // Navbar scroll effect
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 50) {
+          $('#navbar').addClass('navbar-scrolled');
+        } else {
+          $('#navbar').removeClass('navbar-scrolled');
+        }
+      });
+      
+      // Mobile menu toggle
+      $('#navbar-toggle').click(function() {
+        $('#navbar-menu').toggleClass('open');
+      });
+      
+      // Animation for staggered items
+      setTimeout(function() {
+        $('.stagger-item').each(function(index) {
+          $(this).css('opacity', '1');
+        });
+      }, 100);
+      
+      // Smooth scroll for anchor links
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top - 80
+          }, 800);
+        }
+      });
+    });
+  </script>
 </body>
 </html>

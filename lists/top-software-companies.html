@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover WhosBest.org's definitive ranking of the top 10 software companies worldwide. Comprehensive analysis of innovation, product quality, market impact, financial performance, and customer satisfaction.">
+  <meta name="keywords" content="top software companies, best tech companies, software rankings, technology leaders, enterprise software, consumer software, cloud computing, AI companies, software giants">
+  <meta name="author" content="WhosBest.org">
+  <meta property="og:title" content="Top 10 Software Companies | WhosBest.org | The Directory of Excellence">
+  <meta property="og:description" content="Explore our data-driven rankings of the world's top 10 software companies, with detailed profiles, product portfolios, and comprehensive evaluation metrics.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whosbest.org/lists/top-software-companies.html">
+  <meta property="og:image" content="../assets/software-companies-rankings-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <title>Top 10 Software Companies | WhosBest.org | The Directory of Excellence</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  
+  <style>
+    /* Additional styles specific to software company rankings */
+    .company-rank {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: var(--color-primary);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+    
+    .company-card {
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow);
+      background-color: white;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+    }
+    
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    
+    .company-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .company-header {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--color-gray-200);
+    }
+    
+    .company-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-right: 1rem;
+      background-color: var(--color-gray-50);
+      padding: 0.5rem;
+      border-radius: var(--border-radius);
+    }
+    
+    .company-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
+    
+    .company-location {
+      color: var(--color-gray-600);
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    
+    .company-location i {
+      margin-right: 0.5rem;
+      color: var(--color-gray-400);
+    }
+    
+    .company-content {
+      padding: 1.5rem;
+    }
+    
+    .company-description {
+      margin-bottom: 1.5rem;
+    }
+    
+    .company-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .stat-item {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--color-gray-50);
+      border-radius: var(--border-radius);
+    }
+    
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--color-primary);
+      margin-bottom: 0.25rem;
+    }
+    
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--color-gray-600);
+    }
+    
+    .company-strengths {
+      margin-bottom: 1.5rem;
+    }
+    
+    .strength-tag {
+      display: inline-block;
+      background-color: var(--color-primary-light);
+      color: var(--color-primary-dark);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--border-radius-full);
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .product-areas {
+      margin-bottom: 1.5rem;
+    }
+    
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .product-item {
+      background-color: var(--color-gray-100);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--border-radius-full);
+      font-size: 0.85rem;
+      color: var(--color-gray-700);
+    }
+    
+    .company-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      background-color: var(--color-gray-50);
+      border-top: 1px solid var(--color-gray-200);
+    }
+    
+    .company-rating {
+      display: flex;
+      align-items: center;
+    }
+    
+    .rating-value {
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+    
+    .rating-stars {
+      color: var(--color-yellow-400);
+    }
+    
+    .company-link {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+    
+    .company-link i {
+      margin-left: 0.5rem;
+      transition: transform 0.2s ease;
+    }
+    
+    .company-link:hover i {
+      transform: translateX(3px);
+    }
+    
+    .metrics-card {
+      background-color: white;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .metric-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.25rem;
+    }
+    
+    .metric-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .metric-icon {
+      min-width: 40px;
+      height: 40px;
+      background-color: var(--color-primary-light);
+      color: var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+    }
+    
+    .metric-content h4 {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    
+    .metric-content p {
+      color: var(--color-gray-600);
+      font-size: 0.95rem;
+    }
+    
+    .methodology-steps {
+      counter-reset: step;
+    }
+    
+    .methodology-step {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .methodology-step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      background-color: var(--color-primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .methodology-step h4 {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .methodology-step p {
+      color: var(--color-gray-600);
+      font-size: 0.95rem;
+    }
+    
+    .weight-indicator {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      background-color: var(--color-primary);
+      color: white;
+      border-radius: var(--border-radius-full);
+      font-size: 0.75rem;
+      margin-left: 0.5rem;
+    }
+    
+    .notable-products {
+      margin-bottom: 1.5rem;
+    }
+    
+    .product-highlight {
+      padding: 0.75rem;
+      background-color: var(--color-gray-50);
+      border-radius: var(--border-radius);
+      margin-bottom: 0.5rem;
+    }
+    
+    .product-highlight:last-child {
+      margin-bottom: 0;
+    }
+    
+    .product-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .product-description {
+      font-size: 0.85rem;
+      color: var(--color-gray-600);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="navbar-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="220">
+          <!-- Star/Excellence Icon -->
+          <g fill="#2563eb">
+            <!-- Star shape representing "best" -->
+            <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+            
+            <!-- Optional subtle accent -->
+            <circle cx="50" cy="50" r="25" fill="#2563eb" opacity="0.1" />
+          </g>
+          
+          <!-- WHOSBEST.ORG Text -->
+          <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#2563eb">
+            WHOSBEST<tspan fill="#2563eb" font-weight="600">.ORG</tspan>
+          </text>
+          
+          <!-- Tagline (Optional) -->
+          <text x="92" y="75" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" letter-spacing="0.5" fill="#64748b">
+            The Directory of Excellence
+          </text>
+          
+          <!-- Abstract Line Element -->
+          <path d="M85 65 L85 45" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+          
+          <!-- Abstract Dots (Excellence Indicators) -->
+          <circle cx="350" cy="40" r="3" fill="#2563eb" />
+          <circle cx="360" cy="50" r="3" fill="#2563eb" />
+          <circle cx="350" cy="60" r="3" fill="#2563eb" />
+        </svg>
+      </a>
+      
+      <div class="navbar-menu" id="navbar-menu">
+        <a href="../index.html" class="navbar-link">Home</a>
+        <a href="../about.html" class="navbar-link">About</a>
+        <a href="../categories.html" class="navbar-link">Categories</a>
+        <a href="../rankings.html" class="navbar-link active">Rankings</a>
+        <a href="../methodology.html" class="navbar-link">Methodology</a>
+        <a href="../contact.html" class="navbar-link">Contact</a>
+      </div>
+      
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-image" style="background-image: url('../assets/software-companies-hero.jpg');"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">Top 10 Software Companies Worldwide</h1>
+      <p class="hero-subtitle">Discover the world's leading software innovators that excel in product excellence, technological innovation, market impact, and customer satisfaction. Our comprehensive rankings identify companies that consistently set the standard for software development and digital transformation.</p>
+    </div>
+    <div class="hero-shape"></div>
+  </section>
+  
+  <!-- Breadcrumb -->
+  <div class="bg-gray-50 py-3">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="../categories/technology.html">Technology</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="../lists/enterprise-software.html">Software</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Top Software Companies</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <section class="py-16">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="sticky" style="top: 100px;">
+            <!-- Methodology Overview -->
+            <div class="metrics-card mb-6">
+              <h3 class="text-xl font-bold mb-4">Our Ranking Methodology</h3>
+              <p class="text-gray-600 mb-4">Our software company rankings employ a comprehensive, data-driven methodology that evaluates organizations across multiple dimensions of excellence.</p>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Product Excellence <span class="weight-indicator">25%</span></h4>
+                  <p>Quality, reliability, performance, and user experience of software products and services.</p>
+                </div>
+              </div>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Innovation & R&D <span class="weight-indicator">20%</span></h4>
+                  <p>Research investment, technological breakthroughs, and adoption of emerging technologies.</p>
+                </div>
+              </div>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Market Impact <span class="weight-indicator">20%</span></h4>
+                  <p>Market share, industry influence, ecosystem strength, and transformative impact.</p>
+                </div>
+              </div>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Financial Performance <span class="weight-indicator">20%</span></h4>
+                  <p>Revenue growth, profitability, market valuation, and business sustainability.</p>
+                </div>
+              </div>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-headset"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Customer Satisfaction <span class="weight-indicator">15%</span></h4>
+                  <p>User reviews, customer retention, support quality, and implementation success.</p>
+                </div>
+              </div>
+              
+              <div class="text-center mt-4">
+                <a href="../methodology.html#technology" class="btn btn-sm btn-outline">Full Methodology Details</a>
+              </div>
+            </div>
+            
+            <!-- Key Facts -->
+            <div class="metrics-card mb-6">
+              <h3 class="text-xl font-bold mb-4">Key Facts</h3>
+              
+              <div class="mb-4">
+                <h4 class="font-semibold mb-2">Data Sources</h4>
+                <ul class="list-disc pl-5 text-gray-600 text-sm space-y-1">
+                  <li>Financial reports and investor presentations</li>
+                  <li>Customer satisfaction surveys and reviews</li>
+                  <li>Industry analyst reports (Gartner, Forrester, IDC)</li>
+                  <li>Patent and innovation databases</li>
+                  <li>Market share and adoption metrics</li>
+                  <li>Developer surveys and platform statistics</li>
+                </ul>
+              </div>
+              
+              <div class="mb-4">
+                <h4 class="font-semibold mb-2">Evaluation Period</h4>
+                <p class="text-gray-600 text-sm">Data collected from 2022-2025, with emphasis on the most recent product releases, financial performance, and market developments.</p>
+              </div>
+              
+              <div>
+                <h4 class="font-semibold mb-2">Ranking Updates</h4>
+                <p class="text-gray-600 text-sm">Rankings are updated annually each July. Last updated: July 2025.</p>
+              </div>
+            </div>
+            
+            <!-- Related Rankings -->
+            <div class="metrics-card">
+              <h3 class="text-xl font-bold mb-4">Related Rankings</h3>
+              <ul class="space-y-2">
+                <li><a href="top-cloud-services.html" class="link-primary">Top Cloud Services</a></li>
+                <li><a href="top-ai-companies.html" class="link-primary">Top AI Companies</a></li>
+                <li><a href="top-erp-systems.html" class="link-primary">Top ERP Systems</a></li>
+                <li><a href="top-crm-software.html" class="link-primary">Top CRM Software</a></li>
+                <li><a href="top-cybersecurity-firms.html" class="link-primary">Top Cybersecurity Firms</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <!-- Introduction -->
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold mb-4">The World's Leading Software Companies</h2>
+            <p class="mb-4">Our comprehensive evaluation of software companies worldwide has identified these organizations as the pinnacle of technological excellence. These companies consistently demonstrate exceptional performance across product quality, innovation, market impact, financial performance, and customer satisfaction.</p>
+            <p>Each company in our top 10 offers unique strengths and specializations while maintaining the highest standards of software development and digital transformation. From cloud computing to artificial intelligence, enterprise solutions to consumer applications, these companies represent the best that the technology industry has to offer.</p>
+          </div>
+          
+          <!-- Software Company Rankings -->
+          <div class="company-rankings">
+            <!-- Company 1 -->
+            <div class="company-card">
+              <div class="company-header">
+                <div class="company-rank">1</div>
+                <img src="../assets/software-companies/microsoft-logo.png" alt="Microsoft Logo" class="company-logo">
+                <div>
+                  <h3 class="company-name">Microsoft Corporation</h3>
+                  <div class="company-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Redmond, Washington, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-content">
+                <div class="company-description">
+                  <p>Microsoft has established itself as the world's premier software company through its comprehensive ecosystem of productivity tools, cloud services, and enterprise solutions. The company's successful transformation from a traditional software vendor to a cloud-first, AI-driven technology leader has positioned it at the forefront of digital innovation.</p>
+                </div>
+                
+                <div class="company-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">$218B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$2.8T</div>
+                    <div class="stat-label">Market Cap</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">221,000+</div>
+                    <div class="stat-label">Employees</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1975</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="company-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Cloud Infrastructure</span>
+                    <span class="strength-tag">Enterprise Solutions</span>
+                    <span class="strength-tag">Productivity Software</span>
+                    <span class="strength-tag">AI & Machine Learning</span>
+                    <span class="strength-tag">Developer Tools</span>
+                    <span class="strength-tag">Strategic Acquisitions</span>
+                  </div>
+                </div>
+                
+                <div class="product-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Products & Services</h4>
+                  <div class="product-list">
+                    <span class="product-item">Microsoft 365</span>
+                    <span class="product-item">Azure</span>
+                    <span class="product-item">Windows</span>
+                    <span class="product-item">Dynamics 365</span>
+                    <span class="product-item">Power Platform</span>
+                    <span class="product-item">GitHub</span>
+                    <span class="product-item">LinkedIn</span>
+                  </div>
+                </div>
+                
+                <div class="notable-products">
+                  <h4 class="text-lg font-semibold mb-2">Notable Achievements</h4>
+                  <div class="product-highlight">
+                    <div class="product-title">Azure Cloud Growth</div>
+                    <div class="product-description">Azure has achieved 35% year-over-year growth, solidifying its position as the second-largest cloud provider with innovative AI and hybrid cloud capabilities.</div>
+                  </div>
+                  <div class="product-highlight">
+                    <div class="product-title">AI Integration</div>
+                    <div class="product-description">Successfully integrated advanced AI capabilities across its product portfolio, including Microsoft 365 Copilot, revolutionizing workplace productivity.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-footer">
+                <div class="company-rating">
+                  <span class="rating-value">9.8/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="company-profiles/microsoft.html" class="company-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Company 2 -->
+            <div class="company-card">
+              <div class="company-header">
+                <div class="company-rank">2</div>
+                <img src="../assets/software-companies/apple-logo.png" alt="Apple Logo" class="company-logo">
+                <div>
+                  <h3 class="company-name">Apple Inc.</h3>
+                  <div class="company-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Cupertino, California, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-content">
+                <div class="company-description">
+                  <p>Apple has redefined the intersection of software and hardware with its tightly integrated ecosystem. While primarily known for its hardware products, Apple's software excellence—from operating systems to applications and services—has created unparalleled user experiences and established new standards for design, functionality, and security.</p>
+                </div>
+                
+                <div class="company-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">$394B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$3.1T</div>
+                    <div class="stat-label">Market Cap</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">164,000+</div>
+                    <div class="stat-label">Employees</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1976</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="company-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Integrated Ecosystem</span>
+                    <span class="strength-tag">User Experience</span>
+                    <span class="strength-tag">Operating Systems</span>
+                    <span class="strength-tag">App Store Economy</span>
+                    <span class="strength-tag">Privacy & Security</span>
+                    <span class="strength-tag">Design Excellence</span>
+                  </div>
+                </div>
+                
+                <div class="product-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Products & Services</h4>
+                  <div class="product-list">
+                    <span class="product-item">iOS/iPadOS</span>
+                    <span class="product-item">macOS</span>
+                    <span class="product-item">App Store</span>
+                    <span class="product-item">iCloud</span>
+                    <span class="product-item">Apple Intelligence</span>
+                    <span class="product-item">Apple Services</span>
+                    <span class="product-item">Developer Tools</span>
+                  </div>
+                </div>
+                
+                <div class="notable-products">
+                  <h4 class="text-lg font-semibold mb-2">Notable Achievements</h4>
+                  <div class="product-highlight">
+                    <div class="product-title">Apple Intelligence Platform</div>
+                    <div class="product-description">Launched a comprehensive on-device AI system that maintains privacy while delivering advanced capabilities across the Apple ecosystem.</div>
+                  </div>
+                  <div class="product-highlight">
+                    <div class="product-title">Services Growth</div>
+                    <div class="product-description">Expanded software services to over $100 billion in annual revenue, creating a robust ecosystem beyond hardware products.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-footer">
+                <div class="company-rating">
+                  <span class="rating-value">9.7/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="company-profiles/apple.html" class="company-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Company 3 -->
+            <div class="company-card">
+              <div class="company-header">
+                <div class="company-rank">3</div>
+                <img src="../assets/software-companies/alphabet-logo.png" alt="Alphabet Logo" class="company-logo">
+                <div>
+                  <h3 class="company-name">Alphabet Inc. (Google)</h3>
+                  <div class="company-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Mountain View, California, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-content">
+                <div class="company-description">
+                  <p>Alphabet, through its Google subsidiary, has transformed how the world accesses and utilizes information. The company's software innovations span search, cloud computing, operating systems, productivity tools, and artificial intelligence. Google's ability to develop and scale software solutions has established it as a foundational pillar of the digital economy.</p>
+                </div>
+                
+                <div class="company-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">$307B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$2.1T</div>
+                    <div class="stat-label">Market Cap</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">182,000+</div>
+                    <div class="stat-label">Employees</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1998</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="company-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Search Technology</span>
+                    <span class="strength-tag">AI & Machine Learning</span>
+                    <span class="strength-tag">Cloud Infrastructure</span>
+                    <span class="strength-tag">Mobile Ecosystem</span>
+                    <span class="strength-tag">Data Analytics</span>
+                    <span class="strength-tag">Open Source Contributions</span>
+                  </div>
+                </div>
+                
+                <div class="product-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Products & Services</h4>
+                  <div class="product-list">
+                    <span class="product-item">Google Search</span>
+                    <span class="product-item">Google Cloud</span>
+                    <span class="product-item">Android</span>
+                    <span class="product-item">Google Workspace</span>
+                    <span class="product-item">Google AI</span>
+                    <span class="product-item">Chrome</span>
+                    <span class="product-item">YouTube</span>
+                  </div>
+                </div>
+                
+                <div class="notable-products">
+                  <h4 class="text-lg font-semibold mb-2">Notable Achievements</h4>
+                  <div class="product-highlight">
+                    <div class="product-title">AI Search Evolution</div>
+                    <div class="product-description">Transformed Google Search with advanced AI capabilities, maintaining market leadership while delivering more contextual and multimodal search experiences.</div>
+                  </div>
+                  <div class="product-highlight">
+                    <div class="product-title">Cloud Momentum</div>
+                    <div class="product-description">Google Cloud achieved profitability and accelerated growth, establishing itself as a strong third player in the cloud market with AI-differentiated offerings.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-footer">
+                <div class="company-rating">
+                  <span class="rating-value">9.6/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="company-profiles/alphabet.html" class="company-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Company 4 -->
+            <div class="company-card">
+              <div class="company-header">
+                <div class="company-rank">4</div>
+                <img src="../assets/software-companies/amazon-logo.png" alt="Amazon Logo" class="company-logo">
+                <div>
+                  <h3 class="company-name">Amazon.com, Inc. (AWS)</h3>
+                  <div class="company-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Seattle, Washington, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-content">
+                <div class="company-description">
+                  <p>Amazon, through its Amazon Web Services (AWS) division, revolutionized cloud computing and software delivery models. AWS has become the world's leading cloud platform, offering a comprehensive suite of infrastructure services, platform capabilities, and software solutions that power millions of applications worldwide.</p>
+                </div>
+                
+                <div class="company-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">$575B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$1.9T</div>
+                    <div class="stat-label">Market Cap</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1.5M+</div>
+                    <div class="stat-label">Employees</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1994</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="company-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Cloud Infrastructure</span>
+                    <span class="strength-tag">Service Breadth</span>
+                    <span class="strength-tag">Scalability</span>
+                    <span class="strength-tag">Developer Ecosystem</span>
+                    <span class="strength-tag">Enterprise Adoption</span>
+                    <span class="strength-tag">Innovation Pace</span>
+                  </div>
+                </div>
+                
+                <div class="product-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Products & Services</h4>
+                  <div class="product-list">
+                    <span class="product-item">AWS EC2</span>
+                    <span class="product-item">AWS S3</span>
+                    <span class="product-item">AWS Lambda</span>
+                    <span class="product-item">Amazon SageMaker</span>
+                    <span class="product-item">AWS Database Services</span>
+                    <span class="product-item">AWS AI Services</span>
+                    <span class="product-item">AWS Marketplace</span>
+                  </div>
+                </div>
+                
+                <div class="notable-products">
+                  <h4 class="text-lg font-semibold mb-2">Notable Achievements</h4>
+                  <div class="product-highlight">
+                    <div class="product-title">AWS Revenue Milestone</div>
+                    <div class="product-description">AWS reached $100 billion in annual revenue, cementing its position as the world's largest cloud provider with over 30% market share.</div>
+                  </div>
+                  <div class="product-highlight">
+                    <div class="product-title">AI Infrastructure Leadership</div>
+                    <div class="product-description">Established AWS as the leading platform for AI development and deployment with specialized chips, optimized frameworks, and managed AI services.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-footer">
+                <div class="company-rating">
+                  <span class="rating-value">9.5/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="company-profiles/amazon.html" class="company-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Company 5 -->
+            <div class="company-card">
+              <div class="company-header">
+                <div class="company-rank">5</div>
+                <img src="../assets/software-companies/salesforce-logo.png" alt="Salesforce Logo" class="company-logo">
+                <div>
+                  <h3 class="company-name">Salesforce, Inc.</h3>
+                  <div class="company-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>San Francisco, California, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-content">
+                <div class="company-description">
+                  <p>Salesforce pioneered the Software-as-a-Service (SaaS) model and has grown into the world's leading customer relationship management platform. The company's innovative cloud-based approach to enterprise software has transformed how businesses manage customer relationships, sales processes, and digital engagement.</p>
+                </div>
+                
+                <div class="company-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">$37.8B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$285B</div>
+                    <div class="stat-label">Market Cap</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">73,000+</div>
+                    <div class="stat-label">Employees</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1999</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="company-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">CRM Leadership</span>
+                    <span class="strength-tag">SaaS Innovation</span>
+                    <span class="strength-tag">Platform Ecosystem</span>
+                    <span class="strength-tag">Strategic Acquisitions</span>
+                    <span class="strength-tag">Industry Solutions</span>
+                    <span class="strength-tag">Customer Success</span>
+                  </div>
+                </div>
+                
+                <div class="product-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Products & Services</h4>
+                  <div class="product-list">
+                    <span class="product-item">Sales Cloud</span>
+                    <span class="product-item">Service Cloud</span>
+                    <span class="product-item">Marketing Cloud</span>
+                    <span class="product-item">Commerce Cloud</span>
+                    <span class="product-item">Tableau</span>
+                    <span class="product-item">Slack</span>
+                    <span class="product-item">MuleSoft</span>
+                  </div>
+                </div>
+                
+                <div class="notable-products">
+                  <h4 class="text-lg font-semibold mb-2">Notable Achievements</h4>
+                  <div class="product-highlight">
+                    <div class="product-title">AI-Powered CRM</div>
+                    <div class="product-description">Successfully integrated AI capabilities across its entire platform with Einstein, delivering predictive insights and automation to millions of users.</div>
+                  </div>
+                  <div class="product-highlight">
+                    <div class="product-title">Slack Integration</div>
+                    <div class="product-description">Transformed Slack into a central hub for the digital HQ, fully integrating it with the Salesforce ecosystem to enhance collaboration and workflow.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-footer">
+                <div class="company-rating">
+                  <span class="rating-value">9.4/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="company-profiles/salesforce.html" class="company-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Company 6 -->
+            <div class="company-card">
+              <div class="company-header">
+                <div class="company-rank">6</div>
+                <img src="../assets/software-companies/oracle-logo.png" alt="Oracle Logo" class="company-logo">
+                <div>
+                  <h3 class="company-name">Oracle Corporation</h3>
+                  <div class="company-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Austin, Texas, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-content">
+                <div class="company-description">
+                  <p>Oracle has established itself as a foundational enterprise software provider with market-leading database technology and comprehensive business applications. The company's successful transition to cloud services and continued innovation in mission-critical software has maintained its position as an essential technology partner for global enterprises.</p>
+                </div>
+                
+                <div class="company-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">$52.8B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$350B</div>
+                    <div class="stat-label">Market Cap</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">143,000+</div>
+                    <div class="stat-label">Employees</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1977</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="company-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Database Leadership</span>
+                    <span class="strength-tag">Enterprise Applications</span>
+                    <span class="strength-tag">Cloud Infrastructure</span>
+                    <span class="strength-tag">Industry Solutions</span>
+                    <span class="strength-tag">Mission-Critical Systems</span>
+                    <span class="strength-tag">Acquisition Strategy</span>
+                  </div>
+                </div>
+                
+                <div class="product-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Products & Services</h4>
+                  <div class="product-list">
+                    <span class="product-item">Oracle Database</span>
+                    <span class="product-item">Oracle Cloud Infrastructure</span>
+                    <span class="product-item">Oracle Fusion Applications</span>
+                    <span class="product-item">Oracle NetSuite</span>
+                    <span class="product-item">Oracle Autonomous Database</span>
+                    <span class="product-item">Java</span>
+                    <span class="product-item">MySQL</span>
+                  </div>
+                </div>
+                
+                <div class="notable-products">
+                  <h4 class="text-lg font-semibold mb-2">Notable Achievements</h4>
+                  <div class="product-highlight">
+                    <div class="product-title">Cloud Transformation</div>
+                    <div class="product-description">Successfully transformed into a major cloud provider with Oracle Cloud Infrastructure achieving 45% annual growth and expanding global data center presence.</div>
+                  </div>
+                  <div class="product-highlight">
+                    <div class="product-title">Autonomous Database</div>
+                    <div class="product-description">Pioneered self-driving, self-securing, and self-repairing database technology that has redefined database management and performance.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-footer">
+                <div class="company-rating">
+                  <span class="rating-value">9.3/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="company-profiles/oracle.html" class="company-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Company 7 -->
+            <div class="company-card">
+              <div class="company-header">
+                <div class="company-rank">7</div>
+                <img src="../assets/software-companies/sap-logo.png" alt="SAP Logo" class="company-logo">
+                <div>
+                  <h3 class="company-name">SAP SE</h3>
+                  <div class="company-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Walldorf, Germany</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-content">
+                <div class="company-description">
+                  <p>SAP is the global leader in enterprise resource planning (ERP) software and business applications that power the operations of organizations worldwide. The company's comprehensive suite of solutions enables businesses to manage complex processes, optimize resources, and gain real-time insights across finance, supply chain, HR, and other critical functions.</p>
+                </div>
+                
+                <div class="company-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">€31.2B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">€180B</div>
+                    <div class="stat-label">Market Cap</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">107,000+</div>
+                    <div class="stat-label">Employees</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1972</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="company-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">ERP Leadership</span>
+                    <span class="strength-tag">Business Applications</span>
+                    <span class="strength-tag">Industry Expertise</span>
+                    <span class="strength-tag">Global Presence</span>
+                    <span class="strength-tag">Enterprise Integration</span>
+                    <span class="strength-tag">Process Optimization</span>
+                  </div>
+                </div>
+                
+                <div class="product-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Products & Services</h4>
+                  <div class="product-list">
+                    <span class="product-item">SAP S/4HANA</span>
+                    <span class="product-item">SAP Business Technology Platform</span>
+                    <span class="product-item">SAP SuccessFactors</span>
+                    <span class="product-item">SAP Ariba</span>
+                    <span class="product-item">SAP Customer Experience</span>
+                    <span class="product-item">SAP Business Network</span>
+                    <span class="product-item">SAP Analytics Cloud</span>
+                  </div>
+                </div>
+                
+                <div class="notable-products">
+                  <h4 class="text-lg font-semibold mb-2">Notable Achievements</h4>
+                  <div class="product-highlight">
+                    <div class="product-title">Cloud Transformation</div>
+                    <div class="product-description">Successfully pivoted to a cloud-first strategy with cloud revenue growing to represent over 40% of total revenue, driving recurring revenue growth.</div>
+                  </div>
+                  <div class="product-highlight">
+                    <div class="product-title">RISE with SAP</div>
+                    <div class="product-description">Launched innovative business transformation as a service offering that accelerates customer cloud adoption and digital transformation journeys.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-footer">
+                <div class="company-rating">
+                  <span class="rating-value">9.2/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="company-profiles/sap.html" class="company-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Company 8 -->
+            <div class="company-card">
+              <div class="company-header">
+                <div class="company-rank">8</div>
+                <img src="../assets/software-companies/adobe-logo.png" alt="Adobe Logo" class="company-logo">
+                <div>
+                  <h3 class="company-name">Adobe Inc.</h3>
+                  <div class="company-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>San Jose, California, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-content">
+                <div class="company-description">
+                  <p>Adobe has transformed from a desktop software provider to a comprehensive cloud platform for creativity, marketing, and document management. The company's successful transition to subscription-based services and continuous innovation in digital experience technologies has established it as an essential partner for creative professionals and enterprises alike.</p>
+                </div>
+                
+                <div class="company-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">$19.4B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$240B</div>
+                    <div class="stat-label">Market Cap</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">29,000+</div>
+                    <div class="stat-label">Employees</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1982</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="company-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Creative Software</span>
+                    <span class="strength-tag">Document Solutions</span>
+                    <span class="strength-tag">Marketing Technology</span>
+                    <span class="strength-tag">Subscription Model</span>
+                    <span class="strength-tag">AI Integration</span>
+                    <span class="strength-tag">Industry Standards</span>
+                  </div>
+                </div>
+                
+                <div class="product-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Products & Services</h4>
+                  <div class="product-list">
+                    <span class="product-item">Creative Cloud</span>
+                    <span class="product-item">Document Cloud</span>
+                    <span class="product-item">Experience Cloud</span>
+                    <span class="product-item">Adobe Firefly</span>
+                    <span class="product-item">Acrobat</span>
+                    <span class="product-item">Photoshop</span>
+                    <span class="product-item">Premiere Pro</span>
+                  </div>
+                </div>
+                
+                <div class="notable-products">
+                  <h4 class="text-lg font-semibold mb-2">Notable Achievements</h4>
+                  <div class="product-highlight">
+                    <div class="product-title">Generative AI Leadership</div>
+                    <div class="product-description">Successfully launched Adobe Firefly, establishing leadership in commercially viable generative AI for creative professionals with responsible content credentials.</div>
+                  </div>
+                  <div class="product-highlight">
+                    <div class="product-title">Experience Platform Growth</div>
+                    <div class="product-description">Developed the industry-leading digital experience platform that unifies customer data, content, and insights for personalized experiences at scale.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-footer">
+                <div class="company-rating">
+                  <span class="rating-value">9.1/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="company-profiles/adobe.html" class="company-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Company 9 -->
+            <div class="company-card">
+              <div class="company-header">
+                <div class="company-rank">9</div>
+                <img src="../assets/software-companies/servicenow-logo.png" alt="ServiceNow Logo" class="company-logo">
+                <div>
+                  <h3 class="company-name">ServiceNow, Inc.</h3>
+                  <div class="company-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Santa Clara, California, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-content">
+                <div class="company-description">
+                  <p>ServiceNow has revolutionized enterprise workflow management with its cloud-based platform that digitizes and automates complex business processes. The company's rapid growth and continuous expansion into new workflow domains has established it as an essential platform for digital transformation across IT, employee, customer, and creator workflows.</p>
+                </div>
+                
+                <div class="company-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">$8.5B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$190B</div>
+                    <div class="stat-label">Market Cap</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">20,000+</div>
+                    <div class="stat-label">Employees</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">2004</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="company-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Workflow Automation</span>
+                    <span class="strength-tag">Platform Approach</span>
+                    <span class="strength-tag">Enterprise Adoption</span>
+                    <span class="strength-tag">Low-Code Development</span>
+                    <span class="strength-tag">Integration Capabilities</span>
+                    <span class="strength-tag">Customer Satisfaction</span>
+                  </div>
+                </div>
+                
+                <div class="product-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Products & Services</h4>
+                  <div class="product-list">
+                    <span class="product-item">IT Service Management</span>
+                    <span class="product-item">IT Operations Management</span>
+                    <span class="product-item">Customer Service Management</span>
+                    <span class="product-item">HR Service Delivery</span>
+                    <span class="product-item">Now Platform</span>
+                    <span class="product-item">App Engine</span>
+                    <span class="product-item">Integration Hub</span>
+                  </div>
+                </div>
+                
+                <div class="notable-products">
+                  <h4 class="text-lg font-semibold mb-2">Notable Achievements</h4>
+                  <div class="product-highlight">
+                    <div class="product-title">AI-Powered Workflows</div>
+                    <div class="product-description">Successfully integrated advanced AI capabilities across the Now Platform, enhancing productivity and automation with predictive intelligence.</div>
+                  </div>
+                  <div class="product-highlight">
+                    <div class="product-title">Industry Solutions</div>
+                    <div class="product-description">Developed specialized industry solutions for healthcare, financial services, manufacturing, and telecommunications, accelerating digital transformation in key sectors.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-footer">
+                <div class="company-rating">
+                  <span class="rating-value">9.0/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="company-profiles/servicenow.html" class="company-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Company 10 -->
+            <div class="company-card">
+              <div class="company-header">
+                <div class="company-rank">10</div>
+                <img src="../assets/software-companies/nvidia-logo.png" alt="NVIDIA Logo" class="company-logo">
+                <div>
+                  <h3 class="company-name">NVIDIA Corporation</h3>
+                  <div class="company-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Santa Clara, California, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-content">
+                <div class="company-description">
+                  <p>While primarily known for its hardware, NVIDIA has transformed into a comprehensive computing platform company with software that powers AI, high-performance computing, graphics, and autonomous systems. The company's CUDA ecosystem, AI frameworks, and industry-specific software platforms have established it as a critical enabler of the AI revolution.</p>
+                </div>
+                
+                <div class="company-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">$60.9B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$3.0T</div>
+                    <div class="stat-label">Market Cap</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">26,000+</div>
+                    <div class="stat-label">Employees</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1993</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="company-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">AI Software</span>
+                    <span class="strength-tag">Developer Ecosystem</span>
+                    <span class="strength-tag">Industry Solutions</span>
+                    <span class="strength-tag">Graphics Software</span>
+                    <span class="strength-tag">Simulation Platforms</span>
+                    <span class="strength-tag">Software-Hardware Integration</span>
+                  </div>
+                </div>
+                
+                <div class="product-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Products & Services</h4>
+                  <div class="product-list">
+                    <span class="product-item">CUDA</span>
+                    <span class="product-item">NVIDIA AI Enterprise</span>
+                    <span class="product-item">Omniverse</span>
+                    <span class="product-item">DRIVE</span>
+                    <span class="product-item">Metropolis</span>
+                    <span class="product-item">Clara</span>
+                    <span class="product-item">GeForce Experience</span>
+                  </div>
+                </div>
+                
+                <div class="notable-products">
+                  <h4 class="text-lg font-semibold mb-2">Notable Achievements</h4>
+                  <div class="product-highlight">
+                    <div class="product-title">AI Software Leadership</div>
+                    <div class="product-description">Established NVIDIA AI Enterprise as the leading software platform for AI development and deployment, powering the majority of global AI workloads.</div>
+                  </div>
+                  <div class="product-highlight">
+                    <div class="product-title">Omniverse Platform</div>
+                    <div class="product-description">Developed the groundbreaking Omniverse platform for 3D design collaboration and simulation, enabling industrial metaverse applications across industries.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="company-footer">
+                <div class="company-rating">
+                  <span class="rating-value">8.9/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="company-profiles/nvidia.html" class="company-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Methodology Details -->
+          <div class="mt-12">
+            <h2 class="text-3xl font-bold mb-6">Our Software Company Ranking Methodology</h2>
+            <p class="mb-6">At WhosBest.org, we employ a comprehensive, data-driven approach to evaluate software companies across multiple dimensions of excellence. Our methodology combines quantitative metrics with qualitative assessments to provide a holistic view of each company's strengths and achievements.</p>
+            
+            <div class="methodology-steps mb-8">
+              <div class="methodology-step">
+                <h4>Data Collection</h4>
+                <p>We gather data from multiple sources, including financial reports, customer reviews, analyst assessments, patent databases, and market share analyses. All data undergoes rigorous verification to ensure accuracy and currency.</p>
+              </div>
+              
+              <div class="methodology-step">
+                <h4>Evaluation Criteria</h4>
+                <p>Software companies are evaluated across five key dimensions: Product Excellence (25%), Innovation & R&D (20%), Market Impact (20%), Financial Performance (20%), and Customer Satisfaction (15%). Each dimension comprises multiple specific metrics designed to capture different aspects of software company performance.</p>
+              </div>
+              
+              <div class="methodology-step">
+                <h4>Scoring System</h4>
+                <p>Each metric is standardized to enable fair comparisons across companies of different sizes and types. Weighted scores are calculated for each dimension and combined to produce an overall score on a scale of 0-10, determining the final ranking position.</p>
+              </div>
+              
+              <div class="methodology-step">
+                <h4>Expert Review</h4>
+                <p>A panel of technology industry experts reviews the preliminary rankings to provide qualitative insights and identify any anomalies that require further investigation. This human oversight ensures that our data-driven approach captures nuances that numbers alone might miss.</p>
+              </div>
+              
+              <div class="methodology-step">
+                <h4>Annual Updates</h4>
+                <p>Rankings are updated annually to reflect the latest data and developments in the software industry. Our methodology is continuously refined to ensure it remains relevant and accurately captures what constitutes excellence in the rapidly evolving technology landscape.</p>
+              </div>
+            </div>
+            
+            <div class="text-center">
+              <a href="../methodology.html#technology" class="btn btn-primary">View Detailed Methodology</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Find Your Ideal Software Partner</h2>
+        <p class="text-gray-600 mb-8">Explore our comprehensive software company rankings and detailed profiles to discover organizations that align with your specific technology needs and business objectives.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="../tools/software-solution-finder.html" class="btn btn-primary btn-lg">Try Our Solution Finder</a>
+          <a href="../categories/technology.html" class="btn btn-outline btn-lg">Explore All Technology Rankings</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <div class="footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="150">
+            <!-- Star/Excellence Icon -->
+            <g fill="#ffffff">
+              <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+              <circle cx="50" cy="50" r="25" fill="#ffffff" opacity="0.1" />
+            </g>
+            
+            <!-- WHOSBEST.ORG Text -->
+            <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#ffffff">
+              WHOSBEST<tspan fill="#ffffff" font-weight="600">.ORG</tspan>
+            </text>
+          </svg>
+        </div>
+        <p class="footer-description">WhosBest.org is the definitive directory of excellence, providing comprehensive rankings across multiple categories to help you make informed decisions.</p>
+        
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Categories</h4>
+        <div class="footer-links">
+          <a href="../categories/healthcare.html" class="footer-link">Healthcare</a>
+          <a href="../categories/professional-services.html" class="footer-link">Professional Services</a>
+          <a href="../categories/technology.html" class="footer-link">Technology</a>
+          <a href="../categories/education.html" class="footer-link">Education</a>
+          <a href="../categories/local-business.html" class="footer-link">Local Business</a>
+          <a href="../categories.html" class="footer-link">View All Categories</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <div class="footer-links">
+          <a href="../about.html" class="footer-link">About Us</a>
+          <a href="../methodology.html" class="footer-link">Our Methodology</a>
+          <a href="../rankings.html" class="footer-link">Latest Rankings</a>
+          <a href="../submit.html" class="footer-link">Submit a Business</a>
+          <a href="../contact.html" class="footer-link">Contact Us</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Legal</h4>
+        <div class="footer-links">
+          <a href="../privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="../terms.html" class="footer-link">Terms of Service</a>
+          <a href="../disclaimer.html" class="footer-link">Disclaimer</a>
+          <a href="../accessibility.html" class="footer-link">Accessibility</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2025 WhosBest.org. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script>
+    $(document).ready(function() {
+      // Navbar scroll effect
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 50) {
+          $('#navbar').addClass('navbar-scrolled');
+        } else {
+          $('#navbar').removeClass('navbar-scrolled');
+        }
+      });
+      
+      // Mobile menu toggle
+      $('#navbar-toggle').click(function() {
+        $('#navbar-menu').toggleClass('open');
+      });
+      
+      // Animation for staggered items
+      setTimeout(function() {
+        $('.company-card').each(function(index) {
+          var $this = $(this);
+          setTimeout(function() {
+            $this.css('opacity', '1');
+          }, index * 100);
+        });
+      }, 300);
+      
+      // Smooth scroll for anchor links
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top - 100
+          }, 800);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover WhosBest.org's definitive ranking of the top 10 legal firms worldwide. Comprehensive analysis of legal expertise, client satisfaction, case outcomes, and industry reputation.">
+  <meta name="keywords" content="top law firms, best legal firms, law firm rankings, legal services rankings, corporate law firms, litigation firms, best lawyers, legal excellence">
+  <meta name="author" content="WhosBest.org">
+  <meta property="og:title" content="Top 10 Legal Firms | WhosBest.org | The Directory of Excellence">
+  <meta property="og:description" content="Explore our data-driven rankings of the world's top 10 legal firms, with detailed profiles, practice areas, and comprehensive evaluation metrics.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whosbest.org/lists/top-legal-firms.html">
+  <meta property="og:image" content="../assets/legal-firms-rankings-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <title>Top 10 Legal Firms | WhosBest.org | The Directory of Excellence</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  
+  <style>
+    /* Additional styles specific to legal firm rankings */
+    .firm-rank {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: var(--color-primary);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+    
+    .firm-card {
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow);
+      background-color: white;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+    }
+    
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    
+    .firm-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .firm-header {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--color-gray-200);
+    }
+    
+    .firm-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-right: 1rem;
+      background-color: var(--color-gray-50);
+      padding: 0.5rem;
+      border-radius: var(--border-radius);
+    }
+    
+    .firm-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
+    
+    .firm-location {
+      color: var(--color-gray-600);
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    
+    .firm-location i {
+      margin-right: 0.5rem;
+      color: var(--color-gray-400);
+    }
+    
+    .firm-content {
+      padding: 1.5rem;
+    }
+    
+    .firm-description {
+      margin-bottom: 1.5rem;
+    }
+    
+    .firm-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .stat-item {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--color-gray-50);
+      border-radius: var(--border-radius);
+    }
+    
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--color-primary);
+      margin-bottom: 0.25rem;
+    }
+    
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--color-gray-600);
+    }
+    
+    .firm-strengths {
+      margin-bottom: 1.5rem;
+    }
+    
+    .strength-tag {
+      display: inline-block;
+      background-color: var(--color-primary-light);
+      color: var(--color-primary-dark);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--border-radius-full);
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .practice-areas {
+      margin-bottom: 1.5rem;
+    }
+    
+    .practice-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .practice-item {
+      background-color: var(--color-gray-100);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--border-radius-full);
+      font-size: 0.85rem;
+      color: var(--color-gray-700);
+    }
+    
+    .firm-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      background-color: var(--color-gray-50);
+      border-top: 1px solid var(--color-gray-200);
+    }
+    
+    .firm-rating {
+      display: flex;
+      align-items: center;
+    }
+    
+    .rating-value {
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+    
+    .rating-stars {
+      color: var(--color-yellow-400);
+    }
+    
+    .firm-link {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+    
+    .firm-link i {
+      margin-left: 0.5rem;
+      transition: transform 0.2s ease;
+    }
+    
+    .firm-link:hover i {
+      transform: translateX(3px);
+    }
+    
+    .metrics-card {
+      background-color: white;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .metric-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.25rem;
+    }
+    
+    .metric-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .metric-icon {
+      min-width: 40px;
+      height: 40px;
+      background-color: var(--color-primary-light);
+      color: var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+    }
+    
+    .metric-content h4 {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    
+    .metric-content p {
+      color: var(--color-gray-600);
+      font-size: 0.95rem;
+    }
+    
+    .methodology-steps {
+      counter-reset: step;
+    }
+    
+    .methodology-step {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .methodology-step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      background-color: var(--color-primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .methodology-step h4 {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .methodology-step p {
+      color: var(--color-gray-600);
+      font-size: 0.95rem;
+    }
+    
+    .weight-indicator {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      background-color: var(--color-primary);
+      color: white;
+      border-radius: var(--border-radius-full);
+      font-size: 0.75rem;
+      margin-left: 0.5rem;
+    }
+    
+    .notable-cases {
+      margin-bottom: 1.5rem;
+    }
+    
+    .case-item {
+      padding: 0.75rem;
+      background-color: var(--color-gray-50);
+      border-radius: var(--border-radius);
+      margin-bottom: 0.5rem;
+    }
+    
+    .case-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .case-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .case-description {
+      font-size: 0.85rem;
+      color: var(--color-gray-600);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="navbar-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="220">
+          <!-- Star/Excellence Icon -->
+          <g fill="#2563eb">
+            <!-- Star shape representing "best" -->
+            <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+            
+            <!-- Optional subtle accent -->
+            <circle cx="50" cy="50" r="25" fill="#2563eb" opacity="0.1" />
+          </g>
+          
+          <!-- WHOSBEST.ORG Text -->
+          <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#2563eb">
+            WHOSBEST<tspan fill="#2563eb" font-weight="600">.ORG</tspan>
+          </text>
+          
+          <!-- Tagline (Optional) -->
+          <text x="92" y="75" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" letter-spacing="0.5" fill="#64748b">
+            The Directory of Excellence
+          </text>
+          
+          <!-- Abstract Line Element -->
+          <path d="M85 65 L85 45" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+          
+          <!-- Abstract Dots (Excellence Indicators) -->
+          <circle cx="350" cy="40" r="3" fill="#2563eb" />
+          <circle cx="360" cy="50" r="3" fill="#2563eb" />
+          <circle cx="350" cy="60" r="3" fill="#2563eb" />
+        </svg>
+      </a>
+      
+      <div class="navbar-menu" id="navbar-menu">
+        <a href="../index.html" class="navbar-link">Home</a>
+        <a href="../about.html" class="navbar-link">About</a>
+        <a href="../categories.html" class="navbar-link">Categories</a>
+        <a href="../rankings.html" class="navbar-link active">Rankings</a>
+        <a href="../methodology.html" class="navbar-link">Methodology</a>
+        <a href="../contact.html" class="navbar-link">Contact</a>
+      </div>
+      
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-image" style="background-image: url('../assets/legal-firms-hero.jpg');"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">Top 10 Legal Firms Worldwide</h1>
+      <p class="hero-subtitle">Discover the world's leading legal practices that excel in client service, case outcomes, legal innovation, and industry reputation. Our comprehensive rankings identify law firms that consistently set the standard for legal excellence across practice areas and jurisdictions.</p>
+    </div>
+    <div class="hero-shape"></div>
+  </section>
+  
+  <!-- Breadcrumb -->
+  <div class="bg-gray-50 py-3">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="../categories/professional-services.html">Professional Services</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="../lists/legal-services.html">Legal Services</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Top Legal Firms</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <section class="py-16">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="sticky" style="top: 100px;">
+            <!-- Methodology Overview -->
+            <div class="metrics-card mb-6">
+              <h3 class="text-xl font-bold mb-4">Our Ranking Methodology</h3>
+              <p class="text-gray-600 mb-4">Our legal firm rankings employ a comprehensive, data-driven methodology that evaluates practices across multiple dimensions of excellence.</p>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-gavel"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Case Outcomes <span class="weight-indicator">25%</span></h4>
+                  <p>Success rates, landmark cases, and the significance of legal precedents established.</p>
+                </div>
+              </div>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Legal Expertise <span class="weight-indicator">25%</span></h4>
+                  <p>Depth and breadth of legal knowledge, specializations, and attorney credentials.</p>
+                </div>
+              </div>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Client Satisfaction <span class="weight-indicator">20%</span></h4>
+                  <p>Client feedback, retention rates, and testimonials from businesses and individuals.</p>
+                </div>
+              </div>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-globe-americas"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Industry Reputation <span class="weight-indicator">15%</span></h4>
+                  <p>Peer recognition, industry awards, and standing within the legal community.</p>
+                </div>
+              </div>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Innovation & Growth <span class="weight-indicator">15%</span></h4>
+                  <p>Legal technology adoption, business model innovation, and strategic expansion.</p>
+                </div>
+              </div>
+              
+              <div class="text-center mt-4">
+                <a href="../methodology.html#professional-services" class="btn btn-sm btn-outline">Full Methodology Details</a>
+              </div>
+            </div>
+            
+            <!-- Key Facts -->
+            <div class="metrics-card mb-6">
+              <h3 class="text-xl font-bold mb-4">Key Facts</h3>
+              
+              <div class="mb-4">
+                <h4 class="font-semibold mb-2">Data Sources</h4>
+                <ul class="list-disc pl-5 text-gray-600 text-sm space-y-1">
+                  <li>Peer review surveys among legal professionals</li>
+                  <li>Client satisfaction surveys and interviews</li>
+                  <li>Public court records and case outcomes</li>
+                  <li>Financial performance data</li>
+                  <li>Industry association recognitions</li>
+                  <li>Legal directories and publications</li>
+                </ul>
+              </div>
+              
+              <div class="mb-4">
+                <h4 class="font-semibold mb-2">Evaluation Period</h4>
+                <p class="text-gray-600 text-sm">Data collected from 2022-2025, with emphasis on the most recent client engagements and case outcomes.</p>
+              </div>
+              
+              <div>
+                <h4 class="font-semibold mb-2">Ranking Updates</h4>
+                <p class="text-gray-600 text-sm">Rankings are updated annually each July. Last updated: July 2025.</p>
+              </div>
+            </div>
+            
+            <!-- Related Rankings -->
+            <div class="metrics-card">
+              <h3 class="text-xl font-bold mb-4">Related Rankings</h3>
+              <ul class="space-y-2">
+                <li><a href="top-corporate-law-firms.html" class="link-primary">Top Corporate Law Firms</a></li>
+                <li><a href="top-litigation-firms.html" class="link-primary">Top Litigation Specialists</a></li>
+                <li><a href="top-ip-law-firms.html" class="link-primary">Top Intellectual Property Law Firms</a></li>
+                <li><a href="top-employment-law-firms.html" class="link-primary">Top Employment Law Firms</a></li>
+                <li><a href="top-tax-law-firms.html" class="link-primary">Top Tax Law Firms</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <!-- Introduction -->
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold mb-4">The World's Leading Legal Firms</h2>
+            <p class="mb-4">Our comprehensive evaluation of legal practices worldwide has identified these firms as the pinnacle of legal excellence. These organizations consistently demonstrate exceptional performance across client service, case outcomes, legal expertise, industry reputation, and innovation.</p>
+            <p>Each firm in our top 10 offers unique strengths and specializations while maintaining the highest standards of legal practice. From landmark litigation victories to groundbreaking corporate transactions, these firms represent the best that the legal profession has to offer.</p>
+          </div>
+          
+          <!-- Legal Firm Rankings -->
+          <div class="firm-rankings">
+            <!-- Firm 1 -->
+            <div class="firm-card">
+              <div class="firm-header">
+                <div class="firm-rank">1</div>
+                <img src="../assets/legal-firms/latham-watkins-logo.png" alt="Latham & Watkins Logo" class="firm-logo">
+                <div>
+                  <h3 class="firm-name">Latham & Watkins LLP</h3>
+                  <div class="firm-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Global (HQ: New York, USA)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-content">
+                <div class="firm-description">
+                  <p>Latham & Watkins has established itself as the world's premier legal practice, known for its exceptional work in complex corporate transactions and high-stakes litigation. With a truly integrated global platform and collaborative culture, the firm delivers consistent excellence across jurisdictions and practice areas.</p>
+                </div>
+                
+                <div class="firm-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">3,000+</div>
+                    <div class="stat-label">Attorneys</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">29</div>
+                    <div class="stat-label">Global Offices</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$5.2B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1934</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="firm-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Global Integration</span>
+                    <span class="strength-tag">Cross-Border Transactions</span>
+                    <span class="strength-tag">Complex Litigation</span>
+                    <span class="strength-tag">Industry Knowledge</span>
+                    <span class="strength-tag">Client Service Excellence</span>
+                    <span class="strength-tag">Legal Innovation</span>
+                  </div>
+                </div>
+                
+                <div class="practice-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Practice Areas</h4>
+                  <div class="practice-list">
+                    <span class="practice-item">M&A</span>
+                    <span class="practice-item">Private Equity</span>
+                    <span class="practice-item">Capital Markets</span>
+                    <span class="practice-item">Banking</span>
+                    <span class="practice-item">Litigation</span>
+                    <span class="practice-item">Antitrust</span>
+                    <span class="practice-item">Intellectual Property</span>
+                  </div>
+                </div>
+                
+                <div class="notable-cases">
+                  <h4 class="text-lg font-semibold mb-2">Notable Work</h4>
+                  <div class="case-item">
+                    <div class="case-title">Global Tech Merger</div>
+                    <div class="case-description">Led the $68 billion merger between two technology giants, navigating complex regulatory challenges across 12 jurisdictions.</div>
+                  </div>
+                  <div class="case-item">
+                    <div class="case-title">Landmark Antitrust Defense</div>
+                    <div class="case-description">Successfully defended a Fortune 10 company in one of the largest antitrust cases of the decade.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-footer">
+                <div class="firm-rating">
+                  <span class="rating-value">9.8/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="firm-profiles/latham-watkins.html" class="firm-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Firm 2 -->
+            <div class="firm-card">
+              <div class="firm-header">
+                <div class="firm-rank">2</div>
+                <img src="../assets/legal-firms/kirkland-ellis-logo.png" alt="Kirkland & Ellis Logo" class="firm-logo">
+                <div>
+                  <h3 class="firm-name">Kirkland & Ellis LLP</h3>
+                  <div class="firm-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Global (HQ: Chicago, USA)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-content">
+                <div class="firm-description">
+                  <p>Kirkland & Ellis has established itself as a global powerhouse, particularly renowned for its market-leading private equity practice and litigation capabilities. The firm's entrepreneurial culture and business-focused approach have made it the go-to counsel for complex, high-stakes matters worldwide.</p>
+                </div>
+                
+                <div class="firm-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">3,000+</div>
+                    <div class="stat-label">Attorneys</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">18</div>
+                    <div class="stat-label">Global Offices</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$6.0B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1909</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="firm-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Private Equity Excellence</span>
+                    <span class="strength-tag">Complex Transactions</span>
+                    <span class="strength-tag">Restructuring</span>
+                    <span class="strength-tag">Trial Expertise</span>
+                    <span class="strength-tag">Deal Execution</span>
+                    <span class="strength-tag">Industry Specialization</span>
+                  </div>
+                </div>
+                
+                <div class="practice-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Practice Areas</h4>
+                  <div class="practice-list">
+                    <span class="practice-item">Private Equity</span>
+                    <span class="practice-item">M&A</span>
+                    <span class="practice-item">Restructuring</span>
+                    <span class="practice-item">Complex Litigation</span>
+                    <span class="practice-item">Intellectual Property</span>
+                    <span class="practice-item">Capital Markets</span>
+                  </div>
+                </div>
+                
+                <div class="notable-cases">
+                  <h4 class="text-lg font-semibold mb-2">Notable Work</h4>
+                  <div class="case-item">
+                    <div class="case-title">Record-Breaking Private Equity Deal</div>
+                    <div class="case-description">Advised on the largest private equity buyout in history, valued at over $100 billion.</div>
+                  </div>
+                  <div class="case-item">
+                    <div class="case-title">Complex Restructuring</div>
+                    <div class="case-description">Led one of the most complex corporate restructurings of the decade, preserving billions in value.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-footer">
+                <div class="firm-rating">
+                  <span class="rating-value">9.7/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="firm-profiles/kirkland-ellis.html" class="firm-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Firm 3 -->
+            <div class="firm-card">
+              <div class="firm-header">
+                <div class="firm-rank">3</div>
+                <img src="../assets/legal-firms/skadden-logo.png" alt="Skadden Logo" class="firm-logo">
+                <div>
+                  <h3 class="firm-name">Skadden, Arps, Slate, Meagher & Flom LLP</h3>
+                  <div class="firm-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Global (HQ: New York, USA)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-content">
+                <div class="firm-description">
+                  <p>Skadden has long been synonymous with high-stakes, complex legal matters, particularly in M&A and securities litigation. The firm's strategic approach to solving clients' most challenging legal issues has established it as a trusted advisor to corporations, financial institutions, and governments worldwide.</p>
+                </div>
+                
+                <div class="firm-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">1,700+</div>
+                    <div class="stat-label">Attorneys</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">22</div>
+                    <div class="stat-label">Global Offices</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$3.2B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1948</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="firm-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">M&A Excellence</span>
+                    <span class="strength-tag">Securities Litigation</span>
+                    <span class="strength-tag">Regulatory Expertise</span>
+                    <span class="strength-tag">Crisis Management</span>
+                    <span class="strength-tag">Strategic Counsel</span>
+                    <span class="strength-tag">Global Coordination</span>
+                  </div>
+                </div>
+                
+                <div class="practice-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Practice Areas</h4>
+                  <div class="practice-list">
+                    <span class="practice-item">M&A</span>
+                    <span class="practice-item">Securities Litigation</span>
+                    <span class="practice-item">Corporate Governance</span>
+                    <span class="practice-item">White Collar Defense</span>
+                    <span class="practice-item">Regulatory</span>
+                    <span class="practice-item">Tax</span>
+                  </div>
+                </div>
+                
+                <div class="notable-cases">
+                  <h4 class="text-lg font-semibold mb-2">Notable Work</h4>
+                  <div class="case-item">
+                    <div class="case-title">Transformative Cross-Border Merger</div>
+                    <div class="case-description">Advised on a $45 billion cross-border merger that reshaped an entire industry sector.</div>
+                  </div>
+                  <div class="case-item">
+                    <div class="case-title">High-Profile Securities Defense</div>
+                    <div class="case-description">Successfully defended a global financial institution in a multi-billion dollar securities class action.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-footer">
+                <div class="firm-rating">
+                  <span class="rating-value">9.6/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="firm-profiles/skadden.html" class="firm-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Firm 4 -->
+            <div class="firm-card">
+              <div class="firm-header">
+                <div class="firm-rank">4</div>
+                <img src="../assets/legal-firms/allen-overy-logo.png" alt="Allen & Overy Logo" class="firm-logo">
+                <div>
+                  <h3 class="firm-name">Allen & Overy LLP</h3>
+                  <div class="firm-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Global (HQ: London, UK)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-content">
+                <div class="firm-description">
+                  <p>Allen & Overy stands as a global elite law firm with particular strength in banking, capital markets, and international transactions. The firm's innovative approach and deep sector expertise have established it as a market leader in complex cross-border matters across Europe, Asia, and emerging markets.</p>
+                </div>
+                
+                <div class="firm-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">2,800+</div>
+                    <div class="stat-label">Attorneys</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">43</div>
+                    <div class="stat-label">Global Offices</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">£1.94B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1930</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="firm-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Banking Excellence</span>
+                    <span class="strength-tag">Capital Markets</span>
+                    <span class="strength-tag">Global Reach</span>
+                    <span class="strength-tag">Emerging Markets</span>
+                    <span class="strength-tag">Legal Innovation</span>
+                    <span class="strength-tag">Cross-Border Expertise</span>
+                  </div>
+                </div>
+                
+                <div class="practice-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Practice Areas</h4>
+                  <div class="practice-list">
+                    <span class="practice-item">Banking</span>
+                    <span class="practice-item">Capital Markets</span>
+                    <span class="practice-item">Corporate/M&A</span>
+                    <span class="practice-item">Project Finance</span>
+                    <span class="practice-item">Financial Regulation</span>
+                    <span class="practice-item">International Arbitration</span>
+                  </div>
+                </div>
+                
+                <div class="notable-cases">
+                  <h4 class="text-lg font-semibold mb-2">Notable Work</h4>
+                  <div class="case-item">
+                    <div class="case-title">Landmark Banking Merger</div>
+                    <div class="case-description">Advised on the €30 billion merger between two of Europe's largest financial institutions.</div>
+                  </div>
+                  <div class="case-item">
+                    <div class="case-title">Innovative Green Bond Issuance</div>
+                    <div class="case-description">Structured a pioneering $5 billion green bond program that set new market standards.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-footer">
+                <div class="firm-rating">
+                  <span class="rating-value">9.5/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="firm-profiles/allen-overy.html" class="firm-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Firm 5 -->
+            <div class="firm-card">
+              <div class="firm-header">
+                <div class="firm-rank">5</div>
+                <img src="../assets/legal-firms/clifford-chance-logo.png" alt="Clifford Chance Logo" class="firm-logo">
+                <div>
+                  <h3 class="firm-name">Clifford Chance LLP</h3>
+                  <div class="firm-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Global (HQ: London, UK)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-content">
+                <div class="firm-description">
+                  <p>Clifford Chance combines exceptional legal expertise with deep industry knowledge to deliver strategic solutions to the world's leading corporations and financial institutions. The firm's truly integrated global platform and collaborative culture enable it to handle the most complex cross-border matters with sophistication and precision.</p>
+                </div>
+                
+                <div class="firm-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">3,300+</div>
+                    <div class="stat-label">Attorneys</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">32</div>
+                    <div class="stat-label">Global Offices</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">£1.97B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1987</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="firm-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Global Integration</span>
+                    <span class="strength-tag">Financial Markets</span>
+                    <span class="strength-tag">Corporate Transactions</span>
+                    <span class="strength-tag">Regulatory Expertise</span>
+                    <span class="strength-tag">Industry Knowledge</span>
+                    <span class="strength-tag">International Arbitration</span>
+                  </div>
+                </div>
+                
+                <div class="practice-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Practice Areas</h4>
+                  <div class="practice-list">
+                    <span class="practice-item">Banking & Finance</span>
+                    <span class="practice-item">Capital Markets</span>
+                    <span class="practice-item">Corporate/M&A</span>
+                    <span class="practice-item">Private Equity</span>
+                    <span class="practice-item">Financial Regulation</span>
+                    <span class="practice-item">International Arbitration</span>
+                  </div>
+                </div>
+                
+                <div class="notable-cases">
+                  <h4 class="text-lg font-semibold mb-2">Notable Work</h4>
+                  <div class="case-item">
+                    <div class="case-title">Groundbreaking Infrastructure Project</div>
+                    <div class="case-description">Advised on a $25 billion infrastructure project spanning three continents with novel financing structures.</div>
+                  </div>
+                  <div class="case-item">
+                    <div class="case-title">Complex Regulatory Investigation</div>
+                    <div class="case-description">Successfully represented a global financial institution in a multi-jurisdictional regulatory investigation.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-footer">
+                <div class="firm-rating">
+                  <span class="rating-value">9.4/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="firm-profiles/clifford-chance.html" class="firm-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Firm 6 -->
+            <div class="firm-card">
+              <div class="firm-header">
+                <div class="firm-rank">6</div>
+                <img src="../assets/legal-firms/davis-polk-logo.png" alt="Davis Polk Logo" class="firm-logo">
+                <div>
+                  <h3 class="firm-name">Davis Polk & Wardwell LLP</h3>
+                  <div class="firm-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Global (HQ: New York, USA)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-content">
+                <div class="firm-description">
+                  <p>Davis Polk is renowned for its sophisticated advice on the most complex and high-stakes matters, particularly in capital markets, M&A, and financial regulation. The firm's intellectual rigor, precision, and judgment have made it a trusted advisor to the world's leading corporations, financial institutions, and governments.</p>
+                </div>
+                
+                <div class="firm-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">1,000+</div>
+                    <div class="stat-label">Attorneys</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">10</div>
+                    <div class="stat-label">Global Offices</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$1.7B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1849</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="firm-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Capital Markets Excellence</span>
+                    <span class="strength-tag">Financial Regulation</span>
+                    <span class="strength-tag">Strategic M&A</span>
+                    <span class="strength-tag">Intellectual Rigor</span>
+                    <span class="strength-tag">Crisis Management</span>
+                    <span class="strength-tag">Sophisticated Counsel</span>
+                  </div>
+                </div>
+                
+                <div class="practice-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Practice Areas</h4>
+                  <div class="practice-list">
+                    <span class="practice-item">Capital Markets</span>
+                    <span class="practice-item">M&A</span>
+                    <span class="practice-item">Financial Regulation</span>
+                    <span class="practice-item">Credit</span>
+                    <span class="practice-item">Tax</span>
+                    <span class="practice-item">Restructuring</span>
+                  </div>
+                </div>
+                
+                <div class="notable-cases">
+                  <h4 class="text-lg font-semibold mb-2">Notable Work</h4>
+                  <div class="case-item">
+                    <div class="case-title">Historic Financial Crisis Response</div>
+                    <div class="case-description">Advised the U.S. Treasury and Federal Reserve on critical aspects of the financial crisis response.</div>
+                  </div>
+                  <div class="case-item">
+                    <div class="case-title">Landmark IPO</div>
+                    <div class="case-description">Led one of the largest and most complex IPOs in history, valued at over $25 billion.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-footer">
+                <div class="firm-rating">
+                  <span class="rating-value">9.3/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="firm-profiles/davis-polk.html" class="firm-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Firm 7 -->
+            <div class="firm-card">
+              <div class="firm-header">
+                <div class="firm-rank">7</div>
+                <img src="../assets/legal-firms/wachtell-logo.png" alt="Wachtell Lipton Logo" class="firm-logo">
+                <div>
+                  <h3 class="firm-name">Wachtell, Lipton, Rosen & Katz</h3>
+                  <div class="firm-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>New York, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-content">
+                <div class="firm-description">
+                  <p>Wachtell Lipton is widely recognized as the world's premier M&A and corporate governance firm. Despite its boutique size and single-office model, the firm handles the largest, most complex, and highest-profile corporate transactions, special situations, and litigation matters worldwide.</p>
+                </div>
+                
+                <div class="firm-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">260+</div>
+                    <div class="stat-label">Attorneys</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1</div>
+                    <div class="stat-label">Global Office</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$1.1B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1965</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="firm-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">M&A Innovation</span>
+                    <span class="strength-tag">Corporate Governance</span>
+                    <span class="strength-tag">Strategic Defense</span>
+                    <span class="strength-tag">Crisis Management</span>
+                    <span class="strength-tag">Intellectual Leadership</span>
+                    <span class="strength-tag">Boardroom Counsel</span>
+                  </div>
+                </div>
+                
+                <div class="practice-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Practice Areas</h4>
+                  <div class="practice-list">
+                    <span class="practice-item">M&A</span>
+                    <span class="practice-item">Corporate Governance</span>
+                    <span class="practice-item">Takeover Defense</span>
+                    <span class="practice-item">Shareholder Activism</span>
+                    <span class="practice-item">Corporate Restructuring</span>
+                    <span class="practice-item">Complex Litigation</span>
+                  </div>
+                </div>
+                
+                <div class="notable-cases">
+                  <h4 class="text-lg font-semibold mb-2">Notable Work</h4>
+                  <div class="case-item">
+                    <div class="case-title">Transformative M&A Transaction</div>
+                    <div class="case-description">Advised on a $90 billion merger that transformed an entire industry sector.</div>
+                  </div>
+                  <div class="case-item">
+                    <div class="case-title">Landmark Hostile Defense</div>
+                    <div class="case-description">Successfully defended a Fortune 50 company against an unprecedented hostile takeover attempt.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-footer">
+                <div class="firm-rating">
+                  <span class="rating-value">9.2/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="firm-profiles/wachtell-lipton.html" class="firm-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Firm 8 -->
+            <div class="firm-card">
+              <div class="firm-header">
+                <div class="firm-rank">8</div>
+                <img src="../assets/legal-firms/freshfields-logo.png" alt="Freshfields Logo" class="firm-logo">
+                <div>
+                  <h3 class="firm-name">Freshfields Bruckhaus Deringer LLP</h3>
+                  <div class="firm-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Global (HQ: London, UK)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-content">
+                <div class="firm-description">
+                  <p>Freshfields combines deep historical roots with modern innovation to deliver exceptional legal services globally. The firm is particularly renowned for its cross-border M&A, antitrust, and dispute resolution capabilities, serving the world's leading corporations and financial institutions on their most challenging matters.</p>
+                </div>
+                
+                <div class="firm-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">2,800+</div>
+                    <div class="stat-label">Attorneys</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">28</div>
+                    <div class="stat-label">Global Offices</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">£1.7B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1743</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="firm-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Antitrust Excellence</span>
+                    <span class="strength-tag">Cross-Border M&A</span>
+                    <span class="strength-tag">International Arbitration</span>
+                    <span class="strength-tag">Public International Law</span>
+                    <span class="strength-tag">Global Investigations</span>
+                    <span class="strength-tag">European Expertise</span>
+                  </div>
+                </div>
+                
+                <div class="practice-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Practice Areas</h4>
+                  <div class="practice-list">
+                    <span class="practice-item">Antitrust</span>
+                    <span class="practice-item">M&A</span>
+                    <span class="practice-item">International Arbitration</span>
+                    <span class="practice-item">Corporate</span>
+                    <span class="practice-item">Investigations</span>
+                    <span class="practice-item">Finance</span>
+                  </div>
+                </div>
+                
+                <div class="notable-cases">
+                  <h4 class="text-lg font-semibold mb-2">Notable Work</h4>
+                  <div class="case-item">
+                    <div class="case-title">Complex Cross-Border Merger</div>
+                    <div class="case-description">Led a €40 billion merger requiring clearance in over 20 jurisdictions worldwide.</div>
+                  </div>
+                  <div class="case-item">
+                    <div class="case-title">Landmark International Arbitration</div>
+                    <div class="case-description">Successfully represented a sovereign state in one of the largest investment treaty arbitrations in history.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-footer">
+                <div class="firm-rating">
+                  <span class="rating-value">9.1/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="firm-profiles/freshfields.html" class="firm-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Firm 9 -->
+            <div class="firm-card">
+              <div class="firm-header">
+                <div class="firm-rank">9</div>
+                <img src="../assets/legal-firms/sullivan-cromwell-logo.png" alt="Sullivan & Cromwell Logo" class="firm-logo">
+                <div>
+                  <h3 class="firm-name">Sullivan & Cromwell LLP</h3>
+                  <div class="firm-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Global (HQ: New York, USA)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-content">
+                <div class="firm-description">
+                  <p>Sullivan & Cromwell is known for its unparalleled expertise in complex financial transactions and litigation matters. The firm's distinctive approach combines exceptional legal insight with deep commercial understanding, making it a trusted advisor to the world's leading corporations, financial institutions, and governments.</p>
+                </div>
+                
+                <div class="firm-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">800+</div>
+                    <div class="stat-label">Attorneys</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">13</div>
+                    <div class="stat-label">Global Offices</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$1.6B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1879</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="firm-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Financial Institutions</span>
+                    <span class="strength-tag">Complex Transactions</span>
+                    <span class="strength-tag">Crisis Management</span>
+                    <span class="strength-tag">Strategic Litigation</span>
+                    <span class="strength-tag">Regulatory Expertise</span>
+                    <span class="strength-tag">Global Coordination</span>
+                  </div>
+                </div>
+                
+                <div class="practice-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Practice Areas</h4>
+                  <div class="practice-list">
+                    <span class="practice-item">Banking</span>
+                    <span class="practice-item">M&A</span>
+                    <span class="practice-item">Capital Markets</span>
+                    <span class="practice-item">Financial Services</span>
+                    <span class="practice-item">Complex Litigation</span>
+                    <span class="practice-item">Investigations</span>
+                  </div>
+                </div>
+                
+                <div class="notable-cases">
+                  <h4 class="text-lg font-semibold mb-2">Notable Work</h4>
+                  <div class="case-item">
+                    <div class="case-title">Financial Crisis Resolution</div>
+                    <div class="case-description">Played a central role in resolving multiple aspects of the 2008 financial crisis for major institutions.</div>
+                  </div>
+                  <div class="case-item">
+                    <div class="case-title">Landmark Cross-Border Acquisition</div>
+                    <div class="case-description">Advised on a $35 billion acquisition that transformed a client's global market position.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-footer">
+                <div class="firm-rating">
+                  <span class="rating-value">9.0/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="firm-profiles/sullivan-cromwell.html" class="firm-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Firm 10 -->
+            <div class="firm-card">
+              <div class="firm-header">
+                <div class="firm-rank">10</div>
+                <img src="../assets/legal-firms/gibson-dunn-logo.png" alt="Gibson Dunn Logo" class="firm-logo">
+                <div>
+                  <h3 class="firm-name">Gibson, Dunn & Crutcher LLP</h3>
+                  <div class="firm-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Global (HQ: Los Angeles, USA)</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-content">
+                <div class="firm-description">
+                  <p>Gibson Dunn is renowned for its litigation prowess, particularly in high-stakes, bet-the-company cases and appeals, including before the U.S. Supreme Court. The firm combines exceptional trial skills with sophisticated transactional capabilities, serving clients across industries and practice areas worldwide.</p>
+                </div>
+                
+                <div class="firm-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">1,600+</div>
+                    <div class="stat-label">Attorneys</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">20</div>
+                    <div class="stat-label">Global Offices</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$2.5B</div>
+                    <div class="stat-label">Annual Revenue</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1890</div>
+                    <div class="stat-label">Founded</div>
+                  </div>
+                </div>
+                
+                <div class="firm-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Appellate Excellence</span>
+                    <span class="strength-tag">High-Stakes Litigation</span>
+                    <span class="strength-tag">Regulatory Investigations</span>
+                    <span class="strength-tag">Crisis Management</span>
+                    <span class="strength-tag">Strategic Transactions</span>
+                    <span class="strength-tag">Industry Knowledge</span>
+                  </div>
+                </div>
+                
+                <div class="practice-areas">
+                  <h4 class="text-lg font-semibold mb-2">Core Practice Areas</h4>
+                  <div class="practice-list">
+                    <span class="practice-item">Litigation</span>
+                    <span class="practice-item">Appellate</span>
+                    <span class="practice-item">White Collar Defense</span>
+                    <span class="practice-item">M&A</span>
+                    <span class="practice-item">Private Equity</span>
+                    <span class="practice-item">Regulatory</span>
+                  </div>
+                </div>
+                
+                <div class="notable-cases">
+                  <h4 class="text-lg font-semibold mb-2">Notable Work</h4>
+                  <div class="case-item">
+                    <div class="case-title">Landmark Supreme Court Victory</div>
+                    <div class="case-description">Secured a transformative U.S. Supreme Court ruling with far-reaching implications for an entire industry.</div>
+                  </div>
+                  <div class="case-item">
+                    <div class="case-title">Complex Corporate Investigation</div>
+                    <div class="case-description">Successfully led a multi-jurisdictional investigation involving regulatory authorities on three continents.</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="firm-footer">
+                <div class="firm-rating">
+                  <span class="rating-value">8.9/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="firm-profiles/gibson-dunn.html" class="firm-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Methodology Details -->
+          <div class="mt-12">
+            <h2 class="text-3xl font-bold mb-6">Our Legal Firm Ranking Methodology</h2>
+            <p class="mb-6">At WhosBest.org, we employ a comprehensive, data-driven approach to evaluate legal firms across multiple dimensions of excellence. Our methodology combines quantitative metrics with qualitative assessments to provide a holistic view of each firm's strengths and achievements.</p>
+            
+            <div class="methodology-steps mb-8">
+              <div class="methodology-step">
+                <h4>Data Collection</h4>
+                <p>We gather data from multiple sources, including peer reviews, client feedback, public court records, financial performance data, and industry publications. All data undergoes rigorous verification to ensure accuracy and currency.</p>
+              </div>
+              
+              <div class="methodology-step">
+                <h4>Evaluation Criteria</h4>
+                <p>Legal firms are evaluated across five key dimensions: Case Outcomes (25%), Legal Expertise (25%), Client Satisfaction (20%), Industry Reputation (15%), and Innovation & Growth (15%). Each dimension comprises multiple specific metrics designed to capture different aspects of legal excellence.</p>
+              </div>
+              
+              <div class="methodology-step">
+                <h4>Scoring System</h4>
+                <p>Each metric is standardized to enable fair comparisons across firms of different sizes and types. Weighted scores are calculated for each dimension and combined to produce an overall score on a scale of 0-10, determining the final ranking position.</p>
+              </div>
+              
+              <div class="methodology-step">
+                <h4>Expert Review</h4>
+                <p>A panel of legal industry experts reviews the preliminary rankings to provide qualitative insights and identify any anomalies that require further investigation. This human oversight ensures that our data-driven approach captures nuances that numbers alone might miss.</p>
+              </div>
+              
+              <div class="methodology-step">
+                <h4>Annual Updates</h4>
+                <p>Rankings are updated annually to reflect the latest data and developments in the legal industry. Our methodology is continuously refined to ensure it remains relevant and accurately captures what constitutes excellence in the evolving landscape of legal services.</p>
+              </div>
+            </div>
+            
+            <div class="text-center">
+              <a href="../methodology.html#professional-services" class="btn btn-primary">View Detailed Methodology</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Find Your Ideal Legal Partner</h2>
+        <p class="text-gray-600 mb-8">Explore our comprehensive legal firm rankings and detailed profiles to discover practices that align with your specific legal needs and business objectives.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="../tools/legal-firm-matcher.html" class="btn btn-primary btn-lg">Try Our Legal Firm Matcher</a>
+          <a href="../categories/professional-services.html" class="btn btn-outline btn-lg">Explore All Professional Services Rankings</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <div class="footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="150">
+            <!-- Star/Excellence Icon -->
+            <g fill="#ffffff">
+              <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+              <circle cx="50" cy="50" r="25" fill="#ffffff" opacity="0.1" />
+            </g>
+            
+            <!-- WHOSBEST.ORG Text -->
+            <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#ffffff">
+              WHOSBEST<tspan fill="#ffffff" font-weight="600">.ORG</tspan>
+            </text>
+          </svg>
+        </div>
+        <p class="footer-description">WhosBest.org is the definitive directory of excellence, providing comprehensive rankings across multiple categories to help you make informed decisions.</p>
+        
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Categories</h4>
+        <div class="footer-links">
+          <a href="../categories/healthcare.html" class="footer-link">Healthcare</a>
+          <a href="../categories/professional-services.html" class="footer-link">Professional Services</a>
+          <a href="../categories/technology.html" class="footer-link">Technology</a>
+          <a href="../categories/education.html" class="footer-link">Education</a>
+          <a href="../categories/local-business.html" class="footer-link">Local Business</a>
+          <a href="../categories.html" class="footer-link">View All Categories</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <div class="footer-links">
+          <a href="../about.html" class="footer-link">About Us</a>
+          <a href="../methodology.html" class="footer-link">Our Methodology</a>
+          <a href="../rankings.html" class="footer-link">Latest Rankings</a>
+          <a href="../submit.html" class="footer-link">Submit a Business</a>
+          <a href="../contact.html" class="footer-link">Contact Us</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Legal</h4>
+        <div class="footer-links">
+          <a href="../privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="../terms.html" class="footer-link">Terms of Service</a>
+          <a href="../disclaimer.html" class="footer-link">Disclaimer</a>
+          <a href="../accessibility.html" class="footer-link">Accessibility</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2025 WhosBest.org. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script>
+    $(document).ready(function() {
+      // Navbar scroll effect
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 50) {
+          $('#navbar').addClass('navbar-scrolled');
+        } else {
+          $('#navbar').removeClass('navbar-scrolled');
+        }
+      });
+      
+      // Mobile menu toggle
+      $('#navbar-toggle').click(function() {
+        $('#navbar-menu').toggleClass('open');
+      });
+      
+      // Animation for staggered items
+      setTimeout(function() {
+        $('.firm-card').each(function(index) {
+          var $this = $(this);
+          setTimeout(function() {
+            $this.css('opacity', '1');
+          }, index * 100);
+        });
+      }, 300);
+      
+      // Smooth scroll for anchor links
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top - 100
+          }, 800);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

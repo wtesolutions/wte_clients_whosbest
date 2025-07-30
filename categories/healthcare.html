@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the best healthcare providers, hospitals, medical schools, specialists, and services. WhosBest.org's comprehensive healthcare rankings help you make informed health decisions.">
+  <meta name="keywords" content="best hospitals, top medical schools, best doctors, healthcare rankings, top specialists, best health insurance, medical excellence, healthcare directory">
+  <meta name="author" content="WhosBest.org">
+  <meta property="og:title" content="Healthcare Excellence | Top Hospitals & Medical Services | WhosBest.org">
+  <meta property="og:description" content="Find the best healthcare providers, hospitals, medical schools, and specialists with WhosBest.org's comprehensive healthcare rankings and reviews.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whosbest.org/categories/healthcare.html">
+  <meta property="og:image" content="../assets/categories/healthcare-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <title>Healthcare Excellence | Top Hospitals & Medical Services | WhosBest.org</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="navbar-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="220">
+          <!-- Star/Excellence Icon -->
+          <g fill="#2563eb">
+            <!-- Star shape representing "best" -->
+            <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+            
+            <!-- Optional subtle accent -->
+            <circle cx="50" cy="50" r="25" fill="#2563eb" opacity="0.1" />
+          </g>
+          
+          <!-- WHOSBEST.ORG Text -->
+          <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#2563eb">
+            WHOSBEST<tspan fill="#2563eb" font-weight="600">.ORG</tspan>
+          </text>
+          
+          <!-- Tagline (Optional) -->
+          <text x="92" y="75" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" letter-spacing="0.5" fill="#64748b">
+            The Directory of Excellence
+          </text>
+        </svg>
+      </a>
+      
+      <div class="navbar-menu" id="navbar-menu">
+        <a href="../index.html" class="navbar-link">Home</a>
+        <a href="../about.html" class="navbar-link">About</a>
+        <a href="../categories.html" class="navbar-link active">Categories</a>
+        <a href="../rankings.html" class="navbar-link">Rankings</a>
+        <a href="../methodology.html" class="navbar-link">Methodology</a>
+        <a href="../contact.html" class="navbar-link">Contact</a>
+      </div>
+      
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Category Header -->
+  <section class="category-header">
+    <div class="container category-header-content">
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-item"><a href="../index.html">Home</a></div>
+        <div class="breadcrumb-item"><a href="../categories.html">Categories</a></div>
+        <div class="breadcrumb-item">Healthcare</div>
+      </div>
+      
+      <h1 class="category-title">Healthcare Excellence</h1>
+      <p class="category-description">Discover the best hospitals, medical schools, specialists, and healthcare services across the nation. Our comprehensive healthcare rankings are based on patient outcomes, innovation, research contributions, and quality of care to help you make informed health decisions.</p>
+    </div>
+  </section>
+  
+  <!-- List Filter & Search Section -->
+  <section class="py-8">
+    <div class="container">
+      <div class="list-filter">
+        <div class="list-filter-options">
+          <div class="form-group mb-0">
+            <select class="form-select" id="filter-type">
+              <option value="all">All Healthcare Lists</option>
+              <option value="hospitals">Hospitals</option>
+              <option value="education">Medical Education</option>
+              <option value="specialists">Medical Specialists</option>
+              <option value="services">Healthcare Services</option>
+              <option value="technology">Healthcare Technology</option>
+            </select>
+          </div>
+          
+          <div class="form-group mb-0 ml-4">
+            <select class="form-select" id="filter-region">
+              <option value="all">All Regions</option>
+              <option value="northeast">Northeast</option>
+              <option value="southeast">Southeast</option>
+              <option value="midwest">Midwest</option>
+              <option value="southwest">Southwest</option>
+              <option value="west">West</option>
+              <option value="national">National</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="list-search">
+          <div class="form-group mb-0 relative">
+            <input type="text" class="form-control" id="search-lists" placeholder="Search healthcare lists...">
+            <i class="fas fa-search" style="position: absolute; right: 12px; top: 12px; color: var(--color-gray-400);"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Healthcare Lists Section -->
+  <section class="py-8">
+    <div class="container">
+      <div class="directory-grid" id="healthcare-lists">
+        <!-- Top Hospitals List -->
+        <div class="category-card stagger-item" data-type="hospitals" data-region="national">
+          <div class="category-card-image">
+            <img src="../assets/lists/top-hospitals.jpg" alt="Top Hospitals in America">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Top 50 Hospitals in America</h3>
+            <p class="category-card-description">Comprehensive rankings of the nation's best hospitals based on patient outcomes, quality of care, innovation, and specialized treatment centers.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated July 2025</span>
+              <a href="../lists/top-hospitals.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Best Medical Schools -->
+        <div class="category-card stagger-item" data-type="education" data-region="national">
+          <div class="category-card-image">
+            <img src="../assets/lists/medical-schools.jpg" alt="Best Medical Schools">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Best Medical Schools</h3>
+            <p class="category-card-description">Rankings of top medical schools based on academic excellence, research output, faculty credentials, and graduate success rates.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated June 2025</span>
+              <a href="../lists/best-medical-schools.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Top Cardiologists -->
+        <div class="category-card stagger-item" data-type="specialists" data-region="national">
+          <div class="category-card-image">
+            <img src="../assets/lists/cardiologists.jpg" alt="Top Cardiologists">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Top Cardiologists in the US</h3>
+            <p class="category-card-description">Find the nation's leading heart specialists ranked by patient outcomes, peer recognition, research contributions, and innovative treatments.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated May 2025</span>
+              <a href="../lists/top-cardiologists.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Best Health Insurance Providers -->
+        <div class="category-card stagger-item" data-type="services" data-region="national">
+          <div class="category-card-image">
+            <img src="../assets/lists/health-insurance.jpg" alt="Best Health Insurance Providers">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Best Health Insurance Providers</h3>
+            <p class="category-card-description">Comprehensive rankings of health insurance companies based on coverage options, customer satisfaction, claim processing, and value for money.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated April 2025</span>
+              <a href="../lists/best-health-insurance.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Top Telemedicine Services -->
+        <div class="category-card stagger-item" data-type="technology" data-region="national">
+          <div class="category-card-image">
+            <img src="../assets/lists/telemedicine.jpg" alt="Top Telemedicine Services">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Top Telemedicine Services</h3>
+            <p class="category-card-description">Discover the best virtual healthcare providers ranked by accessibility, quality of care, technology platform, and patient satisfaction.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated July 2025</span>
+              <a href="../lists/top-telemedicine-services.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Best Medical Research Institutions -->
+        <div class="category-card stagger-item" data-type="education" data-region="national">
+          <div class="category-card-image">
+            <img src="../assets/lists/medical-research.jpg" alt="Best Medical Research Institutions">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Best Medical Research Institutions</h3>
+            <p class="category-card-description">Rankings of leading medical research centers based on breakthrough discoveries, publication impact, grant funding, and clinical trials.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated March 2025</span>
+              <a href="../lists/best-medical-research-institutions.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Top Pharmaceutical Companies -->
+        <div class="category-card stagger-item" data-type="technology" data-region="national">
+          <div class="category-card-image">
+            <img src="../assets/lists/pharmaceutical.jpg" alt="Top Pharmaceutical Companies">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Top Pharmaceutical Companies</h3>
+            <p class="category-card-description">Comprehensive rankings of pharmaceutical companies based on innovation, R&D investment, drug development pipeline, and patient impact.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated June 2025</span>
+              <a href="../lists/top-pharmaceutical-companies.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Best Mental Health Services -->
+        <div class="category-card stagger-item" data-type="services" data-region="national">
+          <div class="category-card-image">
+            <img src="../assets/lists/mental-health.jpg" alt="Best Mental Health Services">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Best Mental Health Services</h3>
+            <p class="category-card-description">Find top-rated mental health providers, facilities, and resources ranked by treatment effectiveness, accessibility, and patient support.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated May 2025</span>
+              <a href="../lists/best-mental-health-services.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Top Dental Practices -->
+        <div class="category-card stagger-item" data-type="specialists" data-region="national">
+          <div class="category-card-image">
+            <img src="../assets/lists/dental.jpg" alt="Top Dental Practices">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Top Dental Practices in America</h3>
+            <p class="category-card-description">Discover the best dental practices and specialists across the country, ranked by patient care, technology adoption, and treatment outcomes.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated April 2025</span>
+              <a href="../lists/top-dental-practices.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Best Physical Therapy Centers -->
+        <div class="category-card stagger-item" data-type="services" data-region="national">
+          <div class="category-card-image">
+            <img src="../assets/lists/physical-therapy.jpg" alt="Best Physical Therapy Centers">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Best Physical Therapy Centers</h3>
+            <p class="category-card-description">Rankings of top physical therapy providers based on rehabilitation success rates, specialized treatments, and patient recovery outcomes.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated February 2025</span>
+              <a href="../lists/best-physical-therapy-centers.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Top Urgent Care Facilities -->
+        <div class="category-card stagger-item" data-type="services" data-region="national">
+          <div class="category-card-image">
+            <img src="../assets/lists/urgent-care.jpg" alt="Top Urgent Care Facilities">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Top Urgent Care Facilities</h3>
+            <p class="category-card-description">Find the best urgent care centers ranked by wait times, quality of care, staff expertise, and patient satisfaction across the country.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated July 2025</span>
+              <a href="../lists/top-urgent-care-facilities.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Best Healthcare Technology Companies -->
+        <div class="category-card stagger-item" data-type="technology" data-region="national">
+          <div class="category-card-image">
+            <img src="../assets/lists/healthcare-tech.jpg" alt="Best Healthcare Technology Companies">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Best Healthcare Technology Companies</h3>
+            <p class="category-card-description">Comprehensive rankings of companies developing innovative healthcare technologies, from AI diagnostics to patient management systems.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated June 2025</span>
+              <a href="../lists/best-healthcare-technology-companies.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- No Results Message -->
+      <div id="no-results" class="text-center py-8 hidden">
+        <i class="fas fa-search fa-3x text-gray-400 mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">No matching lists found</h3>
+        <p class="text-gray-600">Try adjusting your filters or search terms</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Newsletter Section -->
+  <section class="py-12 bg-gray-50">
+    <div class="container">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-4">Get Healthcare Excellence Updates</h2>
+        <p class="mb-6 text-gray-600">Subscribe to receive the latest healthcare rankings, research findings, and expert insights directly to your inbox.</p>
+        
+        <form class="flex flex-col md:flex-row gap-4 justify-center">
+          <input type="email" placeholder="Your email address" class="form-control" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <div class="footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="150">
+            <!-- Star/Excellence Icon -->
+            <g fill="#ffffff">
+              <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+              <circle cx="50" cy="50" r="25" fill="#ffffff" opacity="0.1" />
+            </g>
+            
+            <!-- WHOSBEST.ORG Text -->
+            <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#ffffff">
+              WHOSBEST<tspan fill="#ffffff" font-weight="600">.ORG</tspan>
+            </text>
+          </svg>
+        </div>
+        <p class="footer-description">WhosBest.org is the definitive directory of excellence, providing comprehensive rankings across multiple categories to help you make informed decisions.</p>
+        
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Categories</h4>
+        <div class="footer-links">
+          <a href="healthcare.html" class="footer-link">Healthcare</a>
+          <a href="professional-services.html" class="footer-link">Professional Services</a>
+          <a href="technology.html" class="footer-link">Technology</a>
+          <a href="education.html" class="footer-link">Education</a>
+          <a href="local-business.html" class="footer-link">Local Business</a>
+          <a href="../categories.html" class="footer-link">View All Categories</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <div class="footer-links">
+          <a href="../about.html" class="footer-link">About Us</a>
+          <a href="../methodology.html" class="footer-link">Our Methodology</a>
+          <a href="../rankings.html" class="footer-link">Latest Rankings</a>
+          <a href="../submit.html" class="footer-link">Submit a Business</a>
+          <a href="../contact.html" class="footer-link">Contact Us</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Legal</h4>
+        <div class="footer-links">
+          <a href="../privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="../terms.html" class="footer-link">Terms of Service</a>
+          <a href="../disclaimer.html" class="footer-link">Disclaimer</a>
+          <a href="../accessibility.html" class="footer-link">Accessibility</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2025 WhosBest.org. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script>
+    $(document).ready(function() {
+      // Navbar scroll effect
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 50) {
+          $('#navbar').addClass('navbar-scrolled');
+        } else {
+          $('#navbar').removeClass('navbar-scrolled');
+        }
+      });
+      
+      // Mobile menu toggle
+      $('#navbar-toggle').click(function() {
+        $('#navbar-menu').toggleClass('open');
+      });
+      
+      // Animation for staggered items
+      setTimeout(function() {
+        $('.stagger-item').each(function(index) {
+          $(this).css('opacity', '1');
+        });
+      }, 100);
+      
+      // Filter functionality
+      function filterLists() {
+        const typeFilter = $('#filter-type').val();
+        const regionFilter = $('#filter-region').val();
+        const searchTerm = $('#search-lists').val().toLowerCase();
+        
+        let visibleCount = 0;
+        
+        $('#healthcare-lists .category-card').each(function() {
+          const $item = $(this);
+          const itemType = $item.data('type');
+          const itemRegion = $item.data('region');
+          const itemText = $item.text().toLowerCase();
+          
+          const matchesType = typeFilter === 'all' || itemType === typeFilter;
+          const matchesRegion = regionFilter === 'all' || itemRegion === regionFilter;
+          const matchesSearch = searchTerm === '' || itemText.includes(searchTerm);
+          
+          if (matchesType && matchesRegion && matchesSearch) {
+            $item.show();
+            visibleCount++;
+          } else {
+            $item.hide();
+          }
+        });
+        
+        // Show/hide no results message
+        if (visibleCount === 0) {
+          $('#no-results').removeClass('hidden');
+        } else {
+          $('#no-results').addClass('hidden');
+        }
+      }
+      
+      // Filter event handlers
+      $('#filter-type, #filter-region').on('change', filterLists);
+      $('#search-lists').on('keyup', filterLists);
+    });
+  </script>
+</body>
+</html>

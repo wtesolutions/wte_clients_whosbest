@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none">
+  <!-- Background Shape (Optional) -->
+  <rect x="10" y="25" width="380" height="50" rx="25" fill="#f0f5ff" opacity="0.3" />
+  
+  <!-- Star/Excellence Icon -->
+  <g fill="#2563eb">
+    <!-- Star shape representing "best" -->
+    <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+    
+    <!-- Optional subtle accent -->
+    <circle cx="50" cy="50" r="25" fill="#2563eb" opacity="0.1" />
+  </g>
+  
+  <!-- WHOSBEST.ORG Text -->
+  <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#2563eb">
+    WHOSBEST<tspan fill="#2563eb" font-weight="600">.ORG</tspan>
+  </text>
+  
+  <!-- Tagline (Optional) -->
+  <text x="92" y="75" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" letter-spacing="0.5" fill="#64748b">
+    The Directory of Excellence
+  </text>
+  
+  <!-- Abstract Line Element -->
+  <path d="M85 65 L85 45" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- Abstract Dots (Excellence Indicators) -->
+  <circle cx="350" cy="40" r="3" fill="#2563eb" />
+  <circle cx="360" cy="50" r="3" fill="#2563eb" />
+  <circle cx="350" cy="60" r="3" fill="#2563eb" />
+</svg>

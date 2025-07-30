@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover America's Top 10 Hospitals ranked by patient outcomes, medical excellence, research innovation, and specialty care. WhosBest.org's definitive hospital rankings help you make informed healthcare decisions.">
+  <meta name="keywords" content="best hospitals, top hospitals in America, hospital rankings, best medical centers, Mayo Clinic, Cleveland Clinic, Johns Hopkins, top 10 hospitals, medical excellence, healthcare rankings">
+  <meta name="author" content="WhosBest.org">
+  <meta property="og:title" content="Top 10 Hospitals in America | Best Medical Centers | WhosBest.org">
+  <meta property="og:description" content="Comprehensive rankings of America's best hospitals based on patient outcomes, quality of care, medical innovation, and specialty excellence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whosbest.org/lists/top-hospitals.html">
+  <meta property="og:image" content="../assets/lists/top-hospitals-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <title>Top 10 Hospitals in America | Best Medical Centers | WhosBest.org</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  
+  <style>
+    /* Additional styles specific to the hospital list */
+    .hospital-rank {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--color-white);
+      background-color: var(--color-primary);
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--border-radius-lg) 0 0 var(--border-radius-lg);
+    }
+    
+    .hospital-card {
+      display: flex;
+      background-color: var(--bg-card);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      margin-bottom: var(--spacing-6);
+      transition: all var(--transition-normal) var(--transition-timing);
+    }
+    
+    .hospital-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .hospital-image {
+      width: 180px;
+      min-width: 180px;
+      height: 180px;
+      overflow: hidden;
+    }
+    
+    .hospital-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .hospital-content {
+      padding: var(--spacing-4) var(--spacing-6);
+      flex-grow: 1;
+    }
+    
+    .hospital-name {
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: var(--spacing-2);
+      color: var(--color-gray-900);
+    }
+    
+    .hospital-location {
+      display: flex;
+      align-items: center;
+      color: var(--color-gray-600);
+      margin-bottom: var(--spacing-2);
+    }
+    
+    .hospital-location i {
+      margin-right: var(--spacing-2);
+      color: var(--color-primary);
+    }
+    
+    .hospital-specialties {
+      margin-bottom: var(--spacing-3);
+    }
+    
+    .specialty-tag {
+      display: inline-block;
+      background-color: var(--color-gray-100);
+      color: var(--color-gray-700);
+      padding: 4px 10px;
+      border-radius: var(--border-radius-full);
+      font-size: var(--font-size-sm);
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    
+    .hospital-ratings {
+      display: flex;
+      align-items: center;
+      margin-top: var(--spacing-3);
+    }
+    
+    .rating-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: var(--spacing-6);
+    }
+    
+    .rating-value {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-primary);
+    }
+    
+    .rating-label {
+      font-size: var(--font-size-xs);
+      color: var(--color-gray-600);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .hospital-actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: var(--spacing-4);
+    }
+    
+    .share-options {
+      position: absolute;
+      background: var(--bg-card);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-lg);
+      padding: var(--spacing-2);
+      z-index: var(--z-20);
+      display: none;
+    }
+    
+    .share-options a {
+      display: flex;
+      align-items: center;
+      padding: var(--spacing-2) var(--spacing-4);
+      color: var(--color-gray-700);
+      transition: background-color var(--transition-fast) var(--transition-timing);
+    }
+    
+    .share-options a:hover {
+      background-color: var(--color-gray-100);
+    }
+    
+    .share-options i {
+      margin-right: var(--spacing-2);
+      width: 20px;
+      text-align: center;
+    }
+    
+    .list-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--spacing-6);
+    }
+    
+    .list-actions {
+      display: flex;
+      gap: var(--spacing-2);
+    }
+    
+    @media (max-width: 768px) {
+      .hospital-card {
+        flex-direction: column;
+      }
+      
+      .hospital-rank {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+      
+      .hospital-image {
+        width: 100%;
+        height: 160px;
+        position: relative;
+      }
+      
+      .hospital-ratings {
+        flex-wrap: wrap;
+      }
+      
+      .rating-item {
+        margin-bottom: var(--spacing-2);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="navbar-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="220">
+          <!-- Star/Excellence Icon -->
+          <g fill="#2563eb">
+            <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+            <circle cx="50" cy="50" r="25" fill="#2563eb" opacity="0.1" />
+          </g>
+          
+          <!-- WHOSBEST.ORG Text -->
+          <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#2563eb">
+            WHOSBEST<tspan fill="#2563eb" font-weight="600">.ORG</tspan>
+          </text>
+          
+          <!-- Tagline (Optional) -->
+          <text x="92" y="75" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" letter-spacing="0.5" fill="#64748b">
+            The Directory of Excellence
+          </text>
+        </svg>
+      </a>
+      
+      <div class="navbar-menu" id="navbar-menu">
+        <a href="../index.html" class="navbar-link">Home</a>
+        <a href="../about.html" class="navbar-link">About</a>
+        <a href="../categories.html" class="navbar-link">Categories</a>
+        <a href="../rankings.html" class="navbar-link active">Rankings</a>
+        <a href="../methodology.html" class="navbar-link">Methodology</a>
+        <a href="../contact.html" class="navbar-link">Contact</a>
+      </div>
+      
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- List Header Section -->
+  <section class="category-header">
+    <div class="container category-header-content">
+      <!-- Breadcrumb Navigation -->
+      <div class="breadcrumb">
+        <div class="breadcrumb-item"><a href="../index.html">Home</a></div>
+        <div class="breadcrumb-item"><a href="../categories.html">Categories</a></div>
+        <div class="breadcrumb-item"><a href="../categories/healthcare.html">Healthcare</a></div>
+        <div class="breadcrumb-item">Top 10 Hospitals in America</div>
+      </div>
+      
+      <h1 class="category-title">Top 10 Hospitals in America</h1>
+      <p class="category-description">Our comprehensive rankings of America's best hospitals are based on rigorous analysis of patient outcomes, quality of care, medical innovation, research contributions, and specialty excellence. Updated for 2025, this definitive list helps patients and healthcare professionals identify the nation's leading medical institutions.</p>
+      
+      <div class="flex gap-4 mt-6">
+        <a href="../methodology.html#hospital-rankings" class="btn btn-outline btn-icon">
+          <i class="fas fa-chart-line"></i>
+          <span>Ranking Methodology</span>
+        </a>
+        
+        <a href="#" class="btn btn-ghost btn-icon" id="last-updated">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Last Updated: July 16, 2025</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- List Content -->
+  <section class="py-8">
+    <div class="container">
+      <!-- List Actions -->
+      <div class="list-header">
+        <div class="list-info">
+          <h2 class="text-2xl font-bold">10 Hospitals • Nationwide</h2>
+        </div>
+        
+        <div class="list-actions">
+          <div class="relative" id="share-container">
+            <button class="btn btn-outline btn-icon" id="share-btn">
+              <i class="fas fa-share-alt"></i>
+              <span>Share</span>
+            </button>
+            
+            <div class="share-options" id="share-options">
+              <a href="#" id="share-facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+              <a href="#" id="share-twitter"><i class="fab fa-twitter"></i> Twitter</a>
+              <a href="#" id="share-linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+              <a href="#" id="share-email"><i class="far fa-envelope"></i> Email</a>
+              <a href="#" id="share-link"><i class="fas fa-link"></i> Copy Link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hospital List -->
+      <div id="hospital-list">
+        <!-- Hospital #1 -->
+        <div class="hospital-card" data-rank="1" data-name="Mayo Clinic" data-region="midwest" data-specialties="cancer,cardiology,neurology,gastroenterology,orthopedics" data-patient-score="9.8" data-quality-score="9.9" data-innovation-score="9.9">
+          <div class="hospital-rank">1</div>
+          <div class="hospital-image">
+            <img src="../assets/hospitals/mayo-clinic.jpg" alt="Mayo Clinic">
+          </div>
+          <div class="hospital-content">
+            <h3 class="hospital-name">Mayo Clinic</h3>
+            <div class="hospital-location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Rochester, Minnesota</span>
+            </div>
+            <div class="hospital-specialties">
+              <span class="specialty-tag">Cancer</span>
+              <span class="specialty-tag">Cardiology</span>
+              <span class="specialty-tag">Neurology</span>
+              <span class="specialty-tag">Gastroenterology</span>
+              <span class="specialty-tag">Orthopedics</span>
+            </div>
+            <p>The Mayo Clinic consistently ranks at the top for its exceptional patient care, groundbreaking research, and innovative treatments across multiple specialties. Its integrated clinical practice, education, and research model sets the standard for medical excellence.</p>
+            <div class="hospital-ratings">
+              <div class="rating-item">
+                <div class="rating-value">9.8</div>
+                <div class="rating-label">Patient Satisfaction</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.9</div>
+                <div class="rating-label">Quality Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.9</div>
+                <div class="rating-label">Innovation Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.9</div>
+                <div class="rating-label">Overall Score</div>
+              </div>
+            </div>
+            <div class="hospital-actions">
+              <a href="#" class="btn btn-sm btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hospital #2 -->
+        <div class="hospital-card" data-rank="2" data-name="Cleveland Clinic" data-region="midwest" data-specialties="cardiology,orthopedics,urology,gastroenterology,pulmonology" data-patient-score="9.7" data-quality-score="9.8" data-innovation-score="9.8">
+          <div class="hospital-rank">2</div>
+          <div class="hospital-image">
+            <img src="../assets/hospitals/cleveland-clinic.jpg" alt="Cleveland Clinic">
+          </div>
+          <div class="hospital-content">
+            <h3 class="hospital-name">Cleveland Clinic</h3>
+            <div class="hospital-location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Cleveland, Ohio</span>
+            </div>
+            <div class="hospital-specialties">
+              <span class="specialty-tag">Cardiology</span>
+              <span class="specialty-tag">Orthopedics</span>
+              <span class="specialty-tag">Urology</span>
+              <span class="specialty-tag">Gastroenterology</span>
+              <span class="specialty-tag">Pulmonology</span>
+            </div>
+            <p>World-renowned for its cardiovascular program, Cleveland Clinic delivers exceptional care across multiple specialties. The institution's commitment to clinical excellence, technological innovation, and patient-centered care makes it a leader in modern healthcare.</p>
+            <div class="hospital-ratings">
+              <div class="rating-item">
+                <div class="rating-value">9.7</div>
+                <div class="rating-label">Patient Satisfaction</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.8</div>
+                <div class="rating-label">Quality Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.8</div>
+                <div class="rating-label">Innovation Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.8</div>
+                <div class="rating-label">Overall Score</div>
+              </div>
+            </div>
+            <div class="hospital-actions">
+              <a href="#" class="btn btn-sm btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hospital #3 -->
+        <div class="hospital-card" data-rank="3" data-name="Johns Hopkins Hospital" data-region="northeast" data-specialties="cancer,neurology,urology,rheumatology,psychiatry" data-patient-score="9.6" data-quality-score="9.8" data-innovation-score="9.9">
+          <div class="hospital-rank">3</div>
+          <div class="hospital-image">
+            <img src="../assets/hospitals/johns-hopkins.jpg" alt="Johns Hopkins Hospital">
+          </div>
+          <div class="hospital-content">
+            <h3 class="hospital-name">Johns Hopkins Hospital</h3>
+            <div class="hospital-location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Baltimore, Maryland</span>
+            </div>
+            <div class="hospital-specialties">
+              <span class="specialty-tag">Cancer</span>
+              <span class="specialty-tag">Neurology</span>
+              <span class="specialty-tag">Urology</span>
+              <span class="specialty-tag">Rheumatology</span>
+              <span class="specialty-tag">Psychiatry</span>
+            </div>
+            <p>Johns Hopkins Hospital continues its legacy of pioneering research and medical education while providing exceptional patient care. The institution's contributions to medical discovery and commitment to advancing healthcare make it a consistent leader in hospital rankings.</p>
+            <div class="hospital-ratings">
+              <div class="rating-item">
+                <div class="rating-value">9.6</div>
+                <div class="rating-label">Patient Satisfaction</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.8</div>
+                <div class="rating-label">Quality Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.9</div>
+                <div class="rating-label">Innovation Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.7</div>
+                <div class="rating-label">Overall Score</div>
+              </div>
+            </div>
+            <div class="hospital-actions">
+              <a href="#" class="btn btn-sm btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hospital #4 -->
+        <div class="hospital-card" data-rank="4" data-name="Massachusetts General Hospital" data-region="northeast" data-specialties="cancer,psychiatry,neurology,endocrinology,cardiology" data-patient-score="9.5" data-quality-score="9.7" data-innovation-score="9.8">
+          <div class="hospital-rank">4</div>
+          <div class="hospital-image">
+            <img src="../assets/hospitals/mass-general.jpg" alt="Massachusetts General Hospital">
+          </div>
+          <div class="hospital-content">
+            <h3 class="hospital-name">Massachusetts General Hospital</h3>
+            <div class="hospital-location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Boston, Massachusetts</span>
+            </div>
+            <div class="hospital-specialties">
+              <span class="specialty-tag">Cancer</span>
+              <span class="specialty-tag">Psychiatry</span>
+              <span class="specialty-tag">Neurology</span>
+              <span class="specialty-tag">Endocrinology</span>
+              <span class="specialty-tag">Cardiology</span>
+            </div>
+            <p>As the original and largest teaching hospital of Harvard Medical School, Massachusetts General Hospital combines cutting-edge research, comprehensive educational programs, and clinical excellence to deliver exceptional patient care across numerous specialties.</p>
+            <div class="hospital-ratings">
+              <div class="rating-item">
+                <div class="rating-value">9.5</div>
+                <div class="rating-label">Patient Satisfaction</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.7</div>
+                <div class="rating-label">Quality Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.8</div>
+                <div class="rating-label">Innovation Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.6</div>
+                <div class="rating-label">Overall Score</div>
+              </div>
+            </div>
+            <div class="hospital-actions">
+              <a href="#" class="btn btn-sm btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hospital #5 -->
+        <div class="hospital-card" data-rank="5" data-name="UCLA Medical Center" data-region="west" data-specialties="geriatrics,orthopedics,cancer,neurology,ophthalmology" data-patient-score="9.4" data-quality-score="9.6" data-innovation-score="9.7">
+          <div class="hospital-rank">5</div>
+          <div class="hospital-image">
+            <img src="../assets/hospitals/ucla-medical.jpg" alt="UCLA Medical Center">
+          </div>
+          <div class="hospital-content">
+            <h3 class="hospital-name">UCLA Medical Center</h3>
+            <div class="hospital-location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Los Angeles, California</span>
+            </div>
+            <div class="hospital-specialties">
+              <span class="specialty-tag">Geriatrics</span>
+              <span class="specialty-tag">Orthopedics</span>
+              <span class="specialty-tag">Cancer</span>
+              <span class="specialty-tag">Neurology</span>
+              <span class="specialty-tag">Ophthalmology</span>
+            </div>
+            <p>UCLA Medical Center excels in providing comprehensive patient care while advancing medical knowledge through research and education. The hospital's interdisciplinary approach and commitment to innovation ensure patients receive cutting-edge treatments across multiple specialties.</p>
+            <div class="hospital-ratings">
+              <div class="rating-item">
+                <div class="rating-value">9.4</div>
+                <div class="rating-label">Patient Satisfaction</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.6</div>
+                <div class="rating-label">Quality Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.7</div>
+                <div class="rating-label">Innovation Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.5</div>
+                <div class="rating-label">Overall Score</div>
+              </div>
+            </div>
+            <div class="hospital-actions">
+              <a href="#" class="btn btn-sm btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hospital #6 -->
+        <div class="hospital-card" data-rank="6" data-name="New York-Presbyterian Hospital" data-region="northeast" data-specialties="cardiology,neurology,cancer,psychiatry,pulmonology" data-patient-score="9.3" data-quality-score="9.5" data-innovation-score="9.6">
+          <div class="hospital-rank">6</div>
+          <div class="hospital-image">
+            <img src="../assets/hospitals/ny-presbyterian.jpg" alt="New York-Presbyterian Hospital">
+          </div>
+          <div class="hospital-content">
+            <h3 class="hospital-name">New York-Presbyterian Hospital</h3>
+            <div class="hospital-location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>New York, New York</span>
+            </div>
+            <div class="hospital-specialties">
+              <span class="specialty-tag">Cardiology</span>
+              <span class="specialty-tag">Neurology</span>
+              <span class="specialty-tag">Cancer</span>
+              <span class="specialty-tag">Psychiatry</span>
+              <span class="specialty-tag">Pulmonology</span>
+            </div>
+            <p>New York-Presbyterian Hospital, affiliated with Columbia and Cornell, delivers comprehensive, high-quality care across numerous specialties. The institution's academic partnerships foster innovation and ensure patients benefit from the latest medical advances.</p>
+            <div class="hospital-ratings">
+              <div class="rating-item">
+                <div class="rating-value">9.3</div>
+                <div class="rating-label">Patient Satisfaction</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.5</div>
+                <div class="rating-label">Quality Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.6</div>
+                <div class="rating-label">Innovation Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.4</div>
+                <div class="rating-label">Overall Score</div>
+              </div>
+            </div>
+            <div class="hospital-actions">
+              <a href="#" class="btn btn-sm btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hospital #7 -->
+        <div class="hospital-card" data-rank="7" data-name="UCSF Medical Center" data-region="west" data-specialties="cancer,neurology,nephrology,diabetes,gynecology" data-patient-score="9.3" data-quality-score="9.5" data-innovation-score="9.7">
+          <div class="hospital-rank">7</div>
+          <div class="hospital-image">
+            <img src="../assets/hospitals/ucsf-medical.jpg" alt="UCSF Medical Center">
+          </div>
+          <div class="hospital-content">
+            <h3 class="hospital-name">UCSF Medical Center</h3>
+            <div class="hospital-location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>San Francisco, California</span>
+            </div>
+            <div class="hospital-specialties">
+              <span class="specialty-tag">Cancer</span>
+              <span class="specialty-tag">Neurology</span>
+              <span class="specialty-tag">Nephrology</span>
+              <span class="specialty-tag">Diabetes</span>
+              <span class="specialty-tag">Gynecology</span>
+            </div>
+            <p>UCSF Medical Center stands out for its innovative approach to patient care and groundbreaking research. The hospital's focus on precision medicine and personalized treatments ensures patients receive the most advanced care tailored to their specific needs.</p>
+            <div class="hospital-ratings">
+              <div class="rating-item">
+                <div class="rating-value">9.3</div>
+                <div class="rating-label">Patient Satisfaction</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.5</div>
+                <div class="rating-label">Quality Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.7</div>
+                <div class="rating-label">Innovation Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.4</div>
+                <div class="rating-label">Overall Score</div>
+              </div>
+            </div>
+            <div class="hospital-actions">
+              <a href="#" class="btn btn-sm btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hospital #8 -->
+        <div class="hospital-card" data-rank="8" data-name="Northwestern Memorial Hospital" data-region="midwest" data-specialties="neurology,cardiology,cancer,geriatrics,orthopedics" data-patient-score="9.2" data-quality-score="9.4" data-innovation-score="9.3">
+          <div class="hospital-rank">8</div>
+          <div class="hospital-image">
+            <img src="../assets/hospitals/northwestern-memorial.jpg" alt="Northwestern Memorial Hospital">
+          </div>
+          <div class="hospital-content">
+            <h3 class="hospital-name">Northwestern Memorial Hospital</h3>
+            <div class="hospital-location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Chicago, Illinois</span>
+            </div>
+            <div class="hospital-specialties">
+              <span class="specialty-tag">Neurology</span>
+              <span class="specialty-tag">Cardiology</span>
+              <span class="specialty-tag">Cancer</span>
+              <span class="specialty-tag">Geriatrics</span>
+              <span class="specialty-tag">Orthopedics</span>
+            </div>
+            <p>Northwestern Memorial Hospital delivers exceptional patient care through its comprehensive clinical programs and cutting-edge research. The institution's commitment to medical education and innovation ensures patients receive the most advanced treatments available.</p>
+            <div class="hospital-ratings">
+              <div class="rating-item">
+                <div class="rating-value">9.2</div>
+                <div class="rating-label">Patient Satisfaction</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.4</div>
+                <div class="rating-label">Quality Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.3</div>
+                <div class="rating-label">Innovation Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.3</div>
+                <div class="rating-label">Overall Score</div>
+              </div>
+            </div>
+            <div class="hospital-actions">
+              <a href="#" class="btn btn-sm btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hospital #9 -->
+        <div class="hospital-card" data-rank="9" data-name="Cedars-Sinai Medical Center" data-region="west" data-specialties="cardiology,gastroenterology,orthopedics,pulmonology,cancer" data-patient-score="9.2" data-quality-score="9.3" data-innovation-score="9.4">
+          <div class="hospital-rank">9</div>
+          <div class="hospital-image">
+            <img src="../assets/hospitals/cedars-sinai.jpg" alt="Cedars-Sinai Medical Center">
+          </div>
+          <div class="hospital-content">
+            <h3 class="hospital-name">Cedars-Sinai Medical Center</h3>
+            <div class="hospital-location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Los Angeles, California</span>
+            </div>
+            <div class="hospital-specialties">
+              <span class="specialty-tag">Cardiology</span>
+              <span class="specialty-tag">Gastroenterology</span>
+              <span class="specialty-tag">Orthopedics</span>
+              <span class="specialty-tag">Pulmonology</span>
+              <span class="specialty-tag">Cancer</span>
+            </div>
+            <p>Cedars-Sinai Medical Center is renowned for its exceptional clinical care and groundbreaking research across multiple specialties. The institution's focus on innovation and personalized medicine ensures patients receive world-class treatment tailored to their specific needs.</p>
+            <div class="hospital-ratings">
+              <div class="rating-item">
+                <div class="rating-value">9.2</div>
+                <div class="rating-label">Patient Satisfaction</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.3</div>
+                <div class="rating-label">Quality Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.4</div>
+                <div class="rating-label">Innovation Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.3</div>
+                <div class="rating-label">Overall Score</div>
+              </div>
+            </div>
+            <div class="hospital-actions">
+              <a href="#" class="btn btn-sm btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hospital #10 -->
+        <div class="hospital-card" data-rank="10" data-name="Stanford Health Care-Stanford Hospital" data-region="west" data-specialties="cancer,neurology,cardiology,orthopedics,urology" data-patient-score="9.1" data-quality-score="9.4" data-innovation-score="9.6">
+          <div class="hospital-rank">10</div>
+          <div class="hospital-image">
+            <img src="../assets/hospitals/stanford-health.jpg" alt="Stanford Health Care-Stanford Hospital">
+          </div>
+          <div class="hospital-content">
+            <h3 class="hospital-name">Stanford Health Care-Stanford Hospital</h3>
+            <div class="hospital-location">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Stanford, California</span>
+            </div>
+            <div class="hospital-specialties">
+              <span class="specialty-tag">Cancer</span>
+              <span class="specialty-tag">Neurology</span>
+              <span class="specialty-tag">Cardiology</span>
+              <span class="specialty-tag">Orthopedics</span>
+              <span class="specialty-tag">Urology</span>
+            </div>
+            <p>Stanford Health Care combines cutting-edge research with exceptional clinical care to deliver innovative treatments across numerous specialties. The hospital's academic environment and collaborative approach ensure patients benefit from the latest medical advances.</p>
+            <div class="hospital-ratings">
+              <div class="rating-item">
+                <div class="rating-value">9.1</div>
+                <div class="rating-label">Patient Satisfaction</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.4</div>
+                <div class="rating-label">Quality Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.6</div>
+                <div class="rating-label">Innovation Score</div>
+              </div>
+              <div class="rating-item">
+                <div class="rating-value">9.2</div>
+                <div class="rating-label">Overall Score</div>
+              </div>
+            </div>
+            <div class="hospital-actions">
+              <a href="#" class="btn btn-sm btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Methodology Section -->
+  <section class="py-8 bg-gray-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold mb-4">Our Hospital Ranking Methodology</h2>
+        <p class="mb-4">WhosBest.org's hospital rankings are based on a comprehensive analysis of multiple factors that determine the quality of care and overall excellence of medical institutions. Our methodology includes:</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <div class="card p-4">
+            <h3 class="font-semibold mb-2">Patient Outcomes (35%)</h3>
+            <p class="text-sm">Measures of survival rates, complication rates, readmission rates, and other clinical outcomes across multiple conditions and procedures.</p>
+          </div>
+          
+          <div class="card p-4">
+            <h3 class="font-semibold mb-2">Quality of Care (25%)</h3>
+            <p class="text-sm">Assessment of safety measures, infection control, nurse staffing levels, and adherence to clinical guidelines and best practices.</p>
+          </div>
+          
+          <div class="card p-4">
+            <h3 class="font-semibold mb-2">Patient Experience (15%)</h3>
+            <p class="text-sm">Patient satisfaction scores, communication effectiveness, responsiveness of staff, and overall hospital environment.</p>
+          </div>
+          
+          <div class="card p-4">
+            <h3 class="font-semibold mb-2">Innovation & Research (15%)</h3>
+            <p class="text-sm">Research output, clinical trials, adoption of advanced technologies, and contributions to medical knowledge.</p>
+          </div>
+          
+          <div class="card p-4">
+            <h3 class="font-semibold mb-2">Specialty Excellence (10%)</h3>
+            <p class="text-sm">Performance in specialized areas of medicine, including complex procedures and treatments for rare conditions.</p>
+          </div>
+          
+          <div class="card p-4">
+            <h3 class="font-semibold mb-2">Expert Opinion (5%)</h3>
+            <p class="text-sm">Surveys of medical professionals regarding hospital reputation and quality of care.</p>
+          </div>
+        </div>
+        
+        <p>Data is collected from multiple sources, including Medicare data, patient surveys, medical databases, and direct hospital reporting. Our rankings are updated annually to reflect the most current information available.</p>
+        
+        <div class="text-center mt-6">
+          <a href="../methodology.html#hospital-rankings" class="btn btn-primary">Learn More About Our Methodology</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Related Lists Section -->
+  <section class="py-8">
+    <div class="container">
+      <h2 class="text-2xl font-bold mb-6">Related Healthcare Rankings</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="category-card">
+          <div class="category-card-image">
+            <img src="../assets/lists/medical-schools.jpg" alt="Best Medical Schools">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Best Medical Schools</h3>
+            <p class="category-card-description">Rankings of top medical schools based on academic excellence, research output, and graduate success rates.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated June 2025</span>
+              <a href="../lists/best-medical-schools.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="category-card">
+          <div class="category-card-image">
+            <img src="../assets/lists/cancer-centers.jpg" alt="Top Cancer Centers">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Top Cancer Centers</h3>
+            <p class="category-card-description">Comprehensive rankings of the nation's leading cancer treatment and research centers.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated May 2025</span>
+              <a href="../lists/top-cancer-centers.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="category-card">
+          <div class="category-card-image">
+            <img src="../assets/lists/cardiologists.jpg" alt="Top Cardiologists">
+          </div>
+          <div class="category-card-content">
+            <h3 class="category-card-title">Top Cardiologists in the US</h3>
+            <p class="category-card-description">Find the nation's leading heart specialists ranked by patient outcomes and innovative treatments.</p>
+            <div class="category-card-meta">
+              <span><i class="fas fa-calendar-alt"></i> Updated May 2025</span>
+              <a href="../lists/top-cardiologists.html" class="btn btn-sm btn-primary">View List</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <div class="footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="150">
+            <!-- Star/Excellence Icon -->
+            <g fill="#ffffff">
+              <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+              <circle cx="50" cy="50" r="25" fill="#ffffff" opacity="0.1" />
+            </g>
+            
+            <!-- WHOSBEST.ORG Text -->
+            <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#ffffff">
+              WHOSBEST<tspan fill="#ffffff" font-weight="600">.ORG</tspan>
+            </text>
+          </svg>
+        </div>
+        <p class="footer-description">WhosBest.org is the definitive directory of excellence, providing comprehensive rankings across multiple categories to help you make informed decisions.</p>
+        
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Categories</h4>
+        <div class="footer-links">
+          <a href="../categories/healthcare.html" class="footer-link">Healthcare</a>
+          <a href="../categories/professional-services.html" class="footer-link">Professional Services</a>
+          <a href="../categories/technology.html" class="footer-link">Technology</a>
+          <a href="../categories/education.html" class="footer-link">Education</a>
+          <a href="../categories/local-business.html" class="footer-link">Local Business</a>
+          <a href="../categories.html" class="footer-link">View All Categories</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <div class="footer-links">
+          <a href="../about.html" class="footer-link">About Us</a>
+          <a href="../methodology.html" class="footer-link">Our Methodology</a>
+          <a href="../rankings.html" class="footer-link">Latest Rankings</a>
+          <a href="../submit.html" class="footer-link">Submit a Business</a>
+          <a href="../contact.html" class="footer-link">Contact Us</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Legal</h4>
+        <div class="footer-links">
+          <a href="../privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="../terms.html" class="footer-link">Terms of Service</a>
+          <a href="../disclaimer.html" class="footer-link">Disclaimer</a>
+          <a href="../accessibility.html" class="footer-link">Accessibility</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2025 WhosBest.org. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script>
+    $(document).ready(function() {
+      // Navbar scroll effect
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 50) {
+          $('#navbar').addClass('navbar-scrolled');
+        } else {
+          $('#navbar').removeClass('navbar-scrolled');
+        }
+      });
+      
+      // Mobile menu toggle
+      $('#navbar-toggle').click(function() {
+        $('#navbar-menu').toggleClass('open');
+      });
+      
+      // Share dropdown toggle
+      $('#share-btn').click(function(e) {
+        e.preventDefault();
+        $('#share-options').toggle();
+      });
+      
+      // Close dropdowns when clicking elsewhere
+      $(document).click(function(e) {
+        if (!$(e.target).closest('#share-container').length) {
+          $('#share-options').hide();
+        }
+      });
+      
+      // Share functionality
+      $('#share-facebook').click(function(e) {
+        e.preventDefault();
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank');
+      });
+      
+      $('#share-twitter').click(function(e) {
+        e.preventDefault();
+        window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent('Check out the Top 10 Hospitals in America from WhosBest.org'), '_blank');
+      });
+      
+      $('#share-linkedin').click(function(e) {
+        e.preventDefault();
+        window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(window.location.href), '_blank');
+      });
+      
+      $('#share-email').click(function(e) {
+        e.preventDefault();
+        window.location.href = 'mailto:?subject=' + encodeURIComponent('Top 10 Hospitals in America - WhosBest.org') + '&body=' + encodeURIComponent('Check out this comprehensive ranking of America\'s best hospitals: ' + window.location.href);
+      });
+      
+      $('#share-link').click(function(e) {
+        e.preventDefault();
+        navigator.clipboard.writeText(window.location.href).then(function() {
+          alert('Link copied to clipboard!');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

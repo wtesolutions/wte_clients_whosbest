@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover WhosBest.org's definitive ranking of the top 10 universities worldwide. Comprehensive analysis of academic excellence, research output, student experience, and global impact.">
+  <meta name="keywords" content="top universities, best universities, university rankings, college rankings, best colleges, academic excellence, higher education rankings, university comparison">
+  <meta name="author" content="WhosBest.org">
+  <meta property="og:title" content="Top 10 Universities | WhosBest.org | The Directory of Excellence">
+  <meta property="og:description" content="Explore our data-driven rankings of the world's top 10 universities, with detailed profiles, key strengths, and comprehensive evaluation metrics.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://whosbest.org/lists/top-universities.html">
+  <meta property="og:image" content="../assets/university-rankings-og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <title>Top 10 Universities | WhosBest.org | The Directory of Excellence</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  
+  <style>
+    /* Additional styles specific to university rankings */
+    .university-rank {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: var(--color-primary);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+    
+    .university-card {
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow);
+      background-color: white;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .university-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .university-header {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--color-gray-200);
+    }
+    
+    .university-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-right: 1rem;
+      background-color: var(--color-gray-50);
+      padding: 0.5rem;
+      border-radius: var(--border-radius);
+    }
+    
+    .university-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
+    
+    .university-location {
+      color: var(--color-gray-600);
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    
+    .university-location i {
+      margin-right: 0.5rem;
+      color: var(--color-gray-400);
+    }
+    
+    .university-content {
+      padding: 1.5rem;
+    }
+    
+    .university-description {
+      margin-bottom: 1.5rem;
+    }
+    
+    .university-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .stat-item {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--color-gray-50);
+      border-radius: var(--border-radius);
+    }
+    
+    .stat-value {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--color-primary);
+      margin-bottom: 0.25rem;
+    }
+    
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--color-gray-600);
+    }
+    
+    .university-strengths {
+      margin-bottom: 1.5rem;
+    }
+    
+    .strength-tag {
+      display: inline-block;
+      background-color: var(--color-primary-light);
+      color: var(--color-primary-dark);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--border-radius-full);
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .university-programs {
+      margin-bottom: 1.5rem;
+    }
+    
+    .program-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .program-item {
+      background-color: var(--color-gray-100);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--border-radius-full);
+      font-size: 0.85rem;
+      color: var(--color-gray-700);
+    }
+    
+    .university-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      background-color: var(--color-gray-50);
+      border-top: 1px solid var(--color-gray-200);
+    }
+    
+    .university-rating {
+      display: flex;
+      align-items: center;
+    }
+    
+    .rating-value {
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+    
+    .rating-stars {
+      color: var(--color-yellow-400);
+    }
+    
+    .university-link {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+    
+    .university-link i {
+      margin-left: 0.5rem;
+      transition: transform 0.2s ease;
+    }
+    
+    .university-link:hover i {
+      transform: translateX(3px);
+    }
+    
+    .metrics-card {
+      background-color: white;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .metric-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.25rem;
+    }
+    
+    .metric-item:last-child {
+      margin-bottom: 0;
+    }
+    
+    .metric-icon {
+      min-width: 40px;
+      height: 40px;
+      background-color: var(--color-primary-light);
+      color: var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+    }
+    
+    .metric-content h4 {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    
+    .metric-content p {
+      color: var(--color-gray-600);
+      font-size: 0.95rem;
+    }
+    
+    .methodology-steps {
+      counter-reset: step;
+    }
+    
+    .methodology-step {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .methodology-step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      background-color: var(--color-primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .methodology-step h4 {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .methodology-step p {
+      color: var(--color-gray-600);
+      font-size: 0.95rem;
+    }
+    
+    .weight-indicator {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      background-color: var(--color-primary);
+      color: white;
+      border-radius: var(--border-radius-full);
+      font-size: 0.75rem;
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="../index.html" class="navbar-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="220">
+          <!-- Star/Excellence Icon -->
+          <g fill="#2563eb">
+            <!-- Star shape representing "best" -->
+            <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+            
+            <!-- Optional subtle accent -->
+            <circle cx="50" cy="50" r="25" fill="#2563eb" opacity="0.1" />
+          </g>
+          
+          <!-- WHOSBEST.ORG Text -->
+          <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#2563eb">
+            WHOSBEST<tspan fill="#2563eb" font-weight="600">.ORG</tspan>
+          </text>
+          
+          <!-- Tagline (Optional) -->
+          <text x="92" y="75" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" letter-spacing="0.5" fill="#64748b">
+            The Directory of Excellence
+          </text>
+          
+          <!-- Abstract Line Element -->
+          <path d="M85 65 L85 45" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+          
+          <!-- Abstract Dots (Excellence Indicators) -->
+          <circle cx="350" cy="40" r="3" fill="#2563eb" />
+          <circle cx="360" cy="50" r="3" fill="#2563eb" />
+          <circle cx="350" cy="60" r="3" fill="#2563eb" />
+        </svg>
+      </a>
+      
+      <div class="navbar-menu" id="navbar-menu">
+        <a href="../index.html" class="navbar-link">Home</a>
+        <a href="../about.html" class="navbar-link">About</a>
+        <a href="../categories.html" class="navbar-link">Categories</a>
+        <a href="../rankings.html" class="navbar-link active">Rankings</a>
+        <a href="../methodology.html" class="navbar-link">Methodology</a>
+        <a href="../contact.html" class="navbar-link">Contact</a>
+      </div>
+      
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-image" style="background-image: url('../assets/university-hero.jpg');"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">Top 10 Universities Worldwide</h1>
+      <p class="hero-subtitle">Discover the world's leading institutions of higher education that excel in academic excellence, research innovation, global impact, and student experience. Our comprehensive rankings identify universities that consistently set the standard for educational excellence.</p>
+    </div>
+    <div class="hero-shape"></div>
+  </section>
+  
+  <!-- Breadcrumb -->
+  <div class="bg-gray-50 py-3">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="../categories/education.html">Education</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="../lists/higher-education.html">Higher Education</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Top Universities</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <section class="py-16">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <div class="sticky" style="top: 100px;">
+            <!-- Methodology Overview -->
+            <div class="metrics-card mb-6">
+              <h3 class="text-xl font-bold mb-4">Our Ranking Methodology</h3>
+              <p class="text-gray-600 mb-4">Our university rankings employ a comprehensive, data-driven methodology that evaluates institutions across multiple dimensions of excellence.</p>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Academic Excellence <span class="weight-indicator">30%</span></h4>
+                  <p>Faculty qualifications, teaching quality, and academic reputation among peers.</p>
+                </div>
+              </div>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-flask"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Research Impact <span class="weight-indicator">25%</span></h4>
+                  <p>Research output, citation impact, and innovation metrics.</p>
+                </div>
+              </div>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Student Experience <span class="weight-indicator">20%</span></h4>
+                  <p>Student satisfaction, resources, facilities, and support services.</p>
+                </div>
+              </div>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-globe-americas"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Global Impact <span class="weight-indicator">15%</span></h4>
+                  <p>International diversity, global partnerships, and worldwide influence.</p>
+                </div>
+              </div>
+              
+              <div class="metric-item">
+                <div class="metric-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="metric-content">
+                  <h4>Career Outcomes <span class="weight-indicator">10%</span></h4>
+                  <p>Graduate employability, career services, and alumni success.</p>
+                </div>
+              </div>
+              
+              <div class="text-center mt-4">
+                <a href="../methodology.html#education" class="btn btn-sm btn-outline">Full Methodology Details</a>
+              </div>
+            </div>
+            
+            <!-- Key Facts -->
+            <div class="metrics-card mb-6">
+              <h3 class="text-xl font-bold mb-4">Key Facts</h3>
+              
+              <div class="mb-4">
+                <h4 class="font-semibold mb-2">Data Sources</h4>
+                <ul class="list-disc pl-5 text-gray-600 text-sm space-y-1">
+                  <li>Academic surveys and peer reviews</li>
+                  <li>Institutional data submissions</li>
+                  <li>Bibliometric databases</li>
+                  <li>Student satisfaction surveys</li>
+                  <li>Employer reputation surveys</li>
+                  <li>Government education databases</li>
+                </ul>
+              </div>
+              
+              <div class="mb-4">
+                <h4 class="font-semibold mb-2">Evaluation Period</h4>
+                <p class="text-gray-600 text-sm">Data collected from 2022-2025 academic years, with emphasis on the most recent data.</p>
+              </div>
+              
+              <div>
+                <h4 class="font-semibold mb-2">Ranking Updates</h4>
+                <p class="text-gray-600 text-sm">Rankings are updated annually each July. Last updated: July 2025.</p>
+              </div>
+            </div>
+            
+            <!-- Related Rankings -->
+            <div class="metrics-card">
+              <h3 class="text-xl font-bold mb-4">Related Rankings</h3>
+              <ul class="space-y-2">
+                <li><a href="top-liberal-arts-colleges.html" class="link-primary">Top Liberal Arts Colleges</a></li>
+                <li><a href="top-public-universities.html" class="link-primary">Top Public Universities</a></li>
+                <li><a href="top-international-universities.html" class="link-primary">Top International Universities</a></li>
+                <li><a href="top-research-universities.html" class="link-primary">Top Research Universities</a></li>
+                <li><a href="top-value-universities.html" class="link-primary">Best Value Universities</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <!-- Introduction -->
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold mb-4">The World's Leading Universities</h2>
+            <p class="mb-4">Our comprehensive evaluation of universities worldwide has identified these institutions as the pinnacle of higher education excellence. These universities consistently demonstrate exceptional performance across academic quality, research impact, student experience, global influence, and career outcomes.</p>
+            <p>Each institution in our top 10 offers unique strengths and specializations while maintaining the highest standards of educational excellence. From groundbreaking research to transformative student experiences, these universities represent the best that higher education has to offer.</p>
+          </div>
+          
+          <!-- University Rankings -->
+          <div class="university-rankings">
+            <!-- University 1 -->
+            <div class="university-card">
+              <div class="university-header">
+                <div class="university-rank">1</div>
+                <img src="../assets/universities/stanford-logo.png" alt="Stanford University Logo" class="university-logo">
+                <div>
+                  <h3 class="university-name">Stanford University</h3>
+                  <div class="university-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Stanford, California, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-content">
+                <div class="university-description">
+                  <p>Stanford University consistently ranks among the world's most prestigious institutions, known for its entrepreneurial spirit and close ties to Silicon Valley. The university excels across disciplines, with particular strengths in engineering, computer science, business, and the natural sciences.</p>
+                </div>
+                
+                <div class="university-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">16,937</div>
+                    <div class="stat-label">Students</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1:5</div>
+                    <div class="stat-label">Faculty-Student Ratio</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$28.9B</div>
+                    <div class="stat-label">Endowment</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">94%</div>
+                    <div class="stat-label">Graduation Rate</div>
+                  </div>
+                </div>
+                
+                <div class="university-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Research Innovation</span>
+                    <span class="strength-tag">Entrepreneurship</span>
+                    <span class="strength-tag">STEM Excellence</span>
+                    <span class="strength-tag">Global Impact</span>
+                    <span class="strength-tag">Interdisciplinary Approach</span>
+                    <span class="strength-tag">Industry Connections</span>
+                  </div>
+                </div>
+                
+                <div class="university-programs">
+                  <h4 class="text-lg font-semibold mb-2">Notable Programs</h4>
+                  <div class="program-list">
+                    <span class="program-item">Computer Science</span>
+                    <span class="program-item">Engineering</span>
+                    <span class="program-item">Business</span>
+                    <span class="program-item">Earth Sciences</span>
+                    <span class="program-item">Medicine</span>
+                    <span class="program-item">Law</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-footer">
+                <div class="university-rating">
+                  <span class="rating-value">9.8/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="university-profiles/stanford-university.html" class="university-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- University 2 -->
+            <div class="university-card">
+              <div class="university-header">
+                <div class="university-rank">2</div>
+                <img src="../assets/universities/mit-logo.png" alt="MIT Logo" class="university-logo">
+                <div>
+                  <h3 class="university-name">Massachusetts Institute of Technology (MIT)</h3>
+                  <div class="university-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Cambridge, Massachusetts, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-content">
+                <div class="university-description">
+                  <p>MIT is a world-leading institution focused on science, engineering, and technology education and research. The university is renowned for its rigorous academics, innovative research, and culture of problem-solving that has produced numerous scientific breakthroughs and technological advances.</p>
+                </div>
+                
+                <div class="university-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">11,520</div>
+                    <div class="stat-label">Students</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1:3</div>
+                    <div class="stat-label">Faculty-Student Ratio</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$24.6B</div>
+                    <div class="stat-label">Endowment</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">95%</div>
+                    <div class="stat-label">Graduation Rate</div>
+                  </div>
+                </div>
+                
+                <div class="university-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Engineering Excellence</span>
+                    <span class="strength-tag">Scientific Research</span>
+                    <span class="strength-tag">Technological Innovation</span>
+                    <span class="strength-tag">Industry Partnerships</span>
+                    <span class="strength-tag">Entrepreneurial Ecosystem</span>
+                    <span class="strength-tag">Problem-Solving Culture</span>
+                  </div>
+                </div>
+                
+                <div class="university-programs">
+                  <h4 class="text-lg font-semibold mb-2">Notable Programs</h4>
+                  <div class="program-list">
+                    <span class="program-item">Electrical Engineering</span>
+                    <span class="program-item">Computer Science</span>
+                    <span class="program-item">Physics</span>
+                    <span class="program-item">Economics</span>
+                    <span class="program-item">Aerospace Engineering</span>
+                    <span class="program-item">Business Analytics</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-footer">
+                <div class="university-rating">
+                  <span class="rating-value">9.7/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="university-profiles/mit.html" class="university-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- University 3 -->
+            <div class="university-card">
+              <div class="university-header">
+                <div class="university-rank">3</div>
+                <img src="../assets/universities/harvard-logo.png" alt="Harvard University Logo" class="university-logo">
+                <div>
+                  <h3 class="university-name">Harvard University</h3>
+                  <div class="university-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Cambridge, Massachusetts, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-content">
+                <div class="university-description">
+                  <p>Harvard University is America's oldest institution of higher learning and one of the most prestigious universities worldwide. With excellence across humanities, sciences, and professional fields, Harvard combines rich history with cutting-edge research and exceptional teaching.</p>
+                </div>
+                
+                <div class="university-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">23,731</div>
+                    <div class="stat-label">Students</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1:7</div>
+                    <div class="stat-label">Faculty-Student Ratio</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$53.2B</div>
+                    <div class="stat-label">Endowment</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">97%</div>
+                    <div class="stat-label">Graduation Rate</div>
+                  </div>
+                </div>
+                
+                <div class="university-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Academic Prestige</span>
+                    <span class="strength-tag">Research Excellence</span>
+                    <span class="strength-tag">Global Leadership</span>
+                    <span class="strength-tag">Professional Education</span>
+                    <span class="strength-tag">Interdisciplinary Studies</span>
+                    <span class="strength-tag">Alumni Network</span>
+                  </div>
+                </div>
+                
+                <div class="university-programs">
+                  <h4 class="text-lg font-semibold mb-2">Notable Programs</h4>
+                  <div class="program-list">
+                    <span class="program-item">Business</span>
+                    <span class="program-item">Law</span>
+                    <span class="program-item">Medicine</span>
+                    <span class="program-item">Public Policy</span>
+                    <span class="program-item">Economics</span>
+                    <span class="program-item">Liberal Arts</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-footer">
+                <div class="university-rating">
+                  <span class="rating-value">9.6/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="university-profiles/harvard-university.html" class="university-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- University 4 -->
+            <div class="university-card">
+              <div class="university-header">
+                <div class="university-rank">4</div>
+                <img src="../assets/universities/oxford-logo.png" alt="University of Oxford Logo" class="university-logo">
+                <div>
+                  <h3 class="university-name">University of Oxford</h3>
+                  <div class="university-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Oxford, United Kingdom</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-content">
+                <div class="university-description">
+                  <p>The University of Oxford is the oldest university in the English-speaking world and one of the most prestigious globally. With its distinctive collegiate system and tutorial-based teaching approach, Oxford combines centuries of tradition with world-leading research across disciplines.</p>
+                </div>
+                
+                <div class="university-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">25,390</div>
+                    <div class="stat-label">Students</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1:4</div>
+                    <div class="stat-label">Faculty-Student Ratio</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">£6.1B</div>
+                    <div class="stat-label">Endowment</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">95%</div>
+                    <div class="stat-label">Graduation Rate</div>
+                  </div>
+                </div>
+                
+                <div class="university-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Tutorial System</span>
+                    <span class="strength-tag">Research Impact</span>
+                    <span class="strength-tag">Humanities Excellence</span>
+                    <span class="strength-tag">Scientific Innovation</span>
+                    <span class="strength-tag">Global Reputation</span>
+                    <span class="strength-tag">Collegiate Community</span>
+                  </div>
+                </div>
+                
+                <div class="university-programs">
+                  <h4 class="text-lg font-semibold mb-2">Notable Programs</h4>
+                  <div class="program-list">
+                    <span class="program-item">Philosophy</span>
+                    <span class="program-item">Politics & Economics</span>
+                    <span class="program-item">Medicine</span>
+                    <span class="program-item">English Literature</span>
+                    <span class="program-item">Physics</span>
+                    <span class="program-item">History</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-footer">
+                <div class="university-rating">
+                  <span class="rating-value">9.5/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="university-profiles/oxford-university.html" class="university-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- University 5 -->
+            <div class="university-card">
+              <div class="university-header">
+                <div class="university-rank">5</div>
+                <img src="../assets/universities/cambridge-logo.png" alt="University of Cambridge Logo" class="university-logo">
+                <div>
+                  <h3 class="university-name">University of Cambridge</h3>
+                  <div class="university-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Cambridge, United Kingdom</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-content">
+                <div class="university-description">
+                  <p>The University of Cambridge is one of the world's oldest and most prestigious universities, renowned for its academic excellence and research contributions. With its collegiate structure and emphasis on small-group teaching, Cambridge offers a distinctive educational experience across sciences and humanities.</p>
+                </div>
+                
+                <div class="university-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">23,247</div>
+                    <div class="stat-label">Students</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1:4</div>
+                    <div class="stat-label">Faculty-Student Ratio</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">£7.1B</div>
+                    <div class="stat-label">Endowment</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">96%</div>
+                    <div class="stat-label">Graduation Rate</div>
+                  </div>
+                </div>
+                
+                <div class="university-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Scientific Research</span>
+                    <span class="strength-tag">Mathematics Excellence</span>
+                    <span class="strength-tag">Supervision System</span>
+                    <span class="strength-tag">Historic Innovation</span>
+                    <span class="strength-tag">Global Partnerships</span>
+                    <span class="strength-tag">College System</span>
+                  </div>
+                </div>
+                
+                <div class="university-programs">
+                  <h4 class="text-lg font-semibold mb-2">Notable Programs</h4>
+                  <div class="program-list">
+                    <span class="program-item">Mathematics</span>
+                    <span class="program-item">Natural Sciences</span>
+                    <span class="program-item">Engineering</span>
+                    <span class="program-item">Computer Science</span>
+                    <span class="program-item">Law</span>
+                    <span class="program-item">Economics</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-footer">
+                <div class="university-rating">
+                  <span class="rating-value">9.5/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="university-profiles/cambridge-university.html" class="university-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- University 6 -->
+            <div class="university-card">
+              <div class="university-header">
+                <div class="university-rank">6</div>
+                <img src="../assets/universities/caltech-logo.png" alt="Caltech Logo" class="university-logo">
+                <div>
+                  <h3 class="university-name">California Institute of Technology (Caltech)</h3>
+                  <div class="university-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Pasadena, California, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-content">
+                <div class="university-description">
+                  <p>Caltech is a world-renowned science and engineering institute with an outsized impact on research and innovation. Despite its small size, Caltech's intensive focus on fundamental science and engineering has produced numerous scientific breakthroughs and Nobel Prize winners.</p>
+                </div>
+                
+                <div class="university-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">2,397</div>
+                    <div class="stat-label">Students</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1:3</div>
+                    <div class="stat-label">Faculty-Student Ratio</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$4.1B</div>
+                    <div class="stat-label">Endowment</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">94%</div>
+                    <div class="stat-label">Graduation Rate</div>
+                  </div>
+                </div>
+                
+                <div class="university-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Scientific Research</span>
+                    <span class="strength-tag">Intimate Learning Environment</span>
+                    <span class="strength-tag">Research Intensity</span>
+                    <span class="strength-tag">NASA Collaboration</span>
+                    <span class="strength-tag">Nobel Laureate Faculty</span>
+                    <span class="strength-tag">Interdisciplinary Approach</span>
+                  </div>
+                </div>
+                
+                <div class="university-programs">
+                  <h4 class="text-lg font-semibold mb-2">Notable Programs</h4>
+                  <div class="program-list">
+                    <span class="program-item">Physics</span>
+                    <span class="program-item">Astronomy</span>
+                    <span class="program-item">Chemistry</span>
+                    <span class="program-item">Biology</span>
+                    <span class="program-item">Engineering</span>
+                    <span class="program-item">Computer Science</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-footer">
+                <div class="university-rating">
+                  <span class="rating-value">9.4/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="university-profiles/caltech.html" class="university-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- University 7 -->
+            <div class="university-card">
+              <div class="university-header">
+                <div class="university-rank">7</div>
+                <img src="../assets/universities/eth-zurich-logo.png" alt="ETH Zurich Logo" class="university-logo">
+                <div>
+                  <h3 class="university-name">ETH Zurich</h3>
+                  <div class="university-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Zurich, Switzerland</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-content">
+                <div class="university-description">
+                  <p>ETH Zurich (Swiss Federal Institute of Technology) is one of the world's leading universities for science and technology. Known for its cutting-edge research and innovation, ETH Zurich has produced numerous Nobel laureates and pioneered advances in fields from architecture to quantum physics.</p>
+                </div>
+                
+                <div class="university-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">23,472</div>
+                    <div class="stat-label">Students</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1:9</div>
+                    <div class="stat-label">Faculty-Student Ratio</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">CHF 1.7B</div>
+                    <div class="stat-label">Annual Budget</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">93%</div>
+                    <div class="stat-label">Graduation Rate</div>
+                  </div>
+                </div>
+                
+                <div class="university-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Engineering Excellence</span>
+                    <span class="strength-tag">Research Innovation</span>
+                    <span class="strength-tag">Sustainability Focus</span>
+                    <span class="strength-tag">Industry Partnerships</span>
+                    <span class="strength-tag">International Collaboration</span>
+                    <span class="strength-tag">Technological Transfer</span>
+                  </div>
+                </div>
+                
+                <div class="university-programs">
+                  <h4 class="text-lg font-semibold mb-2">Notable Programs</h4>
+                  <div class="program-list">
+                    <span class="program-item">Mechanical Engineering</span>
+                    <span class="program-item">Architecture</span>
+                    <span class="program-item">Computer Science</span>
+                    <span class="program-item">Environmental Sciences</span>
+                    <span class="program-item">Physics</span>
+                    <span class="program-item">Mathematics</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-footer">
+                <div class="university-rating">
+                  <span class="rating-value">9.3/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="university-profiles/eth-zurich.html" class="university-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- University 8 -->
+            <div class="university-card">
+              <div class="university-header">
+                <div class="university-rank">8</div>
+                <img src="../assets/universities/nus-logo.png" alt="National University of Singapore Logo" class="university-logo">
+                <div>
+                  <h3 class="university-name">National University of Singapore (NUS)</h3>
+                  <div class="university-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Singapore</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-content">
+                <div class="university-description">
+                  <p>The National University of Singapore is Asia's top university and a leading global institution known for its innovative education approach and research excellence. NUS combines Eastern and Western intellectual traditions with a focus on developing future leaders for the region and beyond.</p>
+                </div>
+                
+                <div class="university-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">38,596</div>
+                    <div class="stat-label">Students</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1:17</div>
+                    <div class="stat-label">Faculty-Student Ratio</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">S$6.1B</div>
+                    <div class="stat-label">Endowment</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">92%</div>
+                    <div class="stat-label">Graduation Rate</div>
+                  </div>
+                </div>
+                
+                <div class="university-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Global Perspective</span>
+                    <span class="strength-tag">Asian Leadership</span>
+                    <span class="strength-tag">Entrepreneurial Focus</span>
+                    <span class="strength-tag">Interdisciplinary Research</span>
+                    <span class="strength-tag">Industry Connections</span>
+                    <span class="strength-tag">International Partnerships</span>
+                  </div>
+                </div>
+                
+                <div class="university-programs">
+                  <h4 class="text-lg font-semibold mb-2">Notable Programs</h4>
+                  <div class="program-list">
+                    <span class="program-item">Business</span>
+                    <span class="program-item">Computing</span>
+                    <span class="program-item">Engineering</span>
+                    <span class="program-item">Medicine</span>
+                    <span class="program-item">Public Policy</span>
+                    <span class="program-item">Life Sciences</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-footer">
+                <div class="university-rating">
+                  <span class="rating-value">9.2/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="university-profiles/nus.html" class="university-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- University 9 -->
+            <div class="university-card">
+              <div class="university-header">
+                <div class="university-rank">9</div>
+                <img src="../assets/universities/uchicago-logo.png" alt="University of Chicago Logo" class="university-logo">
+                <div>
+                  <h3 class="university-name">University of Chicago</h3>
+                  <div class="university-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Chicago, Illinois, USA</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-content">
+                <div class="university-description">
+                  <p>The University of Chicago is renowned for its intellectual rigor, commitment to free inquiry, and transformative education approach. Known for its "Chicago School" of thought in various disciplines, the university has shaped fields from economics to sociology with its emphasis on critical thinking and interdisciplinary study.</p>
+                </div>
+                
+                <div class="university-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">17,834</div>
+                    <div class="stat-label">Students</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1:5</div>
+                    <div class="stat-label">Faculty-Student Ratio</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">$10.3B</div>
+                    <div class="stat-label">Endowment</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">95%</div>
+                    <div class="stat-label">Graduation Rate</div>
+                  </div>
+                </div>
+                
+                <div class="university-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Intellectual Rigor</span>
+                    <span class="strength-tag">Core Curriculum</span>
+                    <span class="strength-tag">Economic Thought</span>
+                    <span class="strength-tag">Social Sciences</span>
+                    <span class="strength-tag">Critical Inquiry</span>
+                    <span class="strength-tag">Research Innovation</span>
+                  </div>
+                </div>
+                
+                <div class="university-programs">
+                  <h4 class="text-lg font-semibold mb-2">Notable Programs</h4>
+                  <div class="program-list">
+                    <span class="program-item">Economics</span>
+                    <span class="program-item">Business</span>
+                    <span class="program-item">Law</span>
+                    <span class="program-item">Social Sciences</span>
+                    <span class="program-item">Physics</span>
+                    <span class="program-item">Mathematics</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-footer">
+                <div class="university-rating">
+                  <span class="rating-value">9.1/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="university-profiles/uchicago.html" class="university-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            
+            <!-- University 10 -->
+            <div class="university-card">
+              <div class="university-header">
+                <div class="university-rank">10</div>
+                <img src="../assets/universities/tokyo-logo.png" alt="University of Tokyo Logo" class="university-logo">
+                <div>
+                  <h3 class="university-name">University of Tokyo</h3>
+                  <div class="university-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Tokyo, Japan</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-content">
+                <div class="university-description">
+                  <p>The University of Tokyo (Todai) is Japan's most prestigious university and a leading research institution in Asia. Combining Japanese educational traditions with global research standards, Todai has produced numerous prime ministers, business leaders, and Nobel Prize winners while advancing knowledge across disciplines.</p>
+                </div>
+                
+                <div class="university-stats">
+                  <div class="stat-item">
+                    <div class="stat-value">27,865</div>
+                    <div class="stat-label">Students</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">1:7</div>
+                    <div class="stat-label">Faculty-Student Ratio</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">¥104B</div>
+                    <div class="stat-label">Annual Budget</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-value">93%</div>
+                    <div class="stat-label">Graduation Rate</div>
+                  </div>
+                </div>
+                
+                <div class="university-strengths">
+                  <h4 class="text-lg font-semibold mb-2">Key Strengths</h4>
+                  <div>
+                    <span class="strength-tag">Research Excellence</span>
+                    <span class="strength-tag">Scientific Innovation</span>
+                    <span class="strength-tag">National Leadership</span>
+                    <span class="strength-tag">Cultural Heritage</span>
+                    <span class="strength-tag">Industry Partnerships</span>
+                    <span class="strength-tag">Global Collaboration</span>
+                  </div>
+                </div>
+                
+                <div class="university-programs">
+                  <h4 class="text-lg font-semibold mb-2">Notable Programs</h4>
+                  <div class="program-list">
+                    <span class="program-item">Engineering</span>
+                    <span class="program-item">Physics</span>
+                    <span class="program-item">Medicine</span>
+                    <span class="program-item">Law</span>
+                    <span class="program-item">Economics</span>
+                    <span class="program-item">Japanese Studies</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="university-footer">
+                <div class="university-rating">
+                  <span class="rating-value">9.0/10</span>
+                  <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <a href="university-profiles/tokyo-university.html" class="university-link">
+                  View Full Profile <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Methodology Details -->
+          <div class="mt-12">
+            <h2 class="text-3xl font-bold mb-6">Our University Ranking Methodology</h2>
+            <p class="mb-6">At WhosBest.org, we employ a comprehensive, data-driven approach to evaluate universities across multiple dimensions of excellence. Our methodology combines quantitative metrics with qualitative assessments to provide a holistic view of each institution's strengths and achievements.</p>
+            
+            <div class="methodology-steps mb-8">
+              <div class="methodology-step">
+                <h4>Data Collection</h4>
+                <p>We gather data from multiple sources, including institutional submissions, government databases, academic surveys, bibliometric databases, and student satisfaction surveys. All data undergoes rigorous verification to ensure accuracy and currency.</p>
+              </div>
+              
+              <div class="methodology-step">
+                <h4>Evaluation Criteria</h4>
+                <p>Universities are evaluated across five key dimensions: Academic Excellence (30%), Research Impact (25%), Student Experience (20%), Global Impact (15%), and Career Outcomes (10%). Each dimension comprises multiple specific metrics designed to capture different aspects of university performance.</p>
+              </div>
+              
+              <div class="methodology-step">
+                <h4>Scoring System</h4>
+                <p>Each metric is standardized to enable fair comparisons across institutions of different sizes and types. Weighted scores are calculated for each dimension and combined to produce an overall score on a scale of 0-10, determining the final ranking position.</p>
+              </div>
+              
+              <div class="methodology-step">
+                <h4>Expert Review</h4>
+                <p>A panel of education experts reviews the preliminary rankings to provide qualitative insights and identify any anomalies that require further investigation. This human oversight ensures that our data-driven approach captures nuances that numbers alone might miss.</p>
+              </div>
+              
+              <div class="methodology-step">
+                <h4>Annual Updates</h4>
+                <p>Rankings are updated annually to reflect the latest data and developments in higher education. Our methodology is continuously refined to ensure it remains relevant and accurately captures what constitutes excellence in the evolving landscape of higher education.</p>
+              </div>
+            </div>
+            
+            <div class="text-center">
+              <a href="../methodology.html#education" class="btn btn-primary">View Detailed Methodology</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4">Find Your Perfect Educational Match</h2>
+        <p class="text-gray-600 mb-8">Explore our comprehensive university rankings and detailed profiles to discover institutions that align with your academic goals, interests, and aspirations.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="../tools/university-matcher.html" class="btn btn-primary btn-lg">Try Our University Matcher</a>
+          <a href="../categories/education.html" class="btn btn-outline btn-lg">Explore All Education Rankings</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <div class="footer-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none" width="150">
+            <!-- Star/Excellence Icon -->
+            <g fill="#ffffff">
+              <path d="M50 30 L55 45 L70 45 L58 55 L63 70 L50 60 L37 70 L42 55 L30 45 L45 45 Z" />
+              <circle cx="50" cy="50" r="25" fill="#ffffff" opacity="0.1" />
+            </g>
+            
+            <!-- WHOSBEST.ORG Text -->
+            <text x="90" y="60" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="1" fill="#ffffff">
+              WHOSBEST<tspan fill="#ffffff" font-weight="600">.ORG</tspan>
+            </text>
+          </svg>
+        </div>
+        <p class="footer-description">WhosBest.org is the definitive directory of excellence, providing comprehensive rankings across multiple categories to help you make informed decisions.</p>
+        
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Categories</h4>
+        <div class="footer-links">
+          <a href="../categories/healthcare.html" class="footer-link">Healthcare</a>
+          <a href="../categories/professional-services.html" class="footer-link">Professional Services</a>
+          <a href="../categories/technology.html" class="footer-link">Technology</a>
+          <a href="../categories/education.html" class="footer-link">Education</a>
+          <a href="../categories/local-business.html" class="footer-link">Local Business</a>
+          <a href="../categories.html" class="footer-link">View All Categories</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Quick Links</h4>
+        <div class="footer-links">
+          <a href="../about.html" class="footer-link">About Us</a>
+          <a href="../methodology.html" class="footer-link">Our Methodology</a>
+          <a href="../rankings.html" class="footer-link">Latest Rankings</a>
+          <a href="../submit.html" class="footer-link">Submit a Business</a>
+          <a href="../contact.html" class="footer-link">Contact Us</a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="footer-heading">Legal</h4>
+        <div class="footer-links">
+          <a href="../privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="../terms.html" class="footer-link">Terms of Service</a>
+          <a href="../disclaimer.html" class="footer-link">Disclaimer</a>
+          <a href="../accessibility.html" class="footer-link">Accessibility</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2025 WhosBest.org. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script>
+    $(document).ready(function() {
+      // Navbar scroll effect
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 50) {
+          $('#navbar').addClass('navbar-scrolled');
+        } else {
+          $('#navbar').removeClass('navbar-scrolled');
+        }
+      });
+      
+      // Mobile menu toggle
+      $('#navbar-toggle').click(function() {
+        $('#navbar-menu').toggleClass('open');
+      });
+      
+      // Animation for staggered items
+      setTimeout(function() {
+        $('.university-card').each(function(index) {
+          var $this = $(this);
+          setTimeout(function() {
+            $this.css('opacity', '1');
+          }, index * 100);
+        });
+      }, 300);
+      
+      // Smooth scroll for anchor links
+      $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top - 100
+          }, 800);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
